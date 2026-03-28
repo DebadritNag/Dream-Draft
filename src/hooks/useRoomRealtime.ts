@@ -43,12 +43,18 @@ export function useRoomRealtime({ roomId, onRoomUpdate, onDraftPick }: UseRoomRe
       .on(
         'postgres_changes',
         { event: 'UPDATE', schema: 'public', table: 'rooms', filter: `id=eq.${roomId}` },
-        (payload) => onRoomUpdateRef.current?.(payload.new as RoomState)
+        (payload) => {
+          console.log('[realtime] rooms UPDATE:', payload.new);
+          onRoomUpdateRef.current?.(payload.new as RoomState);
+        }
       )
       .on(
         'postgres_changes',
         { event: 'INSERT', schema: 'public', table: 'draft_picks', filter: `room_id=eq.${roomId}` },
-        (payload) => onDraftPickRef.current?.(payload.new as DraftPick)
+        (payload) => {
+          console.log('[realtime] draft_picks INSERT:', payload.new);
+          onDraftPickRef.current?.(payload.new as DraftPick);
+        }
       )
       .subscribe((status) => {
         if (status === 'SUBSCRIBED') {
