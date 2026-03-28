@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Copy, Check } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
-import { usePresence } from "@/hooks/usePresence";
+import { usePresence, getSessionId } from "@/hooks/usePresence";
 import { toast } from "sonner";
 
 const AVATARS = ["⚡", "😈", "⭐", "🦁", "🔥", "🐉", "🦅", "🌊"];
@@ -26,23 +26,25 @@ const Lobby = () => {
   const [isHost, setIsHost] = useState(false);
   const [view, setView] = useState<"menu" | "lobby">("menu");
 
+  const [sessionId] = useState(() => getSessionId());
+  const [joinedAt] = useState(() => new Date().toISOString());
   const presenceUser = user && roomId ? {
     user_id: user.id,
-    session_id: crypto.randomUUID(),
+    session_id: sessionId,
     display_name: teamName,
     avatar,
-    online_at: new Date().toISOString(),
+    online_at: joinedAt,
   } : null;
 
   const { onlineUsers } = usePresence(roomId, presenceUser);
 
-  // Load room members from DB
+  // Load room members from DB (for host flag + fallback)
   useEffect(() => {
     if (!roomId) return;
     const load = async () => {
       const { data } = await supabase
         .from("room_members")
-        .select("*, user_profiles(display_name, avatar)")
+        .select("user_id, team_name, avatar, is_host")
         .eq("room_id", roomId);
       if (data) setMembers(data);
     };
@@ -58,6 +60,12 @@ const Lobby = () => {
 
     return () => { channel.unsubscribe(); };
   }, [roomId, navigate]);
+
+  // Merge presence (real-time) with DB members (for is_host flag)
+  const displayMembers = onlineUsers.map((u) => {
+    const dbMember = members.find((m) => m.user_id === u.user_id);
+    return { ...u, is_host: dbMember?.is_host ?? false };
+  });
 
   const createRoom = async () => {
     if (!user || !teamName) { toast.error("Enter a team name"); return; }
@@ -159,28 +167,24 @@ const Lobby = () => {
         </motion.h1>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {members.map((member, i) => {
-            const isOnline = onlineUsers.some((u) => u.user_id === member.user_id);
-            return (
-              <motion.div key={member.id} initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 * i, type: "spring" }}>
-                <GlassCard className="p-6 text-center relative" glow={member.is_host ? "purple" : "none"}>
-                  {member.is_host && (
-                    <span className="absolute top-2 right-2 text-xs bg-secondary/30 text-secondary px-2 py-0.5 rounded-full">HOST</span>
-                  )}
-                  <div className="absolute top-2 left-2">
-                    <motion.div className={`w-3 h-3 rounded-full ${isOnline ? "bg-accent" : "bg-muted-foreground/30"}`}
-                      animate={isOnline ? { scale: [1, 1.3, 1], opacity: [1, 0.7, 1] } : {}}
-                      transition={{ repeat: Infinity, duration: 2 }} />
-                  </div>
-                  <div className="text-4xl mb-3">{member.avatar}</div>
-                  <p className="font-bold text-foreground">{member.team_name}</p>
-                  <p className="text-sm text-muted-foreground">{member.user_profiles?.display_name}</p>
-                </GlassCard>
-              </motion.div>
-            );
-          })}
-          {[...Array(Math.max(0, 4 - members.length))].map((_, i) => (
+          {displayMembers.map((member, i) => (
+            <motion.div key={member.user_id} initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 * i, type: "spring" }}>
+              <GlassCard className="p-6 text-center relative" glow={member.is_host ? "purple" : "none"}>
+                {member.is_host && (
+                  <span className="absolute top-2 right-2 text-xs bg-secondary/30 text-secondary px-2 py-0.5 rounded-full">HOST</span>
+                )}
+                <div className="absolute top-2 left-2">
+                  <motion.div className="w-3 h-3 rounded-full bg-accent"
+                    animate={{ scale: [1, 1.3, 1], opacity: [1, 0.7, 1] }}
+                    transition={{ repeat: Infinity, duration: 2 }} />
+                </div>
+                <div className="text-4xl mb-3">{member.avatar}</div>
+                <p className="font-bold text-foreground">{member.display_name}</p>
+              </GlassCard>
+            </motion.div>
+          ))}
+          {[...Array(Math.max(0, 4 - displayMembers.length))].map((_, i) => (
             <motion.div key={`empty-${i}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 + i * 0.1 }}>
               <GlassCard className="p-6 text-center border-dashed">
                 <div className="text-4xl mb-3 opacity-20">👤</div>
@@ -192,10 +196,10 @@ const Lobby = () => {
 
         {isHost && (
           <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-            <NeonButton variant="green" size="lg" onClick={startTrivia} disabled={members.length < 2}>
+            <NeonButton variant="green" size="lg" onClick={startTrivia} disabled={displayMembers.length < 2}>
               🚀 Start Trivia
             </NeonButton>
-            {members.length < 2 && <p className="text-xs text-muted-foreground mt-2">Need at least 2 players</p>}
+            {displayMembers.length < 2 && <p className="text-xs text-muted-foreground mt-2">Need at least 2 players</p>}
           </motion.div>
         )}
       </div>
