@@ -11,6 +11,7 @@ import Trivia from "./pages/Trivia.tsx";
 import TriviaResults from "./pages/TriviaResults.tsx";
 import Draft from "./pages/Draft.tsx";
 import Results from "./pages/Results.tsx";
+import Profile from "./pages/Profile.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/trivia-results" element={<TriviaResults />} />
             <Route path="/draft" element={<Draft />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
