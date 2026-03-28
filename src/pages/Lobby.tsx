@@ -113,10 +113,11 @@ const Lobby = () => {
     }
 
     // Load members first before setting roomId to avoid useEffect race
-    const { data: allMembers } = await supabase
+    const { data: allMembers, error: membersError } = await supabase
       .from("room_members")
       .select("user_id, team_name, avatar, is_host")
       .eq("room_id", room.id);
+    console.log("Members after join:", allMembers, membersError);
     if (allMembers) setMembers(allMembers);
 
     setRoomId(room.id);
