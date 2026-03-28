@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, useDeferredValue } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import GlassCard from "@/components/draft/GlassCard";
@@ -40,6 +40,8 @@ export default function Draft() {
 
   const [search, setSearch] = useState("");
   const [posFilter, setPosFilter] = useState<string>("All");
+  const deferredSearch = useDeferredValue(search);
+  const deferredPosFilter = useDeferredValue(posFilter);
   const [previewPlayer, setPreviewPlayer] = useState<Player | null>(null);
   const [members, setMembers] = useState<any[]>([]);
   const [remainingSeconds, setRemainingSeconds] = useState(30);
@@ -119,9 +121,9 @@ export default function Draft() {
 
   const filteredPlayers = availablePlayers.filter((p) => {
     const matchSearch =
-      p.name.toLowerCase().includes(search.toLowerCase()) ||
-      p.club.toLowerCase().includes(search.toLowerCase());
-    const matchPos = posFilter === "All" || p.position === posFilter;
+      p.name.toLowerCase().includes(deferredSearch.toLowerCase()) ||
+      p.club.toLowerCase().includes(deferredSearch.toLowerCase());
+    const matchPos = deferredPosFilter === "All" || p.position === deferredPosFilter;
     return matchSearch && matchPos;
   });
 
