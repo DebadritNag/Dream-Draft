@@ -65,8 +65,15 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
   const draftPlayer = useCallback(async (playerId: string) => {
     if (!roomId || !userId) return { error: 'Not ready' };
 
-    // Get current pick number
-    const pickNumber = picks.length + 1;
+    // Get the actual latest pick count from DB to avoid stale state
+    const { data: latestPicks } = await supabase
+      .from('draft_picks')
+      .select('pick_number')
+      .eq('room_id', roomId)
+      .order('pick_number', { ascending: false })
+      .limit(1);
+
+    const pickNumber = (latestPicks?.[0]?.pick_number ?? 0) + 1;
 
     const { error } = await supabase.from('draft_picks').insert({
       room_id: roomId,
@@ -81,14 +88,11 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
     const draftOrder: string[] = Array.isArray(room?.draft_order) ? (room.draft_order as string[]) : [];
     const picksPerUser = room?.picks_per_user ?? 5;
     const totalPicks = draftOrder.length * picksPerUser;
-    const nextPickNumber = pickNumber;
 
-    if (nextPickNumber >= totalPicks) {
-      // Draft complete
+    if (pickNumber >= totalPicks) {
       await supabase.from('rooms').update({ status: 'complete' }).eq('id', roomId);
     } else {
-      // Snake draft: determine next turn index
-      const nextTurn = nextPickNumber % draftOrder.length;
+      const nextTurn = pickNumber % draftOrder.length;
       const expiresAt = new Date(Date.now() + 30000).toISOString();
       await supabase.from('rooms').update({
         current_turn: nextTurn,
@@ -97,7 +101,7 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
     }
 
     return { data: true };
-  }, [roomId, userId, picks.length, room]);
+  }, [roomId, userId, room]);
 
   // Derived state
   const draftOrder: string[] = Array.isArray(room?.draft_order) ? (room.draft_order as string[]) : [];

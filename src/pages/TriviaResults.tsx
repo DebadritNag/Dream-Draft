@@ -90,8 +90,11 @@ const TriviaResults = () => {
                 <span className="text-2xl">{member?.avatar ?? "👤"}</span>
                 <div className="flex-1">
                   <p className="font-bold text-foreground">{member?.team_name ?? userId}</p>
+                  <p className="text-xs text-muted-foreground">{score} pts</p>
                 </div>
-                <span className="text-xl font-bold text-foreground">{score}/{questions.length || 5}</span>
+                <span className="text-xl font-bold text-foreground">
+                  {results?.correct_answers?.[userId] ?? 0}/5 ✓
+                </span>
               </GlassCard>
             </motion.div>
           ))}
@@ -142,7 +145,12 @@ const TriviaResults = () => {
           transition={{ delay: 5.5 }}>
           {isHost && (
             <NeonButton variant="blue" size="lg" onClick={async () => {
-              await supabase.from("rooms").update({ status: "drafting" }).eq("id", roomId);
+              // Set initial turn timer when starting draft
+              await supabase.from("rooms").update({
+                status: "drafting",
+                current_turn: 0,
+                turn_expires_at: new Date(Date.now() + 30000).toISOString(),
+              }).eq("id", roomId);
               navigate(`/draft?room=${roomId}`);
             }}>
               🎯 Start Draft

@@ -74,6 +74,9 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
         setResults(payload);
         if (timerRef.current) clearInterval(timerRef.current);
       })
+      .on('broadcast', { event: 'user_answered' }, ({ payload }: { payload: { user_id: string } }) => {
+        setRespondedUsers((prev) => new Set([...prev, payload.user_id]));
+      })
       .on('postgres_changes', {
         event: 'INSERT', schema: 'public', table: 'trivia_responses', filter: `room_id=eq.${roomId}`,
       }, (payload) => {
@@ -216,6 +219,13 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
   const submitAnswer = useCallback(async (selectedOption: number) => {
     if (!roomId || !userId || !sessionId || !currentQuestion || submitted) return;
     setSubmitted(true);
+    // Immediately mark self as responded
+    setRespondedUsers((prev) => new Set([...prev, userId]));
+
+    // Broadcast to others instantly so their badges update without waiting for DB
+    channelRef.current?.send({
+      type: 'broadcast', event: 'user_answered', payload: { user_id: userId },
+    });
 
     const { error } = await supabase.from('trivia_responses').insert({
       room_id: roomId,
@@ -228,6 +238,7 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
     if (error) {
       console.error('submitAnswer error:', error);
       setSubmitted(false);
+      setRespondedUsers((prev) => { const s = new Set(prev); s.delete(userId); return s; });
     }
   }, [roomId, userId, sessionId, currentQuestion, submitted]);
 
