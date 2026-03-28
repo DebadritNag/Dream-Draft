@@ -84,25 +84,6 @@ const Index = () => {
       {/* Center content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
 
-        {/* Title — always visible */}
-        <motion.div className="text-center mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}>
-          <motion.div className="text-6xl md:text-8xl mb-4"
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
-            ⚽
-          </motion.div>
-          <h1 className="text-4xl md:text-7xl font-black text-white tracking-tight"
-            style={{ textShadow: "0 0 40px rgba(59,130,246,0.8), 0 0 80px rgba(59,130,246,0.4)" }}>
-            Fantasy Draft
-          </h1>
-          <p className="text-white/60 text-sm md:text-lg mt-3 max-w-md mx-auto">
-            Real-time multiplayer · Trivia draft order · Live picks
-          </p>
-        </motion.div>
-
         {/* Get Started button — appears after video ends */}
         <AnimatePresence>
           {showButton && (
