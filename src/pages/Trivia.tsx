@@ -5,7 +5,6 @@ import GlassCard from "@/components/draft/GlassCard";
 import CountdownTimer from "@/components/draft/CountdownTimer";
 import PlayerStatusBadge from "@/components/draft/PlayerStatusBadge";
 import { useTrivia } from "@/hooks/useTrivia";
-import { useTriviaHost } from "@/hooks/useTriviaHost";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/lib/supabase";
 
@@ -57,10 +56,8 @@ const Trivia = () => {
   }, [roomId, user?.id]);
 
   const { currentQuestion, submitted, respondedUsers, results, remainingSeconds, allAnswered, submitAnswer } =
-    useTrivia({ roomId, userId: user?.id ?? null, sessionId });
+    useTrivia({ roomId, userId: user?.id ?? null, sessionId, isHost, memberCount: members.length });
 
-  // Host drives the trivia engine from their browser
-  useTriviaHost({ roomId, sessionId, isHost, memberCount: members.length });
 
   // Navigate to results when trivia engine broadcasts results
   useEffect(() => {
