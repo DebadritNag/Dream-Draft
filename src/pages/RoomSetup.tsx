@@ -18,7 +18,7 @@ interface RoomSetupProps {
 
 const RoomSetup = ({ onConfirm, onBack, loading }: RoomSetupProps) => {
   const [maxPlayers, setMaxPlayers] = useState(4);
-  const [picksPerUser, setPicksPerUser] = useState(5);
+  const [picksPerUser, setPicksPerUser] = useState(11);
   const [draftFormat, setDraftFormat] = useState<"snake" | "linear">("snake");
 
   return (
@@ -58,17 +58,18 @@ const RoomSetup = ({ onConfirm, onBack, loading }: RoomSetupProps) => {
             <Trophy className="w-5 h-5 text-accent" />
             <h2 className="font-bold text-foreground">Players Per Squad</h2>
           </div>
-          <div className="flex gap-3">
-            {[3, 5, 7, 10, 11].map((n) => (
-              <button key={n} onClick={() => setPicksPerUser(n)}
-                className={`flex-1 py-3 rounded-lg font-bold text-sm transition-all ${
-                  picksPerUser === n
-                    ? "bg-accent text-accent-foreground shadow-lg scale-105"
-                    : "bg-muted text-muted-foreground hover:bg-muted/80"
-                }`}>
-                {n}
-              </button>
-            ))}
+          <div className="flex items-center gap-4">
+            <input
+              type="range" min={11} max={25} value={picksPerUser}
+              onChange={(e) => setPicksPerUser(Number(e.target.value))}
+              className="flex-1 accent-accent h-2 cursor-pointer"
+            />
+            <span className="text-2xl font-black text-foreground w-8 text-center">{picksPerUser}</span>
+          </div>
+          <div className="flex justify-between text-xs text-muted-foreground">
+            <span>11</span>
+            <span>18</span>
+            <span>25</span>
           </div>
           <p className="text-xs text-muted-foreground">
             Each manager picks {picksPerUser} players · {maxPlayers * picksPerUser} total picks

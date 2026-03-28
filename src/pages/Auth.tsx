@@ -10,7 +10,10 @@ import { toast } from "sonner";
 const Auth = () => {
   const navigate = useNavigate();
   const { signIn, signUp } = useAuth();
-  const [isSignUp, setIsSignUp] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("mode") === "signup";
+  });
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
