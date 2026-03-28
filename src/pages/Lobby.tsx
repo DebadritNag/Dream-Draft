@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import GlassCard from "@/components/draft/GlassCard";
@@ -12,121 +12,163 @@ import { toast } from "sonner";
 
 const AVATARS = ["⚡", "😈", "⭐", "🦁", "🔥", "🐉", "🦅", "🌊"];
 
+interface RoomMember {
+  user_id: string;
+  team_name: string;
+  avatar: string;
+  is_host: boolean;
+}
+
 const Lobby = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { user } = useAuth();
+
   const [roomId, setRoomId] = useState<string | null>(null);
   const [roomCode, setRoomCode] = useState("");
+  const [hostId, setHostId] = useState<string | null>(null);
   const [joinCode, setJoinCode] = useState(searchParams.get("code") ?? "");
   const [teamName, setTeamName] = useState("");
   const [avatar] = useState(() => AVATARS[Math.floor(Math.random() * AVATARS.length)]);
   const [copied, setCopied] = useState(false);
-  const [members, setMembers] = useState<any[]>([]);
+  const [members, setMembers] = useState<RoomMember[]>([]);
   const [view, setView] = useState<"menu" | "lobby">("menu");
 
   const [sessionId] = useState(() => getSessionId());
   const [joinedAt] = useState(() => new Date().toISOString());
+  const roomIdRef = useRef<string | null>(null);
+
+  // isHost: strictly compare auth user id with room's host_id
+  const isHost = !!(user && hostId && user.id === hostId);
 
   const presenceUser = useMemo(() => {
     if (!user || !roomId) return null;
-    return { user_id: user.id, session_id: sessionId, display_name: teamName, avatar, online_at: joinedAt };
+    return {
+      user_id: user.id,
+      session_id: sessionId,
+      display_name: teamName,
+      avatar,
+      online_at: joinedAt,
+    };
   }, [user?.id, roomId, sessionId, teamName, avatar, joinedAt]);
 
   const { onlineUsers } = usePresence(roomId, presenceUser);
 
-  // Derive isHost from DB members — never from local state
-  const isHost = user ? (members.find((m) => m.user_id === user.id)?.is_host ?? false) : false;
-
-  const loadMembers = async (rid: string) => {
-    const { data } = await supabase
+  // Fetch all members for a room — any authenticated user can read (fixed by RLS migration)
+  const fetchMembers = async (rid: string) => {
+    const { data, error } = await supabase
       .from("room_members")
       .select("user_id, team_name, avatar, is_host")
       .eq("room_id", rid);
-    if (data) setMembers(data);
+
+    if (error) {
+      console.error("[fetchMembers] error:", error.message, error.code);
+      return;
+    }
+    console.log("[fetchMembers] rows:", data?.length, data);
+    setMembers(data ?? []);
   };
 
+  // Realtime subscription — fires for all users in the room
   useEffect(() => {
     if (!roomId) return;
-    loadMembers(roomId);
+    roomIdRef.current = roomId;
+
+    fetchMembers(roomId);
 
     const channel = supabase
-      .channel(`lobby-members:${roomId}`)
-      .on("postgres_changes", { event: "*", schema: "public", table: "room_members", filter: `room_id=eq.${roomId}` }, () => loadMembers(roomId))
-      .on("postgres_changes", { event: "UPDATE", schema: "public", table: "rooms", filter: `id=eq.${roomId}` }, (payload) => {
-        if (payload.new.status === "trivia") navigate(`/trivia?room=${roomId}`);
-      })
-      .subscribe();
+      .channel(`room-lobby:${roomId}`)
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "room_members", filter: `room_id=eq.${roomId}` },
+        (payload) => {
+          console.log("[realtime] room_members change:", payload.eventType, payload.new);
+          fetchMembers(roomId);
+        }
+      )
+      .on(
+        "postgres_changes",
+        { event: "UPDATE", schema: "public", table: "rooms", filter: `id=eq.${roomId}` },
+        (payload) => {
+          if (payload.new.status === "trivia") navigate(`/trivia?room=${roomId}`);
+        }
+      )
+      .subscribe((status) => {
+        console.log("[realtime] channel status:", status);
+      });
 
-    return () => { channel.unsubscribe(); };
+    return () => {
+      channel.unsubscribe();
+      roomIdRef.current = null;
+    };
   }, [roomId, navigate]);
 
-  const displayMembers = members.map((m) => {
-    const presenceMember = onlineUsers.find((u) => u.user_id === m.user_id);
-    return { user_id: m.user_id, display_name: m.team_name, avatar: m.avatar, is_host: m.is_host, isOnline: !!presenceMember };
-  });
+  // Merge DB members (source of truth) with presence (online indicator)
+  const displayMembers = members.map((m) => ({
+    ...m,
+    isOnline: onlineUsers.some((u) => u.user_id === m.user_id),
+  }));
 
   const createRoom = async () => {
-    if (!user || !teamName) { toast.error("Enter a team name"); return; }
+    if (!user || !teamName.trim()) { toast.error("Enter a team name"); return; }
+
     const code = Math.random().toString(36).substring(2, 8).toUpperCase();
-    const { data: room, error } = await supabase
-      .from("rooms").insert({ code, host_id: user.id }).select().single();
-    if (error || !room) { toast.error("Failed to create room"); return; }
+    const { data: room, error: roomErr } = await supabase
+      .from("rooms")
+      .insert({ code, host_id: user.id })
+      .select("id, code, host_id")
+      .single();
 
-    const { error: memberError } = await supabase.from("room_members").insert({
-      room_id: room.id, user_id: user.id, team_name: teamName, avatar, is_host: true,
+    if (roomErr || !room) { toast.error("Failed to create room"); return; }
+
+    const { error: memberErr } = await supabase.from("room_members").insert({
+      room_id: room.id, user_id: user.id, team_name: teamName.trim(), avatar, is_host: true,
     });
-    if (memberError) { toast.error("Failed to create room"); return; }
+    if (memberErr) { toast.error("Failed to create room"); return; }
 
-    // Pre-load members before setting roomId
-    const { data: allMembers } = await supabase
-      .from("room_members")
-      .select("user_id, team_name, avatar, is_host")
-      .eq("room_id", room.id);
-    if (allMembers) setMembers(allMembers);
+    console.log("[createRoom] host_id:", room.host_id, "user.id:", user.id);
 
+    setHostId(room.host_id);
     setRoomId(room.id);
     setRoomCode(room.code);
     setView("lobby");
   };
 
   const joinRoom = async () => {
-    if (!user || !teamName || !joinCode) { toast.error("Enter team name and room code"); return; }
-
-    const { data: room, error: roomError } = await supabase
-      .from("rooms").select("id, code").eq("code", joinCode.toUpperCase()).single();
-    if (roomError || !room) { toast.error("Room not found"); return; }
-
-    // Check if already a member
-    const { data: existing } = await supabase
-      .from("room_members").select("user_id").eq("room_id", room.id).eq("user_id", user.id).single();
-
-    if (!existing) {
-      const { error } = await supabase.from("room_members").insert({
-        room_id: room.id, user_id: user.id, team_name: teamName, avatar, is_host: false,
-      });
-      if (error) {
-        console.error("Join room error:", error);
-        toast.error(`Join failed: ${error.message}`);
-        return;
-      }
+    if (!user || !teamName.trim() || !joinCode.trim()) {
+      toast.error("Enter team name and room code");
+      return;
     }
 
-    // Load members first before setting roomId to avoid useEffect race
-    const { data: allMembers, error: membersError } = await supabase
-      .from("room_members")
-      .select("user_id, team_name, avatar, is_host")
-      .eq("room_id", room.id);
-    console.log("Members after join:", allMembers, membersError);
-    if (allMembers) setMembers(allMembers);
+    const { data: room, error: roomErr } = await supabase
+      .from("rooms")
+      .select("id, code, host_id")
+      .eq("code", joinCode.trim().toUpperCase())
+      .single();
 
+    if (roomErr || !room) { toast.error("Room not found"); return; }
+
+    console.log("[joinRoom] room.host_id:", room.host_id, "user.id:", user.id);
+
+    // Insert member row — ignore conflict if already joined
+    const { error: insertErr } = await supabase.from("room_members").insert({
+      room_id: room.id, user_id: user.id, team_name: teamName.trim(), avatar, is_host: false,
+    });
+
+    if (insertErr && insertErr.code !== "23505") {
+      console.error("[joinRoom] insert error:", insertErr);
+      toast.error(`Join failed: ${insertErr.message}`);
+      return;
+    }
+
+    setHostId(room.host_id);
     setRoomId(room.id);
     setRoomCode(room.code);
     setView("lobby");
   };
 
   const startTrivia = async () => {
-    if (!roomId) return;
+    if (!roomId || !isHost) return;
     await supabase.from("rooms").update({ status: "trivia" }).eq("id", roomId);
     navigate(`/trivia?room=${roomId}`);
   };
@@ -145,15 +187,23 @@ const Lobby = () => {
           <h1 className="text-3xl font-black text-center text-foreground neon-text-blue">⚽ Fantasy Draft</h1>
           <div>
             <label className="text-sm text-muted-foreground mb-1 block">Your Team Name</label>
-            <Input placeholder="FC Thunder" value={teamName} onChange={(e) => setTeamName(e.target.value)}
-              className="bg-muted/50 border-border" />
+            <Input
+              placeholder="FC Thunder"
+              value={teamName}
+              onChange={(e) => setTeamName(e.target.value)}
+              className="bg-muted/50 border-border"
+            />
           </div>
           <NeonButton variant="green" size="lg" className="w-full" onClick={createRoom}>
             🏠 Create Room
           </NeonButton>
           <div className="flex gap-2">
-            <Input placeholder="Room code" value={joinCode} onChange={(e) => setJoinCode(e.target.value)}
-              className="bg-muted/50 border-border" />
+            <Input
+              placeholder="Room code"
+              value={joinCode}
+              onChange={(e) => setJoinCode(e.target.value)}
+              className="bg-muted/50 border-border"
+            />
             <NeonButton variant="blue" onClick={joinRoom}>Join</NeonButton>
           </div>
         </GlassCard>
@@ -164,6 +214,8 @@ const Lobby = () => {
   return (
     <div className="min-h-screen gradient-bg p-4 md:p-8">
       <div className="max-w-4xl mx-auto space-y-8">
+
+        {/* Room code display */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
           <p className="text-sm text-muted-foreground mb-2">ROOM CODE</p>
           <GlassCard className="inline-flex items-center gap-3 px-6 py-3 cursor-pointer"
@@ -183,6 +235,7 @@ const Lobby = () => {
           Waiting for Players
         </motion.h1>
 
+        {/* Player grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {displayMembers.map((member, i) => (
             <motion.div key={member.user_id} initial={{ opacity: 0, scale: 0.8 }}
@@ -191,18 +244,26 @@ const Lobby = () => {
                 {member.is_host && (
                   <span className="absolute top-2 right-2 text-xs bg-secondary/30 text-secondary px-2 py-0.5 rounded-full">HOST</span>
                 )}
+                {user?.id === member.user_id && (
+                  <span className="absolute bottom-2 left-0 right-0 text-center text-xs text-muted-foreground">You</span>
+                )}
                 <div className="absolute top-2 left-2">
-                  <motion.div className={`w-3 h-3 rounded-full ${member.isOnline ? "bg-accent" : "bg-muted-foreground/40"}`}
+                  <motion.div
+                    className={`w-3 h-3 rounded-full ${member.isOnline ? "bg-accent" : "bg-muted-foreground/40"}`}
                     animate={member.isOnline ? { scale: [1, 1.3, 1], opacity: [1, 0.7, 1] } : {}}
-                    transition={{ repeat: Infinity, duration: 2 }} />
+                    transition={{ repeat: Infinity, duration: 2 }}
+                  />
                 </div>
                 <div className="text-4xl mb-3">{member.avatar}</div>
-                <p className="font-bold text-foreground">{member.display_name}</p>
+                <p className="font-bold text-foreground">{member.team_name}</p>
               </GlassCard>
             </motion.div>
           ))}
-          {[...Array(Math.max(0, 4 - members.length))].map((_, i) => (
-            <motion.div key={`empty-${i}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 + i * 0.1 }}>
+
+          {/* Empty slots */}
+          {[...Array(Math.max(0, 4 - displayMembers.length))].map((_, i) => (
+            <motion.div key={`empty-${i}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 + i * 0.1 }}>
               <GlassCard className="p-6 text-center border-dashed">
                 <div className="text-4xl mb-3 opacity-20">👤</div>
                 <p className="text-muted-foreground text-sm">Waiting...</p>
@@ -211,12 +272,16 @@ const Lobby = () => {
           ))}
         </div>
 
+        {/* Only host sees Start Trivia */}
         {isHost && (
-          <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+          <motion.div className="text-center" initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
             <NeonButton variant="green" size="lg" onClick={startTrivia} disabled={members.length < 2}>
               🚀 Start Trivia
             </NeonButton>
-            {members.length < 2 && <p className="text-xs text-muted-foreground mt-2">Need at least 2 players</p>}
+            {members.length < 2 && (
+              <p className="text-xs text-muted-foreground mt-2">Need at least 2 players</p>
+            )}
           </motion.div>
         )}
       </div>
