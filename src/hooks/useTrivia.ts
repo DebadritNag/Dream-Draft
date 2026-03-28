@@ -147,7 +147,7 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
           type: 'broadcast', event: 'question', payload: questionPayload,
         });
 
-        // Wait for all answers or timeout
+        // Wait for all answers or timeout — whichever comes first
         const respondedSet = new Set<string>();
         await new Promise<void>((resolve) => {
           const responseSub = supabase
@@ -171,6 +171,10 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
           }, endTime.getTime() - Date.now() + 500);
         });
 
+        if (respondedSet.size >= memberCount) {
+          await channelRef.current!.send({ type: 'broadcast', event: 'all_answered', payload: {} });
+        }
+
         // Tally scores
         const { data: responses } = await supabase
           .from('trivia_responses')
@@ -189,10 +193,6 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
               correctAnswers[r.user_id] += 1;
             }
           });
-        }
-
-        if (respondedSet.size >= memberCount) {
-          await channelRef.current!.send({ type: 'broadcast', event: 'all_answered', payload: {} });
         }
 
         if (i < questions.length - 1) {

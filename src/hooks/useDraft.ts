@@ -65,6 +65,10 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
   const draftPlayer = useCallback(async (playerId: string) => {
     if (!roomId || !userId) return { error: 'Not ready' };
 
+    const draftOrder: string[] = Array.isArray(room?.draft_order) ? (room.draft_order as string[]) : [];
+    const picksPerUser = room?.picks_per_user ?? 5;
+    const totalPicks = draftOrder.length * picksPerUser;
+
     // Get the actual latest pick count from DB to avoid stale state
     const { data: latestPicks } = await supabase
       .from('draft_picks')
@@ -75,25 +79,24 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
 
     const pickNumber = (latestPicks?.[0]?.pick_number ?? 0) + 1;
 
-    const { error } = await supabase.from('draft_picks').insert({
-      room_id: roomId,
-      user_id: userId,
-      player_id: playerId,
-      pick_number: pickNumber,
-    });
+    const { data: insertedPick, error } = await supabase
+      .from('draft_picks')
+      .insert({ room_id: roomId, user_id: userId, player_id: playerId, pick_number: pickNumber })
+      .select()
+      .single();
 
     if (error) {
       if (error.code === '23505') return { error: 'Player already drafted' };
       return { error: error.message };
     }
 
-    // Advance turn
-    const draftOrder: string[] = Array.isArray(room?.draft_order) ? (room.draft_order as string[]) : [];
-    const picksPerUser = room?.picks_per_user ?? 5;
-    const totalPicks = draftOrder.length * picksPerUser;
+    // Optimistically apply pick locally so UI updates immediately
+    if (insertedPick) applyPick(insertedPick as DraftPick);
 
+    // Advance turn
     if (pickNumber >= totalPicks) {
       await supabase.from('rooms').update({ status: 'complete' }).eq('id', roomId);
+      applyRoomUpdate({ status: 'complete' });
     } else {
       const nextTurn = pickNumber % draftOrder.length;
       const expiresAt = new Date(Date.now() + 30000).toISOString();
@@ -101,10 +104,12 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
         current_turn: nextTurn,
         turn_expires_at: expiresAt,
       }).eq('id', roomId);
+      // Optimistically update room locally
+      applyRoomUpdate({ current_turn: nextTurn, turn_expires_at: expiresAt });
     }
 
     return { data: true };
-  }, [roomId, userId, room]);
+  }, [roomId, userId, room, applyPick, applyRoomUpdate]);
 
   // Derived state
   const draftOrder: string[] = Array.isArray(room?.draft_order) ? (room.draft_order as string[]) : [];

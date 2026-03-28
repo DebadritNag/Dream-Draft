@@ -70,13 +70,12 @@ export default function Draft() {
       .then(({ data }) => { if (data) setMembers(data); });
   }, [roomId]);
 
-  // Sync server timer
+  // Sync server timer — recompute every 500ms based on turn_expires_at
   useEffect(() => {
     if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
-    setRemainingSeconds(getRemainingSeconds());
-    timerIntervalRef.current = setInterval(() => {
-      setRemainingSeconds(getRemainingSeconds());
-    }, 500);
+    const update = () => setRemainingSeconds(getRemainingSeconds());
+    update();
+    timerIntervalRef.current = setInterval(update, 500);
     return () => { if (timerIntervalRef.current) clearInterval(timerIntervalRef.current); };
   }, [room?.turn_expires_at, getRemainingSeconds]);
 

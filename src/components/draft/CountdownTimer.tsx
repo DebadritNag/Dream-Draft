@@ -1,42 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface CountdownTimerProps {
   totalSeconds: number;
   onComplete?: () => void;
   size?: number;
-  /** If provided, overrides local countdown with server-synced value */
   serverRemainingSeconds?: number;
 }
 
 const CountdownTimer = ({ totalSeconds, onComplete, size = 80, serverRemainingSeconds }: CountdownTimerProps) => {
   const [seconds, setSeconds] = useState(serverRemainingSeconds ?? totalSeconds);
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
 
-  // Sync to server time when provided
+  // When server provides remaining seconds, sync directly
   useEffect(() => {
-    if (serverRemainingSeconds !== undefined) {
-      setSeconds(serverRemainingSeconds);
-    }
+    if (serverRemainingSeconds === undefined) return;
+    setSeconds(serverRemainingSeconds);
+    if (serverRemainingSeconds <= 0) onCompleteRef.current?.();
   }, [serverRemainingSeconds]);
 
-  // Local countdown (used when no server sync)
+  // Local countdown — only runs when no server sync
   useEffect(() => {
-    if (serverRemainingSeconds !== undefined) return; // server controls it
+    if (serverRemainingSeconds !== undefined) return;
     setSeconds(totalSeconds);
   }, [totalSeconds, serverRemainingSeconds]);
 
   useEffect(() => {
     if (serverRemainingSeconds !== undefined) return;
-    if (seconds <= 0) { onComplete?.(); return; }
-    const timer = setInterval(() => setSeconds((s) => s - 1), 1000);
+    if (seconds <= 0) { onCompleteRef.current?.(); return; }
+    const timer = setInterval(() => setSeconds((s) => Math.max(0, s - 1)), 1000);
     return () => clearInterval(timer);
-  }, [seconds, onComplete, serverRemainingSeconds]);
+  }, [seconds, serverRemainingSeconds]);
 
-  useEffect(() => {
-    if (serverRemainingSeconds === 0) onComplete?.();
-  }, [serverRemainingSeconds, onComplete]);
-
-  const progress = seconds / totalSeconds;
+  const safeSeconds = Math.max(0, seconds);
+  const progress = totalSeconds > 0 ? safeSeconds / totalSeconds : 0;
   const circumference = 2 * Math.PI * 35;
   const strokeDashoffset = circumference * (1 - Math.max(0, Math.min(1, progress)));
 
@@ -46,7 +44,7 @@ const CountdownTimer = ({ totalSeconds, onComplete, size = 80, serverRemainingSe
     return "hsl(0, 84%, 60%)";
   };
 
-  const isUrgent = seconds <= 5;
+  const isUrgent = safeSeconds <= 5 && safeSeconds > 0;
 
   return (
     <motion.div
@@ -70,7 +68,7 @@ const CountdownTimer = ({ totalSeconds, onComplete, size = 80, serverRemainingSe
         />
       </svg>
       <span className="absolute text-xl font-bold" style={{ color: getColor() }}>
-        {seconds}
+        {safeSeconds}
       </span>
     </motion.div>
   );
