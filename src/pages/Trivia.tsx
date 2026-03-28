@@ -18,31 +18,43 @@ const Trivia = () => {
   const [members, setMembers] = useState<any[]>([]);
   const [isHost, setIsHost] = useState(false);
 
-  // Get trivia session id
+  // Get trivia session id — poll until it exists (host creates it just before navigating)
   useEffect(() => {
     if (!roomId) return;
-    const load = async () => {
-      const { data } = await supabase
-        .from("trivia_sessions")
-        .select("id")
-        .eq("room_id", roomId)
-        .order("created_at", { ascending: false })
-        .limit(1)
-        .single();
-      if (data) setSessionId(data.id);
+    let cancelled = false;
 
+    const load = async () => {
       const { data: m } = await supabase
         .from("room_members")
         .select("user_id, team_name, avatar, is_host")
         .eq("room_id", roomId);
-      if (m) {
+      if (m && !cancelled) {
         setMembers(m);
         const me = m.find((x) => x.user_id === user?.id);
         setIsHost(me?.is_host ?? false);
       }
+
+      // Poll for session until found
+      const poll = async () => {
+        if (cancelled) return;
+        const { data } = await supabase
+          .from("trivia_sessions")
+          .select("id")
+          .eq("room_id", roomId)
+          .order("created_at", { ascending: false })
+          .limit(1);
+        if (data && data.length > 0) {
+          if (!cancelled) setSessionId(data[0].id);
+        } else {
+          setTimeout(poll, 1000);
+        }
+      };
+      poll();
     };
+
     load();
-  }, [roomId]);
+    return () => { cancelled = true; };
+  }, [roomId, user?.id]);
 
   const { currentQuestion, submitted, respondedUsers, results, remainingSeconds, allAnswered, submitAnswer } =
     useTrivia({ roomId, userId: user?.id ?? null, sessionId });
