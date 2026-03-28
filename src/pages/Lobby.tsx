@@ -172,7 +172,23 @@ const Lobby = () => {
 
   const startTrivia = async () => {
     if (!roomId || !isHost) return;
+
+    // 1. Create a trivia session
+    const { data: session, error: sessionErr } = await supabase
+      .from("trivia_sessions")
+      .insert({ room_id: roomId, status: "active" })
+      .select("id")
+      .single();
+
+    if (sessionErr || !session) {
+      toast.error("Failed to start trivia");
+      return;
+    }
+
+    // 2. Update room status
     await supabase.from("rooms").update({ status: "trivia" }).eq("id", roomId);
+
+    // 3. Navigate host to trivia page
     navigate(`/trivia?room=${roomId}`);
   };
 

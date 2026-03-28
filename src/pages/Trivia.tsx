@@ -5,6 +5,7 @@ import GlassCard from "@/components/draft/GlassCard";
 import CountdownTimer from "@/components/draft/CountdownTimer";
 import PlayerStatusBadge from "@/components/draft/PlayerStatusBadge";
 import { useTrivia } from "@/hooks/useTrivia";
+import { useTriviaHost } from "@/hooks/useTriviaHost";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/lib/supabase";
 
@@ -15,6 +16,7 @@ const Trivia = () => {
   const { user } = useAuth();
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [members, setMembers] = useState<any[]>([]);
+  const [isHost, setIsHost] = useState(false);
 
   // Get trivia session id
   useEffect(() => {
@@ -31,15 +33,22 @@ const Trivia = () => {
 
       const { data: m } = await supabase
         .from("room_members")
-        .select("user_id, team_name, avatar")
+        .select("user_id, team_name, avatar, is_host")
         .eq("room_id", roomId);
-      if (m) setMembers(m);
+      if (m) {
+        setMembers(m);
+        const me = m.find((x) => x.user_id === user?.id);
+        setIsHost(me?.is_host ?? false);
+      }
     };
     load();
   }, [roomId]);
 
   const { currentQuestion, submitted, respondedUsers, results, remainingSeconds, allAnswered, submitAnswer } =
     useTrivia({ roomId, userId: user?.id ?? null, sessionId });
+
+  // Host drives the trivia engine from their browser
+  useTriviaHost({ roomId, sessionId, isHost, memberCount: members.length });
 
   // Navigate to results when trivia engine broadcasts results
   useEffect(() => {
