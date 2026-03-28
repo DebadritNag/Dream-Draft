@@ -81,13 +81,13 @@ export default function Draft() {
       applyPick(pick); playDraftSound();
       const member = members.find((m) => m.user_id === pick.user_id);
       if (member && pick.user_id !== user?.id) toast(`${member.team_name} drafted a player! ⚽`);
-      loadFromDB();
+      loadFromDB(true);
     }, [applyPick, members, user?.id, loadFromDB]),
   });
 
   const wasReconnecting = useRef(false);
   useEffect(() => {
-    if (wasReconnecting.current && connected) { loadFromDB(); toast("Reconnected"); }
+    if (wasReconnecting.current && connected) { loadFromDB(false); toast("Reconnected"); }
     wasReconnecting.current = reconnecting;
   }, [connected, reconnecting, loadFromDB]);
 
@@ -118,7 +118,7 @@ export default function Draft() {
     setDrafting(true);
     setPreviewPlayer(null);
     const { error } = await draftPlayer(player.id);
-    if (error) { toast.error(error === "Player already drafted" ? "⚠️ That player was just taken!" : error); loadFromDB(); }
+    if (error) { toast.error(error === "Player already drafted" ? "⚠️ That player was just taken!" : error); loadFromDB(true); }
     setDrafting(false);
   };
 

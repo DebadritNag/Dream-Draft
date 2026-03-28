@@ -21,9 +21,9 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
   const [lastPickedPlayerId, setLastPickedPlayerId] = useState<string | null>(null);
 
   // Fully rebuild state from DB — called on mount and on reconnect
-  const loadFromDB = useCallback(async () => {
+  const loadFromDB = useCallback(async (silent = false) => {
     if (!roomId) return;
-    setLoading(true);
+    if (!silent) setLoading(true);
 
     const [roomRes, picksRes, playersRes] = await Promise.all([
       supabase.from('rooms').select('*').eq('id', roomId).single(),
