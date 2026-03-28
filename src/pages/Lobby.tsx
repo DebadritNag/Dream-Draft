@@ -102,11 +102,15 @@ const Lobby = () => {
       .single();
     if (!room) { toast.error("Room not found"); return; }
 
-    const { error } = await supabase.from("room_members").insert({
+    const { error } = await supabase.from("room_members").upsert({
       room_id: room.id, user_id: user.id,
       team_name: teamName, avatar, is_host: false,
-    });
-    if (error) { toast.error("Could not join room"); return; }
+    }, { onConflict: "room_id,user_id" });
+    if (error) {
+      console.error("Join room error:", error);
+      toast.error(`Could not join room: ${error.message}`);
+      return;
+    }
 
     setRoomId(room.id);
     setRoomCode(room.code);
