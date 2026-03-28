@@ -129,6 +129,32 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
   // Resolve player name from map (for "My Team" panel)
   const getPlayer = useCallback((id: string): Player | undefined => playerMap[id], [playerMap]);
 
+  // Auto-pick: only the current turn user triggers this to avoid race conditions
+  const autoPickRef = useRef(false);
+  useEffect(() => {
+    if (!isMyTurn || !turnExpiresAt || availablePlayers.length === 0) {
+      autoPickRef.current = false;
+      return;
+    }
+
+    const msLeft = turnExpiresAt - Date.now();
+    if (msLeft <= 0) return;
+
+    const timer = setTimeout(async () => {
+      if (!isMyTurn || autoPickRef.current) return;
+      autoPickRef.current = true;
+
+      // Pick highest rated available player (smart auto-pick)
+      const sorted = [...availablePlayers].sort((a, b) => b.rating - a.rating);
+      const pick = sorted[0];
+      if (pick) {
+        await draftPlayer(pick.id);
+      }
+    }, msLeft);
+
+    return () => clearTimeout(timer);
+  }, [isMyTurn, turnExpiresAt, availablePlayers, draftPlayer]);
+
   return {
     room,
     picks,

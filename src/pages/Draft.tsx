@@ -102,6 +102,17 @@ export default function Draft() {
     return matchSearch && matchPos;
   });
 
+  const [autoPickBanner, setAutoPickBanner] = useState(false);
+
+  // Show auto-pick banner when timer hits 0 on our turn
+  useEffect(() => {
+    if (isMyTurn && remainingSeconds === 0) {
+      setAutoPickBanner(true);
+      const t = setTimeout(() => setAutoPickBanner(false), 3000);
+      return () => clearTimeout(t);
+    }
+  }, [isMyTurn, remainingSeconds]);
+
   const handleDraft = async (player: Player) => {
     if (!isMyTurn || drafting || isDuplicateSession) return;
     setDrafting(true);
@@ -134,6 +145,21 @@ export default function Draft() {
         {isMyTurn && <motion.div className="absolute inset-0 border-2 border-blue-500/20 rounded-none"
           animate={{ opacity: [0, 0.5, 0] }} transition={{ duration: 2, repeat: Infinity }} />}
       </div>
+
+      {/* Auto-pick banner */}
+      <AnimatePresence>
+        {autoPickBanner && (
+          <motion.div
+            className="fixed top-16 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-5 py-3 rounded-2xl border border-amber-500/40 bg-amber-500/15 backdrop-blur-xl"
+            initial={{ opacity: 0, y: -20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.9 }}
+            style={{ boxShadow: "0 0 30px rgba(245,158,11,0.3)" }}>
+            <motion.span animate={{ rotate: [0, -10, 10, 0] }} transition={{ duration: 0.4, repeat: 3 }}>⏱</motion.span>
+            <span className="text-amber-300 font-black text-sm">Time Expired — Auto Pick Activated</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ── TOP NAVBAR ── */}
       <div className="relative z-20 flex items-center justify-between px-4 py-2.5 border-b border-white/5"
@@ -184,7 +210,11 @@ export default function Draft() {
             )}
           </AnimatePresence>
           {connected ? <Wifi className="w-3.5 h-3.5 text-emerald-400" /> : <WifiOff className="w-3.5 h-3.5 text-white/20" />}
-          <CountdownTimer key={room?.turn_expires_at ?? "t"} totalSeconds={30} serverRemainingSeconds={remainingSeconds} size={40} />
+          <motion.div
+            animate={remainingSeconds === 0 ? { x: [-4, 4, -4, 4, 0] } : {}}
+            transition={{ duration: 0.4 }}>
+            <CountdownTimer key={room?.turn_expires_at ?? "t"} totalSeconds={30} serverRemainingSeconds={remainingSeconds} size={40} />
+          </motion.div>
           <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm border border-white/10">
             {myMember?.avatar ?? "⚽"}
           </div>
