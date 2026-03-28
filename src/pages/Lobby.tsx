@@ -161,6 +161,9 @@ const Lobby = () => {
       return;
     }
 
+    // If user is already a member (409/23505), just let them back in
+    console.log("[joinRoom] joined or already member, proceeding to lobby");
+
     setHostId(room.host_id);
     setRoomId(room.id);
     setRoomCode(room.code);
