@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import GlassCard from "@/components/draft/GlassCard";
@@ -28,13 +28,18 @@ const Lobby = () => {
 
   const [sessionId] = useState(() => getSessionId());
   const [joinedAt] = useState(() => new Date().toISOString());
-  const presenceUser = user && roomId ? {
-    user_id: user.id,
-    session_id: sessionId,
-    display_name: teamName,
-    avatar,
-    online_at: joinedAt,
-  } : null;
+
+  // Memoize so presence only re-subscribes when user_id/session actually changes
+  const presenceUser = useMemo(() => {
+    if (!user || !roomId) return null;
+    return {
+      user_id: user.id,
+      session_id: sessionId,
+      display_name: teamName,
+      avatar,
+      online_at: joinedAt,
+    };
+  }, [user?.id, roomId, sessionId, teamName, avatar, joinedAt]);
 
   const { onlineUsers } = usePresence(roomId, presenceUser);
 

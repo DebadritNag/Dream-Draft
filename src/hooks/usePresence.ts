@@ -26,34 +26,45 @@ export function usePresence(roomId: string | null, currentUser: PresenceUser | n
   const [presenceState, setPresenceState] = useState<Record<string, PresenceUser[]>>({});
   const [isDuplicateSession, setIsDuplicateSession] = useState(false);
 
+  // Keep currentUser in a ref so we can re-track on display_name changes without re-subscribing
+  const currentUserRef = useRef(currentUser);
+  useEffect(() => {
+    currentUserRef.current = currentUser;
+    // If already subscribed, re-track with updated info (e.g. display_name typed in)
+    if (channelRef.current && currentUser) {
+      channelRef.current.track(currentUser);
+    }
+  }, [currentUser]);
+
   useEffect(() => {
     if (!roomId || !currentUser) return;
+
+    const syncState = (channel: RealtimeChannel) => {
+      const state = channel.presenceState<PresenceUser>();
+      setPresenceState({ ...state });
+
+      const myPresences = state[currentUser.user_id] ?? [];
+      if (myPresences.length > 1) {
+        const sorted = [...myPresences].sort(
+          (a, b) => new Date(b.online_at).getTime() - new Date(a.online_at).getTime()
+        );
+        setIsDuplicateSession(sorted[0].session_id !== currentUser.session_id);
+      } else {
+        setIsDuplicateSession(false);
+      }
+    };
 
     const channel = supabase.channel(`presence:${roomId}`, {
       config: { presence: { key: currentUser.user_id } },
     });
 
     channel
-      .on('presence', { event: 'sync' }, () => {
-        const state = channel.presenceState<PresenceUser>();
-        setPresenceState({ ...state });
-
-        // Detect duplicate sessions: if another tab has a different session_id for same user
-        const myPresences = state[currentUser.user_id] ?? [];
-        if (myPresences.length > 1) {
-          // Latest session_id wins — sort by online_at desc
-          const sorted = [...myPresences].sort(
-            (a, b) => new Date(b.online_at).getTime() - new Date(a.online_at).getTime()
-          );
-          const latestSessionId = sorted[0].session_id;
-          setIsDuplicateSession(latestSessionId !== currentUser.session_id);
-        } else {
-          setIsDuplicateSession(false);
-        }
-      })
+      .on('presence', { event: 'sync' }, () => syncState(channel))
+      .on('presence', { event: 'join' }, () => syncState(channel))
+      .on('presence', { event: 'leave' }, () => syncState(channel))
       .subscribe(async (status) => {
         if (status === 'SUBSCRIBED') {
-          await channel.track(currentUser);
+          await channel.track(currentUserRef.current ?? currentUser);
         }
       });
 
@@ -63,16 +74,17 @@ export function usePresence(roomId: string | null, currentUser: PresenceUser | n
       channel.untrack();
       channel.unsubscribe();
       channelRef.current = null;
+      setPresenceState({});
     };
+  // Only re-subscribe when room or user identity changes — NOT on display_name changes
   }, [roomId, currentUser?.user_id, currentUser?.session_id]);
 
   const onlineUsers = Object.values(presenceState)
-    .map((presences) => {
-      // Latest session per user
-      return [...presences].sort(
+    .map((presences) =>
+      [...presences].sort(
         (a, b) => new Date(b.online_at).getTime() - new Date(a.online_at).getTime()
-      )[0];
-    })
+      )[0]
+    )
     .filter(Boolean);
 
   return { onlineUsers, isDuplicateSession };
