@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import { getRandomQuestions } from '@/data/trivia';
 
 export interface LiveQuestion {
   question_id: string;
@@ -109,11 +110,7 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
       // Small delay to ensure all clients are subscribed
       await new Promise((r) => setTimeout(r, 1500));
 
-      const { data: questions } = await supabase
-        .from('trivia_questions')
-        .select('id, question, options, correct_answer')
-        .limit(5);
-
+      const questions = getRandomQuestions(5);
       if (!questions || questions.length === 0) {
         console.error('[host] no trivia questions found');
         return;
@@ -134,9 +131,9 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
         }).eq('id', sessionId);
 
         const questionPayload: LiveQuestion = {
-          question_id: q.id,
+          question_id: String(q.id),
           question: q.question,
-          options: q.options as string[],
+          options: q.options,
           start_time: startTime.toISOString(),
           end_time: endTime.toISOString(),
           question_index: i,
@@ -176,13 +173,13 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
           .from('trivia_responses')
           .select('user_id, selected_option, answered_at')
           .eq('session_id', sessionId)
-          .eq('question_id', q.id);
+          .eq('question_id', String(q.id));
 
         if (responses) {
           responses.forEach((r) => {
             if (!scores[r.user_id]) scores[r.user_id] = 0;
             if (!correctAnswers[r.user_id]) correctAnswers[r.user_id] = 0;
-            if (r.selected_option === q.correct_answer) {
+            if (r.selected_option === q.correctAnswer) {
               const elapsed = new Date(r.answered_at).getTime() - startTime.getTime();
               const speedBonus = Math.max(0, 1 - elapsed / QUESTION_DURATION_MS);
               scores[r.user_id] += Math.round(500 + 500 * speedBonus);
