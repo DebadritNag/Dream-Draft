@@ -68,8 +68,8 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
     const draftOrder: string[] = Array.isArray(room?.draft_order) ? (room.draft_order as string[]) : [];
     const picksPerUser = room?.picks_per_user ?? 5;
     const totalPicks = draftOrder.length * picksPerUser;
+    const draftFormat = (room as any)?.draft_format ?? 'snake';
 
-    // Get the actual latest pick count from DB to avoid stale state
     const { data: latestPicks } = await supabase
       .from('draft_picks')
       .select('pick_number')
@@ -90,21 +90,22 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
       return { error: error.message };
     }
 
-    // Optimistically apply pick locally so UI updates immediately
     if (insertedPick) applyPick(insertedPick as DraftPick);
 
-    // Advance turn
     if (pickNumber >= totalPicks) {
       await supabase.from('rooms').update({ status: 'complete' }).eq('id', roomId);
       applyRoomUpdate({ status: 'complete' });
     } else {
-      const nextTurn = pickNumber % draftOrder.length;
+      let nextTurn: number;
+      if (draftFormat === 'snake') {
+        const nextRound = Math.floor(pickNumber / draftOrder.length);
+        const posInRound = pickNumber % draftOrder.length;
+        nextTurn = nextRound % 2 === 0 ? posInRound : draftOrder.length - 1 - posInRound;
+      } else {
+        nextTurn = pickNumber % draftOrder.length;
+      }
       const expiresAt = new Date(Date.now() + 30000).toISOString();
-      await supabase.from('rooms').update({
-        current_turn: nextTurn,
-        turn_expires_at: expiresAt,
-      }).eq('id', roomId);
-      // Optimistically update room locally
+      await supabase.from('rooms').update({ current_turn: nextTurn, turn_expires_at: expiresAt }).eq('id', roomId);
       applyRoomUpdate({ current_turn: nextTurn, turn_expires_at: expiresAt });
     }
 

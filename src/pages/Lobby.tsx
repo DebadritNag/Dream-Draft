@@ -8,6 +8,7 @@ import { Copy, Check } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { usePresence, getSessionId } from "@/hooks/usePresence";
+import RoomSetup from "@/pages/RoomSetup";
 import { toast } from "sonner";
 
 const AVATARS = ["⚡", "😈", "⭐", "🦁", "🔥", "🐉", "🦅", "🌊"];
@@ -32,7 +33,8 @@ const Lobby = () => {
   const [avatar] = useState(() => AVATARS[Math.floor(Math.random() * AVATARS.length)]);
   const [copied, setCopied] = useState(false);
   const [members, setMembers] = useState<RoomMember[]>([]);
-  const [view, setView] = useState<"menu" | "lobby">("menu");
+  const [view, setView] = useState<"menu" | "setup" | "lobby">("menu");
+  const [creatingRoom, setCreatingRoom] = useState(false);
 
   const [sessionId] = useState(() => getSessionId());
   const [joinedAt] = useState(() => new Date().toISOString());
@@ -109,28 +111,35 @@ const Lobby = () => {
     isOnline: onlineUsers.some((u) => u.user_id === m.user_id),
   }));
 
-  const createRoom = async () => {
+  const createRoom = async (config?: { maxPlayers: number; picksPerUser: number; draftFormat: "snake" | "linear" }) => {
     if (!user || !teamName.trim()) { toast.error("Enter a team name"); return; }
-
+    setCreatingRoom(true);
     const code = Math.random().toString(36).substring(2, 8).toUpperCase();
-    const { data: room, error: roomErr } = await supabase
+    const { data: room, error } = await supabase
       .from("rooms")
-      .insert({ code, host_id: user.id })
+      .insert({
+        code,
+        host_id: user.id,
+        picks_per_user: config?.picksPerUser ?? 5,
+        max_players: config?.maxPlayers ?? 4,
+        draft_format: config?.draftFormat ?? "snake",
+      })
       .select("id, code, host_id")
       .single();
 
-    if (roomErr || !room) { toast.error("Failed to create room"); return; }
+    if (error || !room) { toast.error("Failed to create room"); setCreatingRoom(false); return; }
 
     const { error: memberErr } = await supabase.from("room_members").insert({
       room_id: room.id, user_id: user.id, team_name: teamName.trim(), avatar, is_host: true,
     });
-    if (memberErr) { toast.error("Failed to create room"); return; }
+    if (memberErr) { toast.error("Failed to create room"); setCreatingRoom(false); return; }
 
     console.log("[createRoom] host_id:", room.host_id, "user.id:", user.id);
 
     setHostId(room.host_id);
     setRoomId(room.id);
     setRoomCode(room.code);
+    setCreatingRoom(false);
     setView("lobby");
   };
 
@@ -198,6 +207,16 @@ const Lobby = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  if (view === "setup") {
+    return (
+      <RoomSetup
+        loading={creatingRoom}
+        onBack={() => setView("menu")}
+        onConfirm={(config) => createRoom(config)}
+      />
+    );
+  }
+
   if (view === "menu") {
     return (
       <div className="min-h-screen gradient-bg flex items-center justify-center p-4">
@@ -213,7 +232,10 @@ const Lobby = () => {
               className="bg-muted/50 border-border"
             />
           </div>
-          <NeonButton variant="green" size="lg" className="w-full" onClick={createRoom}>
+          <NeonButton variant="green" size="lg" className="w-full" onClick={() => {
+              if (!teamName.trim()) { toast.error("Enter a team name first"); return; }
+              setView("setup");
+            }}>
             🏠 Create Room
           </NeonButton>
           <div className="flex gap-2">

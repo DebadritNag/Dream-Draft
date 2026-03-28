@@ -21,11 +21,15 @@ import { playDraftSound } from "@/lib/sounds";
 import type { Tables } from "@/lib/supabase";
 
 type Player = Tables<"players"> & { position: string };
-const positions = ["All", "GK", "DEF", "MID", "FWD"] as const;
+const positions = ["All", "GK", "CB", "FB", "MID", "WING", "ST"] as const;
 
 const posColors: Record<string, string> = {
-  GK: "bg-amber-500/80", DEF: "bg-emerald-500/80",
-  MID: "bg-sky-500/80",  FWD: "bg-rose-500/80",
+  GK: "bg-amber-500/80",
+  CB: "bg-emerald-500/80",
+  FB: "bg-teal-500/80",
+  MID: "bg-sky-500/80",
+  WING: "bg-purple-500/80",
+  ST: "bg-rose-500/80",
 };
 
 export default function Draft() {
