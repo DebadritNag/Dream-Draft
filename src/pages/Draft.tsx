@@ -125,7 +125,10 @@ export default function Draft() {
     setDrafting(true);
     setPreviewPlayer(null);
     const { error } = await draftPlayer(player.id);
-    if (error) toast.error(error);
+    if (error) {
+      toast.error(error === 'Player already drafted' ? '⚠️ That player was just taken!' : error);
+      loadFromDB(); // restore correct state on conflict
+    }
     setDrafting(false);
   };
 

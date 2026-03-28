@@ -82,7 +82,10 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
       pick_number: pickNumber,
     });
 
-    if (error) return { error: error.message };
+    if (error) {
+      if (error.code === '23505') return { error: 'Player already drafted' };
+      return { error: error.message };
+    }
 
     // Advance turn
     const draftOrder: string[] = Array.isArray(room?.draft_order) ? (room.draft_order as string[]) : [];
