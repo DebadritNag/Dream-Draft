@@ -65,10 +65,17 @@ const Lobby = () => {
     return () => { channel.unsubscribe(); };
   }, [roomId, navigate]);
 
-  // Merge presence (real-time) with DB members (for is_host flag)
-  const displayMembers = onlineUsers.map((u) => {
-    const dbMember = members.find((m) => m.user_id === u.user_id);
-    return { ...u, is_host: dbMember?.is_host ?? false };
+  // Merge DB members (source of truth) with presence (online status)
+  // Fall back to DB members so players show even before presence syncs
+  const displayMembers = members.map((m) => {
+    const presenceMember = onlineUsers.find((u) => u.user_id === m.user_id);
+    return {
+      user_id: m.user_id,
+      display_name: presenceMember?.display_name ?? m.team_name,
+      avatar: m.avatar,
+      is_host: m.is_host,
+      isOnline: !!presenceMember,
+    };
   });
 
   const createRoom = async () => {
@@ -192,8 +199,8 @@ const Lobby = () => {
                   <span className="absolute top-2 right-2 text-xs bg-secondary/30 text-secondary px-2 py-0.5 rounded-full">HOST</span>
                 )}
                 <div className="absolute top-2 left-2">
-                  <motion.div className="w-3 h-3 rounded-full bg-accent"
-                    animate={{ scale: [1, 1.3, 1], opacity: [1, 0.7, 1] }}
+                  <motion.div className={`w-3 h-3 rounded-full ${member.isOnline ? "bg-accent" : "bg-muted-foreground/40"}`}
+                    animate={member.isOnline ? { scale: [1, 1.3, 1], opacity: [1, 0.7, 1] } : {}}
                     transition={{ repeat: Infinity, duration: 2 }} />
                 </div>
                 <div className="text-4xl mb-3">{member.avatar}</div>
@@ -201,7 +208,7 @@ const Lobby = () => {
               </GlassCard>
             </motion.div>
           ))}
-          {[...Array(Math.max(0, 4 - displayMembers.length))].map((_, i) => (
+          {[...Array(Math.max(0, 4 - members.length))].map((_, i) => (
             <motion.div key={`empty-${i}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 + i * 0.1 }}>
               <GlassCard className="p-6 text-center border-dashed">
                 <div className="text-4xl mb-3 opacity-20">👤</div>
@@ -213,10 +220,10 @@ const Lobby = () => {
 
         {isHost && (
           <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-            <NeonButton variant="green" size="lg" onClick={startTrivia} disabled={displayMembers.length < 2}>
+            <NeonButton variant="green" size="lg" onClick={startTrivia} disabled={members.length < 2}>
               🚀 Start Trivia
             </NeonButton>
-            {displayMembers.length < 2 && <p className="text-xs text-muted-foreground mt-2">Need at least 2 players</p>}
+            {members.length < 2 && <p className="text-xs text-muted-foreground mt-2">Need at least 2 players</p>}
           </motion.div>
         )}
       </div>
