@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 7%;
+    --foreground: 210 40% 95%;
+
+    --card: 230 20% 12%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 230 20% 12%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 263 70% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 15% 18%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 230 20% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 15% 18%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 230 15% 20%;
+    --sidebar-ring: 217 91% 60%;
+
+    --neon-blue: 217 91% 60%;
+    --neon-purple: 263 70% 58%;
+    --neon-green: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/40 backdrop-blur-xl border border-white/10 shadow-lg;
+  }
+
+  .glass-strong {
+    @apply bg-card/60 backdrop-blur-2xl border border-white/15 shadow-xl;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px hsl(217 91% 60% / 0.4), 0 0 60px hsl(217 91% 60% / 0.1);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px hsl(263 70% 58% / 0.4), 0 0 60px hsl(263 70% 58% / 0.1);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px hsl(160 84% 39% / 0.4), 0 0 60px hsl(160 84% 39% / 0.1);
+  }
+
+  .neon-text-blue {
+    text-shadow: 0 0 10px hsl(217 91% 60% / 0.6), 0 0 40px hsl(217 91% 60% / 0.2);
+  }
+
+  .neon-text-purple {
+    text-shadow: 0 0 10px hsl(263 70% 58% / 0.6), 0 0 40px hsl(263 70% 58% / 0.2);
+  }
+
+  .gradient-bg {
+    background: radial-gradient(ellipse at top left, hsl(263 70% 58% / 0.15), transparent 50%),
+                radial-gradient(ellipse at bottom right, hsl(217 91% 60% / 0.15), transparent 50%),
+                radial-gradient(ellipse at center, hsl(160 84% 39% / 0.05), transparent 70%),
+                hsl(var(--background));
+  }
+}

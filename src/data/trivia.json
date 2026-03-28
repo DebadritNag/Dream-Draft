@@ -1,0 +1,1502 @@
+[
+  {
+    "id": 1,
+    "question": "I have played for Sporting CP, Manchester United, Real Madrid, and Juventus. I am my country's all-time top goalscorer. Who am I?",
+    "options": ["Lionel Messi", "Luis Figo", "Cristiano Ronaldo", "Wayne Rooney"],
+    "answer": "Cristiano Ronaldo"
+  },
+  {
+    "id": 2,
+    "question": "I spent my youth at Newell's Old Boys before moving to Europe. I have won eight Ballon d'Or awards and the 2022 World Cup. Who am I?",
+    "options": ["Diego Maradona", "Lionel Messi", "Sergio Aguero", "Angel Di Maria"],
+    "answer": "Lionel Messi"
+  },
+  {
+    "id": 3,
+    "question": "I have played for Ajax, Juventus, Inter Milan, Barcelona, AC Milan, PSG, and Manchester United. I am Sweden's all-time top scorer. Who am I?",
+    "options": ["Henrik Larsson", "Freddie Ljungberg", "Zlatan Ibrahimovic", "Alexander Isak"],
+    "answer": "Zlatan Ibrahimovic"
+  },
+  {
+    "id": 4,
+    "question": "I am a French striker who played for Monaco and PSG. I won the World Cup in 2018 and scored a hat-trick in the 2022 World Cup final. Who am I?",
+    "options": ["Karim Benzema", "Antoine Griezmann", "Olivier Giroud", "Kylian Mbappe"],
+    "answer": "Kylian Mbappe"
+  },
+  {
+    "id": 5,
+    "question": "I played for Santos, Barcelona, and PSG. I am Brazil's all-time top goalscorer, surpassing Pelé. Who am I?",
+    "options": ["Ronaldinho", "Neymar", "Ronaldo Nazario", "Kaka"],
+    "answer": "Neymar"
+  },
+  {
+    "id": 6,
+    "question": "I am a Polish striker. I played for Borussia Dortmund before moving to Bayern Munich, and later Barcelona. Who am I?",
+    "options": ["Arkadiusz Milik", "Krzysztof Piatek", "Robert Lewandowski", "Wojciech Szczesny"],
+    "answer": "Robert Lewandowski"
+  },
+  {
+    "id": 7,
+    "question": "I am an Egyptian winger. I played for Basel, Chelsea, Fiorentina, and Roma before becoming a legend at Liverpool. Who am I?",
+    "options": ["Riyad Mahrez", "Hakim Ziyech", "Sadio Mane", "Mohamed Salah"],
+    "answer": "Mohamed Salah"
+  },
+  {
+    "id": 8,
+    "question": "I am a Belgian midfielder. I played for Genk, Chelsea, and Wolfsburg before joining Manchester City. Who am I?",
+    "options": ["Eden Hazard", "Kevin De Bruyne", "Romelu Lukaku", "Youri Tielemans"],
+    "answer": "Kevin De Bruyne"
+  },
+  {
+    "id": 9,
+    "question": "I am a Croatian midfielder who won the 2018 Ballon d'Or. I played for Dinamo Zagreb and Tottenham before joining Real Madrid. Who am I?",
+    "options": ["Ivan Rakitic", "Mateo Kovacic", "Luka Modric", "Marcelo Brozovic"],
+    "answer": "Luka Modric"
+  },
+  {
+    "id": 10,
+    "question": "I am a French striker. I played for Monaco, Juventus, Arsenal, Barcelona, and New York Red Bulls. Who am I?",
+    "options": ["Thierry Henry", "David Trezeguet", "Nicolas Anelka", "Eric Cantona"],
+    "answer": "Thierry Henry"
+  },
+  {
+    "id": 11,
+    "question": "I am a Brazilian striker. I played for Cruzeiro, PSV, Barcelona, Inter Milan, Real Madrid, and AC Milan. I won two World Cups. Who am I?",
+    "options": ["Romario", "Rivaldo", "Ronaldo Nazario", "Adriano"],
+    "answer": "Ronaldo Nazario"
+  },
+  {
+    "id": 12,
+    "question": "I am a versatile English player who featured for Leeds, Newcastle, Aston Villa, Man City, and Liverpool. I am known for my high assist numbers. Who am I?",
+    "options": ["Gareth Barry", "James Milner", "Jordan Henderson", "Steven Gerrard"],
+    "answer": "James Milner"
+  },
+  {
+    "id": 13,
+    "question": "I scored the winning goal in the 2010 World Cup final for Spain. I played the majority of my career at Barcelona before moving to Vissel Kobe. Who am I?",
+    "options": ["Xavi Hernandez", "Cesc Fabregas", "Sergio Busquets", "Andres Iniesta"],
+    "answer": "Andres Iniesta"
+  },
+  {
+    "id": 14,
+    "question": "I am a Dutch midfielder. I am the only player to have won the UEFA Champions League with three different clubs (Ajax, Real Madrid, AC Milan). Who am I?",
+    "options": ["Edgar Davids", "Clarence Seedorf", "Wesley Sneijder", "Ruud Gullit"],
+    "answer": "Clarence Seedorf"
+  },
+  {
+    "id": 15,
+    "question": "I am a German striker who holds the record for the most goals scored in FIFA World Cup history (16). I played for Kaiserslautern, Werder Bremen, Bayern Munich, and Lazio. Who am I?",
+    "options": ["Thomas Muller", "Jurgen Klinsmann", "Lukas Podolski", "Miroslav Klose"],
+    "answer": "Miroslav Klose"
+  },
+  {
+    "id": 16,
+    "question": "I am a Welsh winger. I played for Southampton, Tottenham, Real Madrid, and LAFC. I scored a famous overhead kick in a Champions League final. Who am I?",
+    "options": ["Ryan Giggs", "Aaron Ramsey", "Gareth Bale", "Ian Rush"],
+    "answer": "Gareth Bale"
+  },
+  {
+    "id": 17,
+    "question": "I am a French defensive midfielder. I won the Premier League with both Leicester City and Chelsea, and the World Cup in 2018. Who am I?",
+    "options": ["Claude Makelele", "N'Golo Kante", "Paul Pogba", "Aurelien Tchouameni"],
+    "answer": "N'Golo Kante"
+  },
+  {
+    "id": 18,
+    "question": "I am a German playmaker. I played for Schalke, Werder Bremen, Real Madrid, Arsenal, and Fenerbahce. Who am I?",
+    "options": ["Michael Ballack", "Toni Kroos", "Mesut Ozil", "Mario Gotze"],
+    "answer": "Mesut Ozil"
+  },
+  {
+    "id": 19,
+    "question": "I am a Brazilian attacking midfielder. I won the 2007 Ballon d'Or. I played for Sao Paulo, AC Milan, Real Madrid, and Orlando City. Who am I?",
+    "options": ["Ronaldinho", "Kaka", "Oscar", "Philippe Coutinho"],
+    "answer": "Kaka"
+  },
+  {
+    "id": 20,
+    "question": "I am a Senegalese winger. I played for Metz, Red Bull Salzburg, Southampton, Liverpool, and Bayern Munich. Who am I?",
+    "options": ["El Hadji Diouf", "Ismaila Sarr", "Sadio Mane", "Kalidou Koulibaly"],
+    "answer": "Sadio Mane"
+  },
+  {
+    "id": 21,
+    "question": "I hold the record for the most appearances in English Premier League history (653). I played for Aston Villa, Man City, Everton, and West Brom. Who am I?",
+    "options": ["Ryan Giggs", "Frank Lampard", "James Milner", "Gareth Barry"],
+    "answer": "Gareth Barry"
+  },
+  {
+    "id": 22,
+    "question": "I am the highest-scoring defender in Premier League history. I spent almost my entire career at Chelsea before finishing at Aston Villa. Who am I?",
+    "options": ["Ashley Cole", "John Terry", "Rio Ferdinand", "Nemanja Vidic"],
+    "answer": "John Terry"
+  },
+  {
+    "id": 23,
+    "question": "I am a Brazilian goalkeeper. I played for Internacional and Roma before joining Liverpool, where I once scored a headed goal against West Brom. Who am I?",
+    "options": ["Ederson", "Julio Cesar", "Dida", "Alisson Becker"],
+    "answer": "Alisson Becker"
+  },
+  {
+    "id": 24,
+    "question": "I am a Uruguayan striker. I played for Danubio, Palermo, Napoli, PSG, Manchester United, and Valencia. Who am I?",
+    "options": ["Luis Suarez", "Diego Forlan", "Edinson Cavani", "Darwin Nunez"],
+    "answer": "Edinson Cavani"
+  },
+  {
+    "id": 25,
+    "question": "I am an Argentine striker. I played for Independiente, Atletico Madrid, Man City, and Barcelona. I scored a famous 94th-minute title-winning goal. Who am I?",
+    "options": ["Gonzalo Higuain", "Carlos Tevez", "Sergio Aguero", "Hernan Crespo"],
+    "answer": "Sergio Aguero"
+  },
+  {
+    "id": 26,
+    "question": "I am a French striker. I played for Lyon, Real Madrid, and Al-Ittihad. I won the Ballon d'Or in 2022. Who am I?",
+    "options": ["Olivier Giroud", "Karim Benzema", "Antoine Griezmann", "Alexandre Lacazette"],
+    "answer": "Karim Benzema"
+  },
+  {
+    "id": 27,
+    "question": "I am a Soviet goalkeeper. I am the only goalkeeper in history to have won the Ballon d'Or (1963). Who am I?",
+    "options": ["Lev Yashin", "Gordon Banks", "Dino Zoff", "Oliver Kahn"],
+    "answer": "Lev Yashin"
+  },
+  {
+    "id": 28,
+    "question": "I am a Belgian winger. I played for Lille, Chelsea, and Real Madrid, known for my incredible dribbling before retiring early due to injuries. Who am I?",
+    "options": ["Yannick Carrasco", "Dries Mertens", "Eden Hazard", "Leandro Trossard"],
+    "answer": "Eden Hazard"
+  },
+  {
+    "id": 29,
+    "question": "I am an Argentine forward. I played for Boca Juniors, Corinthians, West Ham, Manchester United, Manchester City, and Juventus. Who am I?",
+    "options": ["Sergio Aguero", "Carlos Tevez", "Juan Riquelme", "Javier Saviola"],
+    "answer": "Carlos Tevez"
+  },
+  {
+    "id": 30,
+    "question": "I am an English midfielder. I played for Manchester United, Preston North End, Real Madrid, LA Galaxy, AC Milan, and PSG. Who am I?",
+    "options": ["Paul Scholes", "Steven Gerrard", "David Beckham", "Frank Lampard"],
+    "answer": "David Beckham"
+  },
+  {
+    "id": 31,
+    "question": "I am a Norwegian striker. I played for Bryne, Molde, Red Bull Salzburg, and Borussia Dortmund before joining Manchester City. Who am I?",
+    "options": ["Ole Gunnar Solskjaer", "John Carew", "Alexander Sorloth", "Erling Haaland"],
+    "answer": "Erling Haaland"
+  },
+  {
+    "id": 32,
+    "question": "I am a German goalkeeper. I played for Schalke before moving to Bayern Munich. I won the 2014 World Cup and popularized the 'sweeper-keeper' role. Who am I?",
+    "options": ["Oliver Kahn", "Manuel Neuer", "Jens Lehmann", "Marc-Andre ter Stegen"],
+    "answer": "Manuel Neuer"
+  },
+  {
+    "id": 33,
+    "question": "I am an Argentine winger. I played for Rosario Central, Benfica, Real Madrid, Manchester United, PSG, and Juventus. Who am I?",
+    "options": ["Paulo Dybala", "Angel Di Maria", "Javier Mascherano", "Ezequiel Lavezzi"],
+    "answer": "Angel Di Maria"
+  },
+  {
+    "id": 34,
+    "question": "I am a Spanish defender. I played for Sevilla, Real Madrid, and PSG. I have a record number of red cards in La Liga. Who am I?",
+    "options": ["Gerard Pique", "Carles Puyol", "Sergio Ramos", "Fernando Hierro"],
+    "answer": "Sergio Ramos"
+  },
+  {
+    "id": 35,
+    "question": "I am a Uruguayan striker. I played for Nacional, Groningen, Ajax, Liverpool, Barcelona, Atletico Madrid, and Gremio. Who am I?",
+    "options": ["Edinson Cavani", "Luis Suarez", "Diego Forlan", "Darwin Nunez"],
+    "answer": "Luis Suarez"
+  },
+  {
+    "id": 36,
+    "question": "I am a Colombian attacking midfielder. I won the Golden Boot at the 2014 World Cup. I played for Porto, Monaco, Real Madrid, Bayern Munich, and Everton. Who am I?",
+    "options": ["Radamel Falcao", "Juan Cuadrado", "Luis Diaz", "James Rodriguez"],
+    "answer": "James Rodriguez"
+  },
+  {
+    "id": 37,
+    "question": "I am an Italian forward who spent my entire 25-year professional career at Roma. I am known as 'Il Capitano'. Who am I?",
+    "options": ["Alessandro Del Piero", "Francesco Totti", "Roberto Baggio", "Daniele De Rossi"],
+    "answer": "Francesco Totti"
+  },
+  {
+    "id": 38,
+    "question": "I am an English midfielder. I played for West Ham, Chelsea, and Manchester City. I am the all-time leading goalscorer for Chelsea. Who am I?",
+    "options": ["Steven Gerrard", "Paul Scholes", "Frank Lampard", "Mason Mount"],
+    "answer": "Frank Lampard"
+  },
+  {
+    "id": 39,
+    "question": "I am a Brazilian playmaker. I played for Gremio, PSG, Barcelona, AC Milan, and Atletico Mineiro. I won the 2005 Ballon d'Or. Who am I?",
+    "options": ["Rivaldo", "Ronaldinho", "Kaka", "Neymar"],
+    "answer": "Ronaldinho"
+  },
+  {
+    "id": 40,
+    "question": "I am an English striker. I played for Tottenham Hotspur, Leicester City, Norwich City, and Bayern Munich. I am England's all-time top goalscorer. Who am I?",
+    "options": ["Wayne Rooney", "Alan Shearer", "Gary Lineker", "Harry Kane"],
+    "answer": "Harry Kane"
+  },
+  {
+    "id": 41,
+    "question": "I am a French midfielder. I played for Le Havre, Manchester United, and Juventus. I scored in the 2018 World Cup final. Who am I?",
+    "options": ["N'Golo Kante", "Paul Pogba", "Blaise Matuidi", "Adrien Rabiot"],
+    "answer": "Paul Pogba"
+  },
+  {
+    "id": 42,
+    "question": "I am a Spanish midfielder. I played for Arsenal, Barcelona, Chelsea, Monaco, and Como. I provided the assist for the winning goal in the 2010 World Cup final. Who am I?",
+    "options": ["Xabi Alonso", "David Silva", "Cesc Fabregas", "Santi Cazorla"],
+    "answer": "Cesc Fabregas"
+  },
+  {
+    "id": 43,
+    "question": "I am a Spanish striker. I played for Atletico Madrid, Liverpool, Chelsea, and AC Milan. My nickname is 'El Nino'. Who am I?",
+    "options": ["David Villa", "Fernando Torres", "Raul", "Diego Costa"],
+    "answer": "Fernando Torres"
+  },
+  {
+    "id": 44,
+    "question": "I am an English winger. I played for Aston Villa before moving to Manchester City for £100 million. Who am I?",
+    "options": ["Phil Foden", "Raheem Sterling", "Jack Grealish", "Bukayo Saka"],
+    "answer": "Jack Grealish"
+  },
+  {
+    "id": 45,
+    "question": "I am a Belgian goalkeeper. I played for Genk, Chelsea, Atletico Madrid, and Real Madrid. Who am I?",
+    "options": ["Simon Mignolet", "Koen Casteels", "Thibaut Courtois", "Jean-Marie Pfaff"],
+    "answer": "Thibaut Courtois"
+  },
+  {
+    "id": 46,
+    "question": "I am a French midfielder. I played for Cannes, Bordeaux, Juventus, and Real Madrid. I scored two headers in the 1998 World Cup final. Who am I?",
+    "options": ["Michel Platini", "Zinedine Zidane", "Patrick Vieira", "Emmanuel Petit"],
+    "answer": "Zinedine Zidane"
+  },
+  {
+    "id": 47,
+    "question": "I am a Spanish midfielder. I spent almost my entire career at Barcelona before finishing at Al Sadd in Qatar. I was a key part of the 'tiki-taka' style. Who am I?",
+    "options": ["Andres Iniesta", "Sergio Busquets", "Xavi Hernandez", "Pep Guardiola"],
+    "answer": "Xavi Hernandez"
+  },
+  {
+    "id": 48,
+    "question": "I am an Italian midfielder known for my passing range. I played for Brescia, Inter, AC Milan, Juventus, and NYCFC. Who am I?",
+    "options": ["Gennaro Gattuso", "Marco Verratti", "Andrea Pirlo", "Claudio Marchisio"],
+    "answer": "Andrea Pirlo"
+  },
+  {
+    "id": 49,
+    "question": "I am an Italian goalkeeper. I played for Parma, Juventus, and PSG. I won the 2006 World Cup. Who am I?",
+    "options": ["Gianluigi Donnarumma", "Gianluigi Buffon", "Dino Zoff", "Salvatore Sirigu"],
+    "answer": "Gianluigi Buffon"
+  },
+  {
+    "id": 50,
+    "question": "I am an Italian defender. I spent my entire 25-year playing career at AC Milan. I won 5 European Cup/Champions League titles. Who am I?",
+    "options": ["Franco Baresi", "Alessandro Nesta", "Paolo Maldini", "Fabio Cannavaro"],
+    "answer": "Paolo Maldini"
+  },
+  {
+    "id": 51,
+    "question": "I am a Welsh winger. I spent my entire professional career at Manchester United, making a record 963 appearances for the club. Who am I?",
+    "options": ["George Best", "Ryan Giggs", "Mark Hughes", "Ian Rush"],
+    "answer": "Ryan Giggs"
+  },
+  {
+    "id": 52,
+    "question": "I am an English midfielder. I spent my entire career at Manchester United, known for my long-range passing and shooting. Who am I?",
+    "options": ["Roy Keane", "Michael Carrick", "David Beckham", "Paul Scholes"],
+    "answer": "Paul Scholes"
+  },
+  {
+    "id": 53,
+    "question": "I am an English midfielder. I spent the vast majority of my career at Liverpool before a brief spell at LA Galaxy. I won the Champions League in 2005. Who am I?",
+    "options": ["Frank Lampard", "Paul Scholes", "Steven Gerrard", "Jordan Henderson"],
+    "answer": "Steven Gerrard"
+  },
+  {
+    "id": 54,
+    "question": "I am an English striker. I played for Everton, Manchester United, DC United, and Derby County. I was Man Utd's all-time top scorer. Who am I?",
+    "options": ["Andy Cole", "Wayne Rooney", "Marcus Rashford", "Teddy Sheringham"],
+    "answer": "Wayne Rooney"
+  },
+  {
+    "id": 55,
+    "question": "I am an English center-back. I played for West Ham, Leeds United, Manchester United, and QPR. Who am I?",
+    "options": ["John Terry", "Sol Campbell", "Rio Ferdinand", "Gary Neville"],
+    "answer": "Rio Ferdinand"
+  },
+  {
+    "id": 56,
+    "question": "I am a Serbian center-back. I played for Red Star Belgrade, Spartak Moscow, Manchester United, and Inter Milan. Who am I?",
+    "options": ["Branislav Ivanovic", "Nemanja Vidic", "Aleksandar Kolarov", "Dejan Stankovic"],
+    "answer": "Nemanja Vidic"
+  },
+  {
+    "id": 57,
+    "question": "I am a French left-back. I played for Monaco, Manchester United, Juventus, Marseille, and West Ham. Who am I?",
+    "options": ["Gael Clichy", "Eric Abidal", "Bixente Lizarazu", "Patrice Evra"],
+    "answer": "Patrice Evra"
+  },
+  {
+    "id": 58,
+    "question": "I am a Belgian center-back. I played for Anderlecht, Hamburg, and Manchester City, where I famously scored a long-range goal against Leicester. Who am I?",
+    "options": ["Jan Vertonghen", "Toby Alderweireld", "Thomas Vermaelen", "Vincent Kompany"],
+    "answer": "Vincent Kompany"
+  },
+  {
+    "id": 59,
+    "question": "I am an Ivorian midfielder. I played for Olympiacos, Monaco, Barcelona, and Manchester City. Who am I?",
+    "options": ["Cheick Tiote", "Yaya Toure", "Didier Zokora", "Franck Kessie"],
+    "answer": "Yaya Toure"
+  },
+  {
+    "id": 60,
+    "question": "I am a Spanish playmaker. I played for Valencia, Manchester City, and Real Sociedad. I won two Euros and a World Cup. Who am I?",
+    "options": ["Juan Mata", "Santi Cazorla", "David Silva", "Isco"],
+    "answer": "David Silva"
+  },
+  {
+    "id": 61,
+    "question": "I am a Dutch striker. I played for Feyenoord, Arsenal, Manchester United, and Fenerbahce. Who am I?",
+    "options": ["Dennis Bergkamp", "Robin van Persie", "Ruud van Nistelrooy", "Klaas-Jan Huntelaar"],
+    "answer": "Robin van Persie"
+  },
+  {
+    "id": 62,
+    "question": "I am a Dutch forward. I played for Ajax, Inter Milan, and Arsenal. I scored a famous goal against Newcastle with a flick and spin. Who am I?",
+    "options": ["Marc Overmars", "Patrick Kluivert", "Dennis Bergkamp", "Marco van Basten"],
+    "answer": "Dennis Bergkamp"
+  },
+  {
+    "id": 63,
+    "question": "I am a French midfielder. I played for Cannes, AC Milan, Arsenal, Juventus, Inter Milan, and Manchester City. Who am I?",
+    "options": ["Emmanuel Petit", "Claude Makelele", "Patrick Vieira", "Mathieu Flamini"],
+    "answer": "Patrick Vieira"
+  },
+  {
+    "id": 64,
+    "question": "I am an Irish midfielder. I played for Cobh Ramblers, Nottingham Forest, Manchester United, and Celtic. I was famously sent home from the 2002 World Cup. Who am I?",
+    "options": ["Robbie Keane", "Damien Duff", "Roy Keane", "Denis Irwin"],
+    "answer": "Roy Keane"
+  },
+  {
+    "id": 65,
+    "question": "I am a French forward. I played for Auxerre, Marseille, Leeds United, and Manchester United, famously kicking a fan at Selhurst Park. Who am I?",
+    "options": ["David Ginola", "Eric Cantona", "Nicolas Anelka", "Djibril Cisse"],
+    "answer": "Eric Cantona"
+  },
+  {
+    "id": 66,
+    "question": "I am an English striker. I played for Southampton, Blackburn Rovers, and Newcastle United. I am the all-time top scorer in the Premier League. Who am I?",
+    "options": ["Andy Cole", "Thierry Henry", "Wayne Rooney", "Alan Shearer"],
+    "answer": "Alan Shearer"
+  },
+  {
+    "id": 67,
+    "question": "I am an English striker. I played for Leicester, Everton, Barcelona, Tottenham, and Nagoya Grampus. I never received a yellow or red card in my career. Who am I?",
+    "options": ["Gary Lineker", "Kevin Keegan", "Ian Wright", "Michael Owen"],
+    "answer": "Gary Lineker"
+  },
+  {
+    "id": 68,
+    "question": "I am an English striker. I played for Liverpool, Real Madrid, Newcastle, Manchester United, and Stoke. I won the Ballon d'Or in 2001. Who am I?",
+    "options": ["Robbie Fowler", "Michael Owen", "Wayne Rooney", "Teddy Sheringham"],
+    "answer": "Michael Owen"
+  },
+  {
+    "id": 69,
+    "question": "I am an Italian forward. I played for Fiorentina, Juventus, AC Milan, Bologna, Inter, and Brescia. I famously missed the deciding penalty in the 1994 World Cup final. Who am I?",
+    "options": ["Alessandro Del Piero", "Gianfranco Zola", "Roberto Baggio", "Christian Vieri"],
+    "answer": "Roberto Baggio"
+  },
+  {
+    "id": 70,
+    "question": "I am an Italian forward. I played for Padova, Juventus, Sydney FC, and Delhi Dynamos. I am Juventus' all-time top scorer. Who am I?",
+    "options": ["Filippo Inzaghi", "Alessandro Del Piero", "Roberto Baggio", "Luca Toni"],
+    "answer": "Alessandro Del Piero"
+  },
+  {
+    "id": 71,
+    "question": "I am an Italian defender. I played for Napoli, Parma, Inter, Juventus, Real Madrid, and Al-Ahli. I am the last defender to win the Ballon d'Or (2006). Who am I?",
+    "options": ["Paolo Maldini", "Alessandro Nesta", "Giorgio Chiellini", "Fabio Cannavaro"],
+    "answer": "Fabio Cannavaro"
+  },
+  {
+    "id": 72,
+    "question": "I am a Brazilian right-back. I played for Sao Paulo, Real Zaragoza, Palmeiras, Roma, and AC Milan. I am the only player to appear in three consecutive World Cup finals. Who am I?",
+    "options": ["Cafu", "Dani Alves", "Maicon", "Roberto Carlos"],
+    "answer": "Cafu"
+  },
+  {
+    "id": 73,
+    "question": "I am a Brazilian left-back. I played for Palmeiras, Inter, Real Madrid, Fenerbahce, and Anzhi. I scored a famous free-kick against France with an impossible curve. Who am I?",
+    "options": ["Marcelo", "Maxwell", "Roberto Carlos", "Alex Sandro"],
+    "answer": "Roberto Carlos"
+  },
+  {
+    "id": 74,
+    "question": "I am a Brazilian right-back. I played for Bahia, Sevilla, Barcelona, Juventus, PSG, and Sao Paulo. I have won over 40 official trophies. Who am I?",
+    "options": ["Cafu", "Dani Alves", "Maicon", "Danilo"],
+    "answer": "Dani Alves"
+  },
+  {
+    "id": 75,
+    "question": "I am a Brazilian left-back. I played for Fluminense, Real Madrid, and Olympiacos. I won 5 Champions League titles with Real Madrid. Who am I?",
+    "options": ["Roberto Carlos", "Filipe Luis", "Marcelo", "Alex Telles"],
+    "answer": "Marcelo"
+  },
+  {
+    "id": 76,
+    "question": "I am a Brazilian center-back. I played for Fluminense, AC Milan, PSG, and Chelsea. My nickname is 'O Monstro'. Who am I?",
+    "options": ["David Luiz", "Marquinhos", "Thiago Silva", "Miranda"],
+    "answer": "Thiago Silva"
+  },
+  {
+    "id": 77,
+    "question": "I am a Brazilian defensive midfielder. I played for Sao Paulo, Real Madrid, Porto, and Manchester United. Who am I?",
+    "options": ["Fernandinho", "Fabinho", "Casemiro", "Gilberto Silva"],
+    "answer": "Casemiro"
+  },
+  {
+    "id": 78,
+    "question": "I am a German midfielder. I played for Bayern Munich, Bayer Leverkusen, and Real Madrid. I retired from football after Euro 2024. Who am I?",
+    "options": ["Toni Kroos", "Bastian Schweinsteiger", "Sami Khedira", "Michael Ballack"],
+    "answer": "Toni Kroos"
+  },
+  {
+    "id": 79,
+    "question": "I am a German forward. I have spent my entire professional career at Bayern Munich and invented the 'Ramdeuter' role. Who am I?",
+    "options": ["Mario Gomez", "Miroslav Klose", "Thomas Muller", "Leroy Sane"],
+    "answer": "Thomas Muller"
+  },
+  {
+    "id": 80,
+    "question": "I am a German midfielder. I played for Bayern Munich, Manchester United, and Chicago Fire. Who am I?",
+    "options": ["Philipp Lahm", "Michael Ballack", "Bastian Schweinsteiger", "Lukas Podolski"],
+    "answer": "Bastian Schweinsteiger"
+  },
+  {
+    "id": 81,
+    "question": "I am a German full-back. I spent my career at Bayern Munich (with a loan to Stuttgart). I captained Germany to the 2014 World Cup win. Who am I?",
+    "options": ["Joshua Kimmich", "Philipp Lahm", "Andreas Brehme", "Jerome Boateng"],
+    "answer": "Philipp Lahm"
+  },
+  {
+    "id": 82,
+    "question": "I am a Dutch winger. I played for Groningen, PSV, Chelsea, Real Madrid, and Bayern Munich. I am known for cutting inside on my left foot. Who am I?",
+    "options": ["Dirk Kuyt", "Wesley Sneijder", "Arjen Robben", "Rafael van der Vaart"],
+    "answer": "Arjen Robben"
+  },
+  {
+    "id": 83,
+    "question": "I am a French winger. I played for Metz, Galatasaray, Marseille, Bayern Munich, and Fiorentina. Who am I?",
+    "options": ["Kingsley Coman", "Ousmane Dembele", "Franck Ribery", "Florent Malouda"],
+    "answer": "Franck Ribery"
+  },
+  {
+    "id": 84,
+    "question": "I am a Cameroonian striker. I played for Real Madrid, Mallorca, Barcelona, Inter Milan, Chelsea, and Everton. Who am I?",
+    "options": ["George Weah", "Didier Drogba", "Samuel Eto'o", "Roger Milla"],
+    "answer": "Samuel Eto'o"
+  },
+  {
+    "id": 85,
+    "question": "I am an Ivorian striker. I played for Le Mans, Guingamp, Marseille, Chelsea, and Galatasaray. I scored the winning penalty in the 2012 Champions League final. Who am I?",
+    "options": ["Salomon Kalou", "Wilfried Bony", "Gervinho", "Didier Drogba"],
+    "answer": "Didier Drogba"
+  },
+  {
+    "id": 86,
+    "question": "I am a Czech goalkeeper. I played for Sparta Prague, Rennes, Chelsea, and Arsenal. I famously wore a protective headguard. Who am I?",
+    "options": ["Tomas Rosicky", "Pavel Nedved", "Petr Cech", "Wojciech Szczesny"],
+    "answer": "Petr Cech"
+  },
+  {
+    "id": 87,
+    "question": "I am a Danish goalkeeper. I played for Brondby, Manchester United, Sporting CP, Aston Villa, and Manchester City. Who am I?",
+    "options": ["Kasper Schmeichel", "Thomas Sorensen", "Peter Schmeichel", "Anders Lindegaard"],
+    "answer": "Peter Schmeichel"
+  },
+  {
+    "id": 88,
+    "question": "I am a Dutch goalkeeper. I played for Ajax, Juventus, Fulham, and Manchester United. Who am I?",
+    "options": ["Jasper Cillessen", "Edwin van der Sar", "Maarten Stekelenburg", "Tim Krul"],
+    "answer": "Edwin van der Sar"
+  },
+  {
+    "id": 89,
+    "question": "I am a Spanish goalkeeper. I played for Real Madrid and Porto. I captained Spain to their 2010 World Cup win. Who am I?",
+    "options": ["Victor Valdes", "Pepe Reina", "David de Gea", "Iker Casillas"],
+    "answer": "Iker Casillas"
+  },
+  {
+    "id": 90,
+    "question": "I am a Spanish center-back. I spent my entire playing career at Barcelona and was known for my shaggy hair and passionate defending. Who am I?",
+    "options": ["Gerard Pique", "Javier Mascherano", "Carles Puyol", "Eric Garcia"],
+    "answer": "Carles Puyol"
+  },
+  {
+    "id": 91,
+    "question": "I am a Spanish center-back. I played for Manchester United, Real Zaragoza, and Barcelona. Who am I?",
+    "options": ["Marc Bartra", "Gerard Pique", "Pau Torres", "Aymeric Laporte"],
+    "answer": "Gerard Pique"
+  },
+  {
+    "id": 92,
+    "question": "I am a Spanish defensive midfielder. I played for Barcelona before joining Inter Miami. I won the 2010 World Cup. Who am I?",
+    "options": ["Rodri", "Xabi Alonso", "Javi Martinez", "Sergio Busquets"],
+    "answer": "Sergio Busquets"
+  },
+  {
+    "id": 93,
+    "question": "I am a Spanish left-back. I played for Valencia and Barcelona before joining Inter Miami. Who am I?",
+    "options": ["Juan Bernat", "Marcos Alonso", "Jordi Alba", "Alejandro Grimaldo"],
+    "answer": "Jordi Alba"
+  },
+  {
+    "id": 94,
+    "question": "I am a Dutch center-back. I played for Groningen, Celtic, Southampton, and Liverpool. Who am I?",
+    "options": ["Matthijs de Ligt", "Stefan de Vrij", "Virgil van Dijk", "Nathan Ake"],
+    "answer": "Virgil van Dijk"
+  },
+  {
+    "id": 95,
+    "question": "I am a South Korean winger. I played for Hamburg and Bayer Leverkusen before joining Tottenham Hotspur. Who am I?",
+    "options": ["Park Ji-sung", "Son Heung-min", "Hwang Hee-chan", "Lee Kang-in"],
+    "answer": "Son Heung-min"
+  },
+  {
+    "id": 96,
+    "question": "I am a Senegalese center-back. I played for Metz, Genk, Napoli, and Chelsea before joining Al-Hilal. Who am I?",
+    "options": ["Kalidou Koulibaly", "Abdou Diallo", "Salif Sane", "Cheikhou Kouyate"],
+    "answer": "Kalidou Koulibaly"
+  },
+  {
+    "id": 97,
+    "question": "I am an Algerian winger. I played for Le Havre, Leicester City, Manchester City, and Al-Ahli. Who am I?",
+    "options": ["Said Benrahma", "Islam Slimani", "Ismael Bennacer", "Riyad Mahrez"],
+    "answer": "Riyad Mahrez"
+  },
+  {
+    "id": 98,
+    "question": "I am a Gabonese striker. I played for AC Milan, Saint-Etienne, Borussia Dortmund, Arsenal, Barcelona, Chelsea, and Marseille. Who am I?",
+    "options": ["Denis Bouanga", "Pierre-Emerick Aubameyang", "Mario Lemina", "Didier Ndong"],
+    "answer": "Pierre-Emerick Aubameyang"
+  },
+  {
+    "id": 99,
+    "question": "I am a Chilean forward. I played for Udinese, Barcelona, Arsenal, Manchester United, Inter Milan, and Marseille. Who am I?",
+    "options": ["Arturo Vidal", "Eduardo Vargas", "Claudio Bravo", "Alexis Sanchez"],
+    "answer": "Alexis Sanchez"
+  },
+  {
+    "id": 100,
+    "question": "I am a Polish goalkeeper. I played for Arsenal, Brentford, Roma, and Juventus before joining Barcelona. Who am I?",
+    "options": ["Lukasz Fabianski", "Wojciech Szczesny", "Jerzy Dudek", "Artur Boruc"],
+    "answer": "Wojciech Szczesny"
+  },
+  {
+    "id": 101,
+    "question": "I am a Serbian defender. I played for Lokomotiv Moscow, Chelsea, and Zenit, famously scoring the winning goal in the 2013 Europa League final. Who am I?",
+    "options": ["Nemanja Vidic", "Aleksandar Kolarov", "Branislav Ivanovic", "Neven Subotic"],
+    "answer": "Branislav Ivanovic"
+  },
+  {
+    "id": 102,
+    "question": "I am a Serbian defensive midfielder. I played for Benfica, Chelsea, Manchester United, and Roma. Who am I?",
+    "options": ["Nemanja Matic", "Dejan Stankovic", "Luka Milivojevic", "Sergej Milinkovic-Savic"],
+    "answer": "Nemanja Matic"
+  },
+  {
+    "id": 103,
+    "question": "I am a Spanish playmaker. I played for Valencia, Chelsea, and Manchester United. I scored in the Euro 2012 final. Who am I?",
+    "options": ["David Silva", "Juan Mata", "Cesc Fabregas", "Santi Cazorla"],
+    "answer": "Juan Mata"
+  },
+  {
+    "id": 104,
+    "question": "I am a Spanish striker. I played for Valencia, Barcelona, and Atletico Madrid. I am Spain's all-time top goalscorer. Who am I?",
+    "options": ["Fernando Torres", "Raul", "David Villa", "Alvaro Morata"],
+    "answer": "David Villa"
+  },
+  {
+    "id": 105,
+    "question": "I am a Spanish winger. I am the only player to have won the Champions League, World Cup, European Championship, Europa League, and Premier League. I played for Barcelona, Chelsea, and Lazio. Who am I?",
+    "options": ["Jesus Navas", "Pedro", "Marco Asensio", "Ferran Torres"],
+    "answer": "Pedro"
+  },
+  {
+    "id": 106,
+    "question": "I am a Spanish midfielder known for being incredibly two-footed. I played for Villarreal, Malaga, and Arsenal before returning to Spain. Who am I?",
+    "options": ["Santi Cazorla", "Mikel Arteta", "Thiago Alcantara", "Dani Parejo"],
+    "answer": "Santi Cazorla"
+  },
+  {
+    "id": 107,
+    "question": "I am a French striker. I played for Montpellier, Arsenal, Chelsea, and AC Milan. I am France's all-time top goalscorer. Who am I?",
+    "options": ["Thierry Henry", "Karim Benzema", "Antoine Griezmann", "Olivier Giroud"],
+    "answer": "Olivier Giroud"
+  },
+  {
+    "id": 108,
+    "question": "I am a French goalkeeper. I played for Nice, Lyon, and spent over a decade at Tottenham. I captained France to their 2018 World Cup win. Who am I?",
+    "options": ["Fabien Barthez", "Hugo Lloris", "Steve Mandanda", "Mike Maignan"],
+    "answer": "Hugo Lloris"
+  },
+  {
+    "id": 109,
+    "question": "I am a Danish playmaker. I played for Ajax, Tottenham, Inter Milan, Brentford, and Manchester United. Who am I?",
+    "options": ["Michael Laudrup", "Christian Eriksen", "Pierre-Emile Hojbjerg", "Thomas Delaney"],
+    "answer": "Christian Eriksen"
+  },
+  {
+    "id": 110,
+    "question": "I am a Belgian midfielder known for my dribbling. I played for AZ Alkmaar, Fulham, and Tottenham Hotspur. Who am I?",
+    "options": ["Mousa Dembele", "Radja Nainggolan", "Axel Witsel", "Marouane Fellaini"],
+    "answer": "Mousa Dembele"
+  },
+  {
+    "id": 111,
+    "question": "I am a Belgian striker. I have played for Chelsea, Everton, Manchester United, Inter Milan, and Napoli. I am Belgium's all-time top scorer. Who am I?",
+    "options": ["Christian Benteke", "Divock Origi", "Michy Batshuayi", "Romelu Lukaku"],
+    "answer": "Romelu Lukaku"
+  },
+  {
+    "id": 112,
+    "question": "I am a Belgian forward. I played for PSV before moving to Napoli, where I became their all-time top goalscorer. Who am I?",
+    "options": ["Dries Mertens", "Eden Hazard", "Yannick Carrasco", "Leandro Trossard"],
+    "answer": "Dries Mertens"
+  },
+  {
+    "id": 113,
+    "question": "I am an Italian winger known for my curling shots. I spent most of my career at Napoli before joining Toronto FC. Who am I?",
+    "options": ["Federico Chiesa", "Lorenzo Insigne", "Domenico Berardi", "Stephan El Shaarawy"],
+    "answer": "Lorenzo Insigne"
+  },
+  {
+    "id": 114,
+    "question": "I am an Italian striker. I played for Juventus, Torino, Dortmund, and Sevilla before becoming a legend at Lazio, winning the European Golden Shoe. Who am I?",
+    "options": ["Ciro Immobile", "Andrea Belotti", "Mario Balotelli", "Luca Toni"],
+    "answer": "Ciro Immobile"
+  },
+  {
+    "id": 115,
+    "question": "I am an Italian center-back. I spent 17 years at Juventus and won Euro 2020 before finishing my career at LAFC. Who am I?",
+    "options": ["Leonardo Bonucci", "Giorgio Chiellini", "Andrea Barzagli", "Alessandro Bastoni"],
+    "answer": "Giorgio Chiellini"
+  },
+  {
+    "id": 116,
+    "question": "I am an Italian center-back known for my long passing. I played for Inter, Juventus, AC Milan, and Union Berlin. Who am I?",
+    "options": ["Leonardo Bonucci", "Alessio Romagnoli", "Francesco Acerbi", "Giorgio Chiellini"],
+    "answer": "Leonardo Bonucci"
+  },
+  {
+    "id": 117,
+    "question": "I am an Italian goalkeeper. I made my debut for AC Milan at age 16 before moving to PSG. I won Player of the Tournament at Euro 2020. Who am I?",
+    "options": ["Gianluigi Buffon", "Salvatore Sirigu", "Gianluigi Donnarumma", "Guglielmo Vicario"],
+    "answer": "Gianluigi Donnarumma"
+  },
+  {
+    "id": 118,
+    "question": "I am an Italian midfielder. I spent 11 years at PSG after leaving Pescara, winning multiple Ligue 1 titles. Who am I?",
+    "options": ["Thiago Motta", "Marco Verratti", "Claudio Marchisio", "Nicolo Barella"],
+    "answer": "Marco Verratti"
+  },
+  {
+    "id": 119,
+    "question": "I am a midfielder who played for Brazil at youth level but Italy at senior level. I played for Barcelona, Atletico Madrid, Inter Milan, and PSG. Who am I?",
+    "options": ["Jorginho", "Thiago Motta", "Emerson Palmieri", "Rafael Toloi"],
+    "answer": "Thiago Motta"
+  },
+  {
+    "id": 120,
+    "question": "I am an Argentine player who played both in midfield and defense. I featured for West Ham, Liverpool, and Barcelona. Who am I?",
+    "options": ["Esteban Cambiasso", "Javier Mascherano", "Fernando Gago", "Gabriel Heinze"],
+    "answer": "Javier Mascherano"
+  },
+  {
+    "id": 121,
+    "question": "I am an Argentine striker. I played for Real Madrid, Napoli, Juventus, AC Milan, Chelsea, and Inter Miami. Who am I?",
+    "options": ["Gonzalo Higuain", "Sergio Aguero", "Hernan Crespo", "Diego Milito"],
+    "answer": "Gonzalo Higuain"
+  },
+  {
+    "id": 122,
+    "question": "I am an Argentine forward nicknamed 'La Joya'. I played for Palermo and Juventus before joining Roma. Who am I?",
+    "options": ["Lautaro Martinez", "Paulo Dybala", "Angel Correa", "Julian Alvarez"],
+    "answer": "Paulo Dybala"
+  },
+  {
+    "id": 123,
+    "question": "I am an Argentine striker. I played for Sampdoria, Inter Milan, and PSG before moving to Galatasaray. Who am I?",
+    "options": ["Mauro Icardi", "Giovanni Simeone", "Joaquin Correa", "Lucas Alario"],
+    "answer": "Mauro Icardi"
+  },
+  {
+    "id": 124,
+    "question": "I am an Argentine striker. I play for Inter Milan and scored the winning goal in the 2024 Copa America final. Who am I?",
+    "options": ["Julian Alvarez", "Lautaro Martinez", "Angel Di Maria", "Paulo Dybala"],
+    "answer": "Lautaro Martinez"
+  },
+  {
+    "id": 125,
+    "question": "I am a Brazilian goalkeeper. I played for Rio Ave and Benfica before moving to Manchester City, where I am known for my incredible distribution. Who am I?",
+    "options": ["Alisson", "Ederson", "Julio Cesar", "Neto"],
+    "answer": "Ederson"
+  },
+  {
+    "id": 126,
+    "question": "I am a Brazilian defensive midfielder. I played for Shakhtar Donetsk before moving to Manchester City, where I became club captain. Who am I?",
+    "options": ["Fernandinho", "Casemiro", "Fabinho", "Fernando"],
+    "answer": "Fernandinho"
+  },
+  {
+    "id": 127,
+    "question": "I am a Portuguese midfielder. I played for Benfica and Monaco before joining Manchester City, known for my incredible work rate and technique. Who am I?",
+    "options": ["Bruno Fernandes", "Bernardo Silva", "Joao Moutinho", "Ruben Neves"],
+    "answer": "Bernardo Silva"
+  },
+  {
+    "id": 128,
+    "question": "I am a Portuguese center-back. I moved from Benfica to Manchester City and won the FWA Footballer of the Year in my debut season. Who am I?",
+    "options": ["Pepe", "Ruben Dias", "Jose Fonte", "Ricardo Carvalho"],
+    "answer": "Ruben Dias"
+  },
+  {
+    "id": 129,
+    "question": "I am a Portuguese full-back capable of playing on either side. I played for Valencia, Inter, Juventus, Man City, Bayern, and Barcelona. Who am I?",
+    "options": ["Nelson Semedo", "Joao Cancelo", "Diogo Dalot", "Nuno Mendes"],
+    "answer": "Joao Cancelo"
+  },
+  {
+    "id": 130,
+    "question": "I am a Portuguese attacking midfielder. I played for Udinese, Sampdoria, and Sporting CP before moving to Manchester United. Who am I?",
+    "options": ["Joao Felix", "Bernardo Silva", "Bruno Fernandes", "Renato Sanches"],
+    "answer": "Bruno Fernandes"
+  },
+  {
+    "id": 131,
+    "question": "I am a Portuguese forward. I played for Atletico Madrid and Wolves before joining Liverpool. Who am I?",
+    "options": ["Diogo Jota", "Rafael Leao", "Pedro Neto", "Goncalo Ramos"],
+    "answer": "Diogo Jota"
+  },
+  {
+    "id": 132,
+    "question": "I am a Scottish left-back. I played for Queen's Park, Dundee United, and Hull City before winning the Champions League with Liverpool. Who am I?",
+    "options": ["Kieran Tierney", "Andrew Robertson", "Aaron Hickey", "Scott McTominay"],
+    "answer": "Andrew Robertson"
+  },
+  {
+    "id": 133,
+    "question": "I am an English right-back known for my exceptional crossing and set-pieces. I have spent my entire professional career at Liverpool. Who am I?",
+    "options": ["Reece James", "Kyle Walker", "Trent Alexander-Arnold", "Kieran Trippier"],
+    "answer": "Trent Alexander-Arnold"
+  },
+  {
+    "id": 134,
+    "question": "I am a Brazilian forward. I played for Hoffenheim before joining Liverpool, where I formed a famous attacking trio and popularized the 'no-look' finish. Who am I?",
+    "options": ["Philippe Coutinho", "Richarlison", "Roberto Firmino", "Gabriel Jesus"],
+    "answer": "Roberto Firmino"
+  },
+  {
+    "id": 135,
+    "question": "I am a Brazilian defensive midfielder. I played for Real Madrid and Monaco before becoming a key figure for Liverpool, eventually moving to Al-Ittihad. Who am I?",
+    "options": ["Casemiro", "Fabinho", "Fernandinho", "Lucas Leiva"],
+    "answer": "Fabinho"
+  },
+  {
+    "id": 136,
+    "question": "I am a Spanish playmaker. I won the Golden Boy award in 2012. I played for Malaga, Real Madrid, Sevilla, and Real Betis. Who am I?",
+    "options": ["David Silva", "Isco", "Marco Asensio", "Brahim Diaz"],
+    "answer": "Isco"
+  },
+  {
+    "id": 137,
+    "question": "I am a Spanish winger. I scored in the 2017 Champions League final for Real Madrid before moving to PSG in 2023. Who am I?",
+    "options": ["Lucas Vazquez", "Marco Asensio", "Pablo Sarabia", "Dani Olmo"],
+    "answer": "Marco Asensio"
+  },
+  {
+    "id": 138,
+    "question": "I am a French center-back. I won four Champions Leagues with Real Madrid and the 2018 World Cup before moving to Manchester United and then Como. Who am I?",
+    "options": ["Aymeric Laporte", "Dayot Upamecano", "Raphael Varane", "William Saliba"],
+    "answer": "Raphael Varane"
+  },
+  {
+    "id": 139,
+    "question": "I am a Portuguese center-back known for my aggressive style. I played for Porto, Real Madrid, and Besiktas, winning Euro 2016. Who am I?",
+    "options": ["Bruno Alves", "Pepe", "Jose Fonte", "Ricardo Carvalho"],
+    "answer": "Pepe"
+  },
+  {
+    "id": 140,
+    "question": "I am a Spanish right-back. I spent a year on loan at Bayer Leverkusen before returning to Real Madrid, where I won six Champions League titles. Who am I?",
+    "options": ["Dani Carvajal", "Jesus Navas", "Cesar Azpilicueta", "Alvaro Odriozola"],
+    "answer": "Dani Carvajal"
+  },
+  {
+    "id": 141,
+    "question": "I am a Costa Rican goalkeeper. I played for Levante, Real Madrid, PSG, and Nottingham Forest. I won three consecutive Champions Leagues. Who am I?",
+    "options": ["Guillermo Ochoa", "Keylor Navas", "Claudio Bravo", "Willy Caballero"],
+    "answer": "Keylor Navas"
+  },
+  {
+    "id": 142,
+    "question": "I am a Croatian midfielder. I played for Schalke, Sevilla, and Barcelona. I scored the opening goal in the 2015 Champions League final. Who am I?",
+    "options": ["Mateo Kovacic", "Luka Modric", "Ivan Rakitic", "Marcelo Brozovic"],
+    "answer": "Ivan Rakitic"
+  },
+  {
+    "id": 143,
+    "question": "I am a Chilean midfielder known for my box-to-box energy. I played for Juventus, Bayern Munich, Barcelona, and Inter Milan. Who am I?",
+    "options": ["Gary Medel", "Charles Aranguiz", "Alexis Sanchez", "Arturo Vidal"],
+    "answer": "Arturo Vidal"
+  },
+  {
+    "id": 144,
+    "question": "I am a Chilean goalkeeper. I played for Real Sociedad, Barcelona, Manchester City, and Real Betis. Who am I?",
+    "options": ["Claudio Bravo", "Keylor Navas", "Emiliano Martinez", "Fernando Muslera"],
+    "answer": "Claudio Bravo"
+  },
+  {
+    "id": 145,
+    "question": "I am a German goalkeeper. I moved from Borussia Monchengladbach to Barcelona in 2014, where I became their long-term number one. Who am I?",
+    "options": ["Manuel Neuer", "Marc-Andre ter Stegen", "Bernd Leno", "Kevin Trapp"],
+    "answer": "Marc-Andre ter Stegen"
+  },
+  {
+    "id": 146,
+    "question": "I am a French winger known for being ambidextrous. I played for Rennes, Borussia Dortmund, Barcelona, and PSG. Who am I?",
+    "options": ["Kingsley Coman", "Ousmane Dembele", "Marcus Thuram", "Moussa Diaby"],
+    "answer": "Ousmane Dembele"
+  },
+  {
+    "id": 147,
+    "question": "I am a French forward. I played for Real Sociedad before moving to Atletico Madrid, then Barcelona, and then back to Atletico Madrid. Who am I?",
+    "options": ["Kylian Mbappe", "Antoine Griezmann", "Wissam Ben Yedder", "Anthony Martial"],
+    "answer": "Antoine Griezmann"
+  },
+  {
+    "id": 148,
+    "question": "I am an English striker. I rose from non-league football to win the Premier League with Leicester City and broke the record for scoring in 11 consecutive matches. Who am I?",
+    "options": ["Callum Wilson", "Danny Ings", "Jamie Vardy", "Dominic Calvert-Lewin"],
+    "answer": "Jamie Vardy"
+  },
+  {
+    "id": 149,
+    "question": "I am a Danish goalkeeper. I won the Premier League with Leicester City, matching the achievement of my famous father. Who am I?",
+    "options": ["Thomas Sorensen", "Anders Lindegaard", "Kasper Schmeichel", "Mads Hermansen"],
+    "answer": "Kasper Schmeichel"
+  },
+  {
+    "id": 150,
+    "question": "I am an English center-back. I played for Sheffield United, Hull City, and Leicester City before making a record-breaking move to Manchester United. Who am I?",
+    "options": ["Michael Keane", "James Tarkowski", "Tyrone Mings", "Harry Maguire"],
+    "answer": "Harry Maguire"
+  },
+  {
+    "id": 151,
+    "question": "I am an English center-back known for bringing the ball out of defense. I played for Barnsley and Everton before moving to Manchester City. Who am I?",
+    "options": ["John Stones", "Eric Dier", "Conor Coady", "Ben White"],
+    "answer": "John Stones"
+  },
+  {
+    "id": 152,
+    "question": "I am an English right-back known for my extreme pace. I played for Sheffield United, Tottenham Hotspur, and Manchester City. Who am I?",
+    "options": ["Kieran Trippier", "Reece James", "Kyle Walker", "Trent Alexander-Arnold"],
+    "answer": "Kyle Walker"
+  },
+  {
+    "id": 153,
+    "question": "I am an English winger. I played for Liverpool, Manchester City, Chelsea, and Arsenal. I scored multiple goals at Euro 2020. Who am I?",
+    "options": ["Jadon Sancho", "Marcus Rashford", "Raheem Sterling", "Jack Grealish"],
+    "answer": "Raheem Sterling"
+  },
+  {
+    "id": 154,
+    "question": "I am an English attacking midfielder. I came through the academy at Manchester City and won the PFA Player of the Year in 2024. Who am I?",
+    "options": ["Cole Palmer", "Phil Foden", "Mason Mount", "Harvey Elliott"],
+    "answer": "Phil Foden"
+  },
+  {
+    "id": 155,
+    "question": "I am an English forward. I came through the academy at Manchester United, famously scoring twice on my Europa League debut and Premier League debut. Who am I?",
+    "options": ["Mason Greenwood", "Anthony Elanga", "Marcus Rashford", "Jesse Lingard"],
+    "answer": "Marcus Rashford"
+  },
+  {
+    "id": 156,
+    "question": "I am an English winger. I left Manchester City's academy for Borussia Dortmund, then joined Manchester United, and later Chelsea. Who am I?",
+    "options": ["Callum Hudson-Odoi", "Jadon Sancho", "Reiss Nelson", "Noni Madueke"],
+    "answer": "Jadon Sancho"
+  },
+  {
+    "id": 157,
+    "question": "I am an English midfielder. My number 22 shirt was retired by Birmingham City before I joined Dortmund and then Real Madrid. Who am I?",
+    "options": ["Declan Rice", "Jude Bellingham", "Kalvin Phillips", "Conor Gallagher"],
+    "answer": "Jude Bellingham"
+  },
+  {
+    "id": 158,
+    "question": "I am an English defensive midfielder. I played for the Republic of Ireland at youth level before switching to England. I captained West Ham to a European trophy before joining Arsenal. Who am I?",
+    "options": ["Kalvin Phillips", "Declan Rice", "Jordan Henderson", "Mason Mount"],
+    "answer": "Declan Rice"
+  },
+  {
+    "id": 159,
+    "question": "I am an English winger. I am a product of Arsenal's Hale End academy and have become their star player, famously wearing the number 7 shirt. Who am I?",
+    "options": ["Emile Smith Rowe", "Bukayo Saka", "Eddie Nketiah", "Reiss Nelson"],
+    "answer": "Bukayo Saka"
+  },
+  {
+    "id": 160,
+    "question": "I am a Norwegian playmaker. I signed for Real Madrid at 16, had multiple loan spells, and eventually became the captain of Arsenal. Who am I?",
+    "options": ["Sander Berge", "Martin Odegaard", "Erling Haaland", "Alexander Sorloth"],
+    "answer": "Martin Odegaard"
+  },
+  {
+    "id": 161,
+    "question": "I am a Swedish striker. I played for AIK, Dortmund, and Real Sociedad before becoming a record signing for Newcastle United. Who am I?",
+    "options": ["Alexander Isak", "Viktor Gyokeres", "Dejan Kulusevski", "Emil Forsberg"],
+    "answer": "Alexander Isak"
+  },
+  {
+    "id": 162,
+    "question": "I am a Swedish winger. I played for Parma and Juventus before joining Tottenham Hotspur. Who am I?",
+    "options": ["Emil Forsberg", "Dejan Kulusevski", "Jesper Lindstrom", "Anthony Elanga"],
+    "answer": "Dejan Kulusevski"
+  },
+  {
+    "id": 163,
+    "question": "I am an Italian winger. I played for Fiorentina and Juventus before moving to Liverpool. I won Euro 2020. Who am I?",
+    "options": ["Domenico Berardi", "Nicolò Zaniolo", "Federico Chiesa", "Riccardo Orsolini"],
+    "answer": "Federico Chiesa"
+  },
+  {
+    "id": 164,
+    "question": "I am an Italian midfielder. I started my career at Cagliari before joining Inter Milan, becoming a crucial box-to-box player. Who am I?",
+    "options": ["Manuel Locatelli", "Nicolo Barella", "Sandro Tonali", "Davide Frattesi"],
+    "answer": "Nicolo Barella"
+  },
+  {
+    "id": 165,
+    "question": "I am an Italian center-back known for my left-footed passing. I played for Atalanta and Parma before establishing myself at Inter Milan. Who am I?",
+    "options": ["Alessandro Bastoni", "Gianluca Mancini", "Federico Dimarco", "Giorgio Scalvini"],
+    "answer": "Alessandro Bastoni"
+  },
+  {
+    "id": 166,
+    "question": "I am a Slovakian center-back. I played for Sampdoria before moving to Inter Milan, and then joined PSG on a free transfer. Who am I?",
+    "options": ["Martin Skrtel", "Milan Skriniar", "David Hancko", "Denis Vavro"],
+    "answer": "Milan Skriniar"
+  },
+  {
+    "id": 167,
+    "question": "I am a Moroccan right-back. I played for Real Madrid, Dortmund, and Inter Milan before joining PSG. Who am I?",
+    "options": ["Noussair Mazraoui", "Achraf Hakimi", "Nayef Aguerd", "Romain Saiss"],
+    "answer": "Achraf Hakimi"
+  },
+  {
+    "id": 168,
+    "question": "I am a Brazilian center-back. I played for Corinthians and Roma before joining PSG, where I eventually took over the captaincy from Thiago Silva. Who am I?",
+    "options": ["Marquinhos", "Lucas Beraldo", "Eder Militao", "Bremer"],
+    "answer": "Marquinhos"
+  },
+  {
+    "id": 169,
+    "question": "I am a French center-back. I came through the academy at PSG and won the World Cup with France in 2018. Who am I?",
+    "options": ["Ibrahima Konate", "Jules Kounde", "Presnel Kimpembe", "Clement Lenglet"],
+    "answer": "Presnel Kimpembe"
+  },
+  {
+    "id": 170,
+    "question": "I am a French goalkeeper. I left PSG for Lille, where I won Ligue 1, before moving to AC Milan and winning Serie A. Who am I?",
+    "options": ["Alphonse Areola", "Brice Samba", "Mike Maignan", "Illan Meslier"],
+    "answer": "Mike Maignan"
+  },
+  {
+    "id": 171,
+    "question": "I am a French left-back. I played for Atletico Madrid, Real Madrid, and Real Sociedad before becoming a star at AC Milan. Who am I?",
+    "options": ["Lucas Hernandez", "Theo Hernandez", "Ferland Mendy", "Lucas Digne"],
+    "answer": "Theo Hernandez"
+  },
+  {
+    "id": 172,
+    "question": "I am a Portuguese winger. I played for Sporting CP and Lille before moving to AC Milan, where I was named Serie A MVP in 2022. Who am I?",
+    "options": ["Rafael Leao", "Pedro Neto", "Goncalo Guedes", "Joao Felix"],
+    "answer": "Rafael Leao"
+  },
+  {
+    "id": 173,
+    "question": "I am an English center-back. I came through Chelsea's academy, had a loan spell at Derby, and then permanently joined AC Milan. Who am I?",
+    "options": ["Marc Guehi", "Fikayo Tomori", "Trevor Chalobah", "Ezri Konsa"],
+    "answer": "Fikayo Tomori"
+  },
+  {
+    "id": 174,
+    "question": "I am an Italian midfielder. I helped Brescia gain promotion before joining my boyhood club AC Milan, and later moved to Newcastle United. Who am I?",
+    "options": ["Sandro Tonali", "Manuel Locatelli", "Bryan Cristante", "Lorenzo Pellegrini"],
+    "answer": "Sandro Tonali"
+  },
+  {
+    "id": 175,
+    "question": "I am a Nigerian striker. I played for Wolfsburg, Charleroi, and Lille before firing Napoli to their first Serie A title in over 30 years. Who am I?",
+    "options": ["Victor Boniface", "Kelechi Iheanacho", "Taiwo Awoniyi", "Victor Osimhen"],
+    "answer": "Victor Osimhen"
+  },
+  {
+    "id": 176,
+    "question": "I am a Georgian winger. I arrived in Serie A as an unknown from Dinamo Batumi and led Napoli to the Scudetto, earning the nickname 'Kvaradona'. Who am I?",
+    "options": ["Georges Mikautadze", "Giorgi Mamardashvili", "Khvicha Kvaratskhelia", "Zuriko Davitashvili"],
+    "answer": "Khvicha Kvaratskhelia"
+  },
+  {
+    "id": 177,
+    "question": "I am a South Korean center-back. I played for Fenerbahce and Napoli, winning Serie A, before moving to Bayern Munich. Who am I?",
+    "options": ["Kim Min-jae", "Hwang Hee-chan", "Lee Kang-in", "Son Heung-min"],
+    "answer": "Kim Min-jae"
+  },
+  {
+    "id": 178,
+    "question": "I am a German attacking midfielder. I spent time in Southampton and Chelsea's academies before joining Bayern Munich. Who am I?",
+    "options": ["Kai Havertz", "Florian Wirtz", "Jamal Musiala", "Julian Brandt"],
+    "answer": "Jamal Musiala"
+  },
+  {
+    "id": 179,
+    "question": "I am a German attacking midfielder. I broke into the Bayer Leverkusen first team at a very young age and won the Bundesliga undefeated. Who am I?",
+    "options": ["Florian Wirtz", "Mario Gotze", "Julian Draxler", "Jonas Hofmann"],
+    "answer": "Florian Wirtz"
+  },
+  {
+    "id": 180,
+    "question": "I am a Dutch right wing-back. I played for Celtic before moving to Bayer Leverkusen, known for my blistering pace and goal contributions. Who am I?",
+    "options": ["Denzel Dumfries", "Jurrien Timber", "Jeremie Frimpong", "Kenny Tete"],
+    "answer": "Jeremie Frimpong"
+  },
+  {
+    "id": 181,
+    "question": "I am a Swiss midfielder. I captained Arsenal before leaving to join Bayer Leverkusen, where I won the Bundesliga in my first season. Who am I?",
+    "options": ["Denis Zakaria", "Xherdan Shaqiri", "Remo Freuler", "Granit Xhaka"],
+    "answer": "Granit Xhaka"
+  },
+  {
+    "id": 182,
+    "question": "I am a Canadian left-back. I moved from the Vancouver Whitecaps to Bayern Munich, winning the Champions League in 2020. Who am I?",
+    "options": ["Jonathan David", "Tajon Buchanan", "Alphonso Davies", "Alistair Johnston"],
+    "answer": "Alphonso Davies"
+  },
+  {
+    "id": 183,
+    "question": "I am a German midfielder. I played for Bochum and Schalke before moving to Bayern Munich on a free transfer in 2018. Who am I?",
+    "options": ["Leon Goretzka", "Joshua Kimmich", "Ilkay Gundogan", "Emre Can"],
+    "answer": "Leon Goretzka"
+  },
+  {
+    "id": 184,
+    "question": "I am a German player who operates as both a right-back and a central midfielder. I joined Bayern Munich from RB Leipzig. Who am I?",
+    "options": ["Philipp Lahm", "Joshua Kimmich", "Benjamin Henrichs", "Lukas Klostermann"],
+    "answer": "Joshua Kimmich"
+  },
+  {
+    "id": 185,
+    "question": "I am a German winger. I played for Schalke before moving to Manchester City, and later joined Bayern Munich. Who am I?",
+    "options": ["Serge Gnabry", "Leroy Sane", "Julian Draxler", "Karim Adeyemi"],
+    "answer": "Leroy Sane"
+  },
+  {
+    "id": 186,
+    "question": "I am a German winger. I struggled at West Brom on loan from Arsenal, but later flourished at Werder Bremen, Hoffenheim, and Bayern Munich. Who am I?",
+    "options": ["Leroy Sane", "Serge Gnabry", "Marco Reus", "Jonas Hofmann"],
+    "answer": "Serge Gnabry"
+  },
+  {
+    "id": 187,
+    "question": "I am a French winger. I played for PSG and Juventus before joining Bayern Munich. I scored the winning goal in the 2020 Champions League final against my former club. Who am I?",
+    "options": ["Kingsley Coman", "Ousmane Dembele", "Marcus Thuram", "Moussa Diaby"],
+    "answer": "Kingsley Coman"
+  },
+  {
+    "id": 188,
+    "question": "I am a French center-back. I developed at RB Salzburg and RB Leipzig before making a big-money move to Bayern Munich. Who am I?",
+    "options": ["Ibrahima Konate", "Dayot Upamecano", "Lucas Hernandez", "Benjamin Pavard"],
+    "answer": "Dayot Upamecano"
+  },
+  {
+    "id": 189,
+    "question": "I am a Dutch center-back. I captained Ajax to the Champions League semi-finals at 19, then played for Juventus and Bayern Munich before joining Man Utd. Who am I?",
+    "options": ["Virgil van Dijk", "Sven Botman", "Matthijs de Ligt", "Nathan Ake"],
+    "answer": "Matthijs de Ligt"
+  },
+  {
+    "id": 190,
+    "question": "I am a Dutch midfielder. I moved from Ajax to Barcelona in 2019. I am known for my incredible ball-carrying ability. Who am I?",
+    "options": ["Donny van de Beek", "Frenkie de Jong", "Georginio Wijnaldum", "Teun Koopmeiners"],
+    "answer": "Frenkie de Jong"
+  },
+  {
+    "id": 191,
+    "question": "I am a Spanish midfielder. I was signed by Barcelona from Las Palmas and won the Golden Boy award in 2021. Who am I?",
+    "options": ["Gavi", "Pedri", "Fermin Lopez", "Ansu Fati"],
+    "answer": "Pedri"
+  },
+  {
+    "id": 192,
+    "question": "I am a Spanish midfielder. I came through La Masia, wear the number 6 shirt for Barcelona, and won the Golden Boy award in 2022. Who am I?",
+    "options": ["Pedri", "Dani Olmo", "Gavi", "Martin Zubimendi"],
+    "answer": "Gavi"
+  },
+  {
+    "id": 193,
+    "question": "I am a Spanish winger. I broke numerous 'youngest player' records for Barcelona and Spain, shining brightly at Euro 2024. Who am I?",
+    "options": ["Ansu Fati", "Lamine Yamal", "Alejandro Balde", "Pau Cubarsi"],
+    "answer": "Lamine Yamal"
+  },
+  {
+    "id": 194,
+    "question": "I am a Brazilian winger. I was signed by Real Madrid from Flamengo. I scored the winning goal in the 2022 Champions League final. Who am I?",
+    "options": ["Rodrygo", "Vinicius Junior", "Savinho", "Endrick"],
+    "answer": "Vinicius Junior"
+  },
+  {
+    "id": 195,
+    "question": "I am a Brazilian forward. I was signed by Real Madrid from Santos. I scored two dramatic late goals against Manchester City in the 2022 Champions League semi-final. Who am I?",
+    "options": ["Rodrygo", "Richarlison", "Vinicius Junior", "Gabriel Martinelli"],
+    "answer": "Rodrygo"
+  },
+  {
+    "id": 196,
+    "question": "I am a Uruguayan midfielder known for my incredible stamina and powerful shots. I joined Real Madrid from Penarol. Who am I?",
+    "options": ["Rodrigo Bentancur", "Manuel Ugarte", "Federico Valverde", "Matias Vecino"],
+    "answer": "Federico Valverde"
+  },
+  {
+    "id": 197,
+    "question": "I am a French midfielder. I joined Real Madrid from Rennes at age 18 and have won the Champions League while often covering at left-back. Who am I?",
+    "options": ["Aurelien Tchouameni", "Eduardo Camavinga", "Youssouf Fofana", "Khephren Thuram"],
+    "answer": "Eduardo Camavinga"
+  },
+  {
+    "id": 198,
+    "question": "I am a French defensive midfielder. I played for Bordeaux and Monaco before moving to Real Madrid to replace Casemiro. Who am I?",
+    "options": ["Aurelien Tchouameni", "Eduardo Camavinga", "N'Golo Kante", "Adrien Rabiot"],
+    "answer": "Aurelien Tchouameni"
+  },
+  {
+    "id": 199,
+    "question": "I am a Brazilian center-back. I played for Sao Paulo and Porto before joining Real Madrid, where I won multiple Champions League titles. Who am I?",
+    "options": ["Eder Militao", "Gleison Bremer", "Gabriel Magalhaes", "Marquinhos"],
+    "answer": "Eder Militao"
+  },
+  {
+    "id": 200,
+    "question": "I am an attacking midfielder. I played for Manchester City and AC Milan before establishing myself at Real Madrid. I recently chose to represent Morocco. Who am I?",
+    "options": ["Hakim Ziyech", "Brahim Diaz", "Amine Harit", "Sofiane Boufal"],
+    "answer": "Brahim Diaz"
+  },
+  {
+    "id": 201,
+    "question": "I am a Portuguese forward. I made a huge money move from Benfica to Atletico Madrid, followed by spells at Chelsea and Barcelona. Who am I?",
+    "options": ["Goncalo Ramos", "Diogo Jota", "Joao Felix", "Francisco Conceicao"],
+    "answer": "Joao Felix"
+  },
+  {
+    "id": 202,
+    "question": "I am an Argentine midfielder. I won the Young Player Award at the 2022 World Cup and made a record-breaking transfer from Benfica to Chelsea. Who am I?",
+    "options": ["Alexis Mac Allister", "Enzo Fernandez", "Giovani Lo Celso", "Leandro Paredes"],
+    "answer": "Enzo Fernandez"
+  },
+  {
+    "id": 203,
+    "question": "I am an Argentine midfielder. I played for Argentinos Juniors, Boca Juniors, and Brighton before joining Liverpool. Who am I?",
+    "options": ["Alexis Mac Allister", "Enzo Fernandez", "Rodrigo De Paul", "Guido Rodriguez"],
+    "answer": "Alexis Mac Allister"
+  },
+  {
+    "id": 204,
+    "question": "I am an Argentine forward. I won the Copa Libertadores with River Plate, the Champions League with Manchester City, and the World Cup with Argentina. Who am I?",
+    "options": ["Sergio Aguero", "Julian Alvarez", "Paulo Dybala", "Lautaro Martinez"],
+    "answer": "Julian Alvarez"
+  },
+  {
+    "id": 205,
+    "question": "I am an Argentine goalkeeper. I spent years on the bench at Arsenal before moving to Aston Villa. I won the Golden Glove at the 2022 World Cup. Who am I?",
+    "options": ["Gerónimo Rulli", "Franco Armani", "Juan Musso", "Emiliano Martinez"],
+    "answer": "Emiliano Martinez"
+  },
+  {
+    "id": 206,
+    "question": "I am an Argentine center-back known for my aggressive tackling. I played for Genoa, Juventus, and Atalanta before joining Tottenham Hotspur. Who am I?",
+    "options": ["Lisandro Martinez", "Cristian Romero", "Nicolas Otamendi", "German Pezzella"],
+    "answer": "Cristian Romero"
+  },
+  {
+    "id": 207,
+    "question": "I am an Argentine center-back. My nickname is 'The Butcher'. I followed my manager from Ajax to Manchester United. Who am I?",
+    "options": ["Cristian Romero", "Nicolas Otamendi", "Lisandro Martinez", "Marcos Rojo"],
+    "answer": "Lisandro Martinez"
+  },
+  {
+    "id": 208,
+    "question": "I am an Argentine midfielder known as Messi's 'bodyguard' on the pitch. I played for Valencia and Udinese before joining Atletico Madrid. Who am I?",
+    "options": ["Leandro Paredes", "Rodrigo De Paul", "Exequiel Palacios", "Giovani Lo Celso"],
+    "answer": "Rodrigo De Paul"
+  },
+  {
+    "id": 209,
+    "question": "I am a Brazilian forward. I played for Fluminense, Watford, and Everton before moving to Tottenham. I scored a stunning scissor kick in the 2022 World Cup. Who am I?",
+    "options": ["Gabriel Jesus", "Antony", "Richarlison", "Roberto Firmino"],
+    "answer": "Richarlison"
+  },
+  {
+    "id": 210,
+    "question": "I am a Brazilian attacking midfielder. I played for Flamengo, AC Milan, and Lyon before moving to West Ham United. Who am I?",
+    "options": ["Lucas Paqueta", "Bruno Guimaraes", "Douglas Luiz", "Andreas Pereira"],
+    "answer": "Lucas Paqueta"
+  },
+  {
+    "id": 211,
+    "question": "I am a Brazilian midfielder. I moved from Athletico Paranaense to Lyon, and then became a fan favorite at Newcastle United. Who am I?",
+    "options": ["Joelinton", "Bruno Guimaraes", "Lucas Paqueta", "Ederson"],
+    "answer": "Bruno Guimaraes"
+  },
+  {
+    "id": 212,
+    "question": "I am a Brazilian winger. I am known for my trademark spin. I moved from Ajax to Manchester United for a huge fee. Who am I?",
+    "options": ["Antony", "Raphinha", "David Neres", "Malcom"],
+    "answer": "Antony"
+  },
+  {
+    "id": 213,
+    "question": "I am a Brazilian winger. I played for Vitoria Guimaraes, Sporting CP, Rennes, and Leeds United before joining Barcelona. Who am I?",
+    "options": ["Antony", "Savinho", "Rodrygo", "Raphinha"],
+    "answer": "Raphinha"
+  },
+  {
+    "id": 214,
+    "question": "I am a Brazilian winger. I joined Arsenal straight from Ituano in the lower leagues of Brazil and became a crucial part of their attack. Who am I?",
+    "options": ["Gabriel Jesus", "Gabriel Martinelli", "Willian", "Marquinhos"],
+    "answer": "Gabriel Martinelli"
+  },
+  {
+    "id": 215,
+    "question": "I am a Brazilian striker. I moved from Palmeiras to Manchester City, won numerous titles, and then joined Arsenal. Who am I?",
+    "options": ["Gabriel Jesus", "Roberto Firmino", "Richarlison", "Matheus Cunha"],
+    "answer": "Gabriel Jesus"
+  },
+  {
+    "id": 216,
+    "question": "I am a Brazilian center-back. I played for Lille before joining Arsenal, where I formed a formidable partnership with William Saliba. Who am I?",
+    "options": ["Thiago Silva", "Bremer", "Eder Militao", "Gabriel Magalhaes"],
+    "answer": "Gabriel Magalhaes"
+  },
+  {
+    "id": 217,
+    "question": "I am a French center-back. I spent time on loan at Saint-Etienne, Nice, and Marseille before returning to become a star for Arsenal. Who am I?",
+    "options": ["Wesley Fofana", "Dayot Upamecano", "William Saliba", "Ibrahima Konate"],
+    "answer": "William Saliba"
+  },
+  {
+    "id": 218,
+    "question": "I am an English right-back. I played for Burnley, Tottenham, and won La Liga with Atletico Madrid before joining Newcastle United. Who am I?",
+    "options": ["Kyle Walker", "Kieran Trippier", "Aaron Wan-Bissaka", "Ben White"],
+    "answer": "Kieran Trippier"
+  },
+  {
+    "id": 219,
+    "question": "I am an English goalkeeper. I came through Sunderland's academy, had several loans, and eventually became Everton and England's number one. Who am I?",
+    "options": ["Nick Pope", "Aaron Ramsdale", "Jordan Pickford", "Dean Henderson"],
+    "answer": "Jordan Pickford"
+  },
+  {
+    "id": 220,
+    "question": "I am an English left-back. I joined Manchester United from Southampton as a teenager and scored in the Euro 2020 final. Who am I?",
+    "options": ["Ben Chilwell", "Luke Shaw", "Kieran Trippier", "Tyrick Mitchell"],
+    "answer": "Luke Shaw"
+  },
+  {
+    "id": 221,
+    "question": "I am an English right-back. I came through Chelsea's academy, had a successful loan at Wigan, and eventually became Chelsea's club captain. Who am I?",
+    "options": ["Reece James", "Trevoh Chalobah", "Malo Gusto", "Marc Guehi"],
+    "answer": "Reece James"
+  },
+  {
+    "id": 222,
+    "question": "I am an English attacking midfielder. I won the Champions League with Chelsea before moving to Manchester United. Who am I?",
+    "options": ["Mason Mount", "Conor Gallagher", "Ruben Loftus-Cheek", "Kai Havertz"],
+    "answer": "Mason Mount"
+  },
+  {
+    "id": 223,
+    "question": "I am an English attacking midfielder. I played for Coventry and Norwich before starring for Leicester City and moving to Tottenham. Who am I?",
+    "options": ["Jack Grealish", "James Maddison", "Harvey Barnes", "Eberechi Eze"],
+    "answer": "James Maddison"
+  },
+  {
+    "id": 224,
+    "question": "I am a Japanese winger known for my incredible dribbling skills and my university thesis on dribbling. I play for Brighton. Who am I?",
+    "options": ["Takefusa Kubo", "Takumi Minamino", "Kaoru Mitoma", "Junya Ito"],
+    "answer": "Kaoru Mitoma"
+  },
+  {
+    "id": 225,
+    "question": "I am a Japanese defensive midfielder. I played for Sint-Truiden and Stuttgart before earning a move to Liverpool. Who am I?",
+    "options": ["Wataru Endo", "Hidemasa Morita", "Daichi Kamada", "Ao Tanaka"],
+    "answer": "Wataru Endo"
+  },
+  {
+    "id": 226,
+    "question": "I am a Japanese versatile defender. I played for Bologna before joining Arsenal, where I cover multiple positions across the backline. Who am I?",
+    "options": ["Takehiro Tomiyasu", "Maya Yoshida", "Hiroki Ito", "Ko Itakura"],
+    "answer": "Takehiro Tomiyasu"
+  },
+  {
+    "id": 227,
+    "question": "I am a Hungarian midfielder. I played for RB Salzburg and RB Leipzig before joining Liverpool. Who am I?",
+    "options": ["Dominik Szoboszlai", "Milos Kerkez", "Roland Sallai", "Willi Orban"],
+    "answer": "Dominik Szoboszlai"
+  },
+  {
+    "id": 228,
+    "question": "I am a Dutch forward. I impressed at the 2022 World Cup for the Netherlands and moved from PSV to Liverpool shortly after. Who am I?",
+    "options": ["Memphis Depay", "Cody Gakpo", "Donyell Malen", "Steven Bergwijn"],
+    "answer": "Cody Gakpo"
+  },
+  {
+    "id": 229,
+    "question": "I am a Dutch attacking midfielder. I went through La Masia, signed for PSG, broke out at PSV, and then joined RB Leipzig. Who am I?",
+    "options": ["Xavi Simons", "Ryan Gravenberch", "Teun Koopmeiners", "Noa Lang"],
+    "answer": "Xavi Simons"
+  },
+  {
+    "id": 230,
+    "question": "I am a Dutch right wing-back. I played for Sparta Rotterdam, Heerenveen, and PSV before joining Inter Milan. Who am I?",
+    "options": ["Jeremie Frimpong", "Denzel Dumfries", "Jurrien Timber", "Lutsharel Geertruida"],
+    "answer": "Denzel Dumfries"
+  },
+  {
+    "id": 231,
+    "question": "I am a Dutch forward. I struggled at Manchester United but rebuilt my career at Lyon before playing for Barcelona and Atletico Madrid. Who am I?",
+    "options": ["Wout Weghorst", "Memphis Depay", "Luuk de Jong", "Cody Gakpo"],
+    "answer": "Memphis Depay"
+  },
+  {
+    "id": 232,
+    "question": "I am a Dutch center-back. I played for Feyenoord and Lazio before joining Inter Milan on a free transfer. Who am I?",
+    "options": ["Virgil van Dijk", "Stefan de Vrij", "Nathan Ake", "Micky van de Ven"],
+    "answer": "Stefan de Vrij"
+  },
+  {
+    "id": 233,
+    "question": "I am a versatile Dutch defender/midfielder. I played for Ajax, Manchester United, Bayern Munich, and Girona. Who am I?",
+    "options": ["Daley Blind", "Joel Veltman", "Jurrien Timber", "Matthijs de Ligt"],
+    "answer": "Daley Blind"
+  },
+  {
+    "id": 234,
+    "question": "I am an American winger. I played for Borussia Dortmund before moving to Chelsea, and later AC Milan. I am nicknamed 'Captain America'. Who am I?",
+    "options": ["Giovanni Reyna", "Timothy Weah", "Christian Pulisic", "Brenden Aaronson"],
+    "answer": "Christian Pulisic"
+  },
+  {
+    "id": 235,
+    "question": "I am an American midfielder. I played for Schalke before moving to Juventus, and had a brief loan spell at Leeds United. Who am I?",
+    "options": ["Weston McKennie", "Tyler Adams", "Yunus Musah", "Johnny Cardoso"],
+    "answer": "Weston McKennie"
+  },
+  {
+    "id": 236,
+    "question": "I am an American defensive midfielder. I played for NY Red Bulls, RB Leipzig, and Leeds United before joining Bournemouth. Who am I?",
+    "options": ["Weston McKennie", "Tyler Adams", "Kellyn Acosta", "Yunus Musah"],
+    "answer": "Tyler Adams"
+  },
+  {
+    "id": 237,
+    "question": "I am an American full-back. I broke through at Ajax before joining Barcelona, and later had loan spells at AC Milan and PSV. Who am I?",
+    "options": ["Antonee Robinson", "Sergino Dest", "Joe Scally", "DeAndre Yedlin"],
+    "answer": "Sergino Dest"
+  },
+  {
+    "id": 238,
+    "question": "I am an American attacking midfielder. I am the son of a former USMNT captain. I broke through at Borussia Dortmund. Who am I?",
+    "options": ["Giovanni Reyna", "Timothy Weah", "Brenden Aaronson", "Malik Tillman"],
+    "answer": "Giovanni Reyna"
+  },
+  {
+    "id": 239,
+    "question": "I am a Canadian forward. I played for Gent in Belgium before earning a move to Lille, where I helped them win Ligue 1. Who am I?",
+    "options": ["Cyle Larin", "Tajon Buchanan", "Jonathan David", "Alphonso Davies"],
+    "answer": "Jonathan David"
+  },
+  {
+    "id": 240,
+    "question": "I am an Ivorian striker. I played for Eintracht Frankfurt, West Ham, and Ajax. I overcame testicular cancer to score in the Africa Cup of Nations final. Who am I?",
+    "options": ["Wilfried Zaha", "Nicolas Pepe", "Sebastien Haller", "Simon Adingra"],
+    "answer": "Sebastien Haller"
+  },
+  {
+    "id": 241,
+    "question": "I am a Moroccan winger. I made my name at Ajax before joining Chelsea, and later moved to Galatasaray. Who am I?",
+    "options": ["Amine Adli", "Hakim Ziyech", "Brahim Diaz", "Abde Ezzalzouli"],
+    "answer": "Hakim Ziyech"
+  },
+  {
+    "id": 242,
+    "question": "I am a Moroccan full-back. I broke through at Ajax before moving to Bayern Munich on a free transfer, and later joined Manchester United. Who am I?",
+    "options": ["Achraf Hakimi", "Noussair Mazraoui", "Nayef Aguerd", "Yahia Attiyat Allah"],
+    "answer": "Noussair Mazraoui"
+  },
+  {
+    "id": 243,
+    "question": "I am a Moroccan defensive midfielder. I starred at the 2022 World Cup for Fiorentina before earning a loan move to Manchester United. Who am I?",
+    "options": ["Sofyan Amrabat", "Azzedine Ounahi", "Ismael Bennacer", "Selim Amallah"],
+    "answer": "Sofyan Amrabat"
+  },
+  {
+    "id": 244,
+    "question": "I am a Moroccan goalkeeper. I was the hero of my country's 2022 World Cup run. I played for Sevilla before joining Al Hilal. Who am I?",
+    "options": ["Munir Mohamedi", "Yassine Bounou", "Edouard Mendy", "Andre Onana"],
+    "answer": "Yassine Bounou"
+  },
+  {
+    "id": 245,
+    "question": "I am a Senegalese goalkeeper. I was signed by Chelsea from Rennes and won the Champions League in my first season before moving to Saudi Arabia. Who am I?",
+    "options": ["Alfred Gomis", "Seny Dieng", "Edouard Mendy", "Bamba Dieng"],
+    "answer": "Edouard Mendy"
+  },
+  {
+    "id": 246,
+    "question": "I am a Cameroonian goalkeeper. I came through La Masia, played for Ajax and Inter Milan, and then joined Manchester United. Who am I?",
+    "options": ["Fabrice Ondoa", "Carlos Kameni", "Andre Onana", "Devis Epassy"],
+    "answer": "Andre Onana"
+  },
+  {
+    "id": 247,
+    "question": "I am a Nigerian striker. I played for Bodo/Glimt and Union SG before moving to Bayer Leverkusen, where I won the Bundesliga. Who am I?",
+    "options": ["Victor Osimhen", "Taiwo Awoniyi", "Terem Moffi", "Victor Boniface"],
+    "answer": "Victor Boniface"
+  },
+  {
+    "id": 248,
+    "question": "I am a Guinean striker. I had an incredible goalscoring season for Stuttgart in the Bundesliga before earning a move to Borussia Dortmund. Who am I?",
+    "options": ["Serhou Guirassy", "Naby Keita", "Ilaix Moriba", "Francois Kamano"],
+    "answer": "Serhou Guirassy"
+  },
+  {
+    "id": 249,
+    "question": "I am an Argentine winger. I am a product of Manchester United's academy and scored a famous bicycle kick against Everton. Who am I?",
+    "options": ["Facundo Pellistri", "Amad Diallo", "Alejandro Garnacho", "Antony"],
+    "answer": "Alejandro Garnacho"
+  },
+  {
+    "id": 250,
+    "question": "I am an English midfielder. I broke into the Manchester United first team as a teenager and scored in the FA Cup final against Manchester City. Who am I?",
+    "options": ["Mason Mount", "Hannibal Mejbri", "Kobbie Mainoo", "Scott McTominay"],
+    "answer": "Kobbie Mainoo"
+  }
+]

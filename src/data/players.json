@@ -1,0 +1,2882 @@
+[
+  {
+    "id": "a830dd36-cbef-4704-a98e-10ab663712bd",
+    "name": "L. Messi",
+    "position": "MID",
+    "rating": 91,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/158/023/23_60.png"
+  },
+  {
+    "id": "32a60fd7-9be6-4673-819d-5856fe76ab7f",
+    "name": "K. De Bruyne",
+    "position": "MID",
+    "rating": 91,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/192/985/23_60.png"
+  },
+  {
+    "id": "8f90c2e9-df4b-45c3-aa8d-b50d93e96c19",
+    "name": "K. Benzema",
+    "position": "ST",
+    "rating": 91,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/165/153/23_60.png"
+  },
+  {
+    "id": "b20b2a05-4014-43f3-8bba-cf05169712d7",
+    "name": "R. Lewandowski",
+    "position": "ST",
+    "rating": 91,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/188/545/23_60.png"
+  },
+  {
+    "id": "9b937d5e-1656-4f22-b183-aa913cff7ab8",
+    "name": "K. Mbappé",
+    "position": "ST",
+    "rating": 91,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/231/747/23_60.png"
+  },
+  {
+    "id": "53bb4ab5-eb87-425f-ba57-0d42f012c707",
+    "name": "Cristiano Ronaldo",
+    "position": "ST",
+    "rating": 90,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/020/801/23_60.png"
+  },
+  {
+    "id": "5a30ff44-085c-4c8a-b42a-2dc2c13cdabe",
+    "name": "M. Salah",
+    "position": "WING",
+    "rating": 90,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/209/331/23_60.png"
+  },
+  {
+    "id": "f14bf2f7-6437-49c5-b7d3-f672fd51161a",
+    "name": "T. Courtois",
+    "position": "GK",
+    "rating": 90,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/192/119/23_60.png"
+  },
+  {
+    "id": "c0177257-4e31-4f07-8341-c14b4ea0c83b",
+    "name": "M. Neuer",
+    "position": "GK",
+    "rating": 90,
+    "club": "FC Bayern München",
+    "image_url": "https://cdn.sofifa.net/players/167/495/23_60.png"
+  },
+  {
+    "id": "5243be84-6e7f-4a63-bb2c-a425bb0b2e91",
+    "name": "V. van Dijk",
+    "position": "CB",
+    "rating": 90,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/203/376/23_60.png"
+  },
+  {
+    "id": "66bda583-d7bb-4bcc-806b-cdfbe2c2296f",
+    "name": "Casemiro",
+    "position": "MID",
+    "rating": 89,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/200/145/23_60.png"
+  },
+  {
+    "id": "cac49188-4de3-4928-b5e2-3d258e84302d",
+    "name": "J. Kimmich",
+    "position": "MID",
+    "rating": 89,
+    "club": "FC Bayern München",
+    "image_url": "https://cdn.sofifa.net/players/212/622/23_60.png"
+  },
+  {
+    "id": "3f7da877-1567-499d-b2bc-b556df25f686",
+    "name": "N. Kanté",
+    "position": "MID",
+    "rating": 89,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/215/914/23_60.png"
+  },
+  {
+    "id": "c5689415-ec1e-4b99-acbe-0efdb9e12813",
+    "name": "H. Kane",
+    "position": "ST",
+    "rating": 89,
+    "club": "Tottenham Hotspur",
+    "image_url": "https://cdn.sofifa.net/players/202/126/23_60.png"
+  },
+  {
+    "id": "68d73a9f-b57f-427a-9c75-a7ba7ad75338",
+    "name": "Neymar Jr",
+    "position": "WING",
+    "rating": 89,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/190/871/23_60.png"
+  },
+  {
+    "id": "02f67898-df04-4fff-a5e5-4688a3e36ce2",
+    "name": "H. Son",
+    "position": "WING",
+    "rating": 89,
+    "club": "Tottenham Hotspur",
+    "image_url": "https://cdn.sofifa.net/players/200/104/23_60.png"
+  },
+  {
+    "id": "cf78ed08-19f4-4013-8fba-c6c8ce46e0ea",
+    "name": "J. Oblak",
+    "position": "GK",
+    "rating": 89,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/200/389/23_60.png"
+  },
+  {
+    "id": "9a2d6c0d-ff25-4233-a012-fa0a2fcdf7db",
+    "name": "Ederson",
+    "position": "GK",
+    "rating": 89,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/210/257/23_60.png"
+  },
+  {
+    "id": "82bbace8-5fb0-48dc-b235-b3c3efdf5536",
+    "name": "Alisson",
+    "position": "GK",
+    "rating": 89,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/212/831/23_60.png"
+  },
+  {
+    "id": "8d7f245f-c4c5-4447-af24-9abb02d2db9c",
+    "name": "Bernardo Silva",
+    "position": "MID",
+    "rating": 88,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/218/667/23_60.png"
+  },
+  {
+    "id": "61afc663-3e56-4b8b-852a-d66a73721186",
+    "name": "T. Kroos",
+    "position": "MID",
+    "rating": 88,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/182/521/23_60.png"
+  },
+  {
+    "id": "13cc6f89-6149-41c0-8eac-c81289c0c646",
+    "name": "L. Modrić",
+    "position": "MID",
+    "rating": 88,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/177/003/23_60.png"
+  },
+  {
+    "id": "7eed2224-db8c-42e0-8207-dfa6ef572dde",
+    "name": "E. Haaland",
+    "position": "ST",
+    "rating": 88,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/239/085/23_60.png"
+  },
+  {
+    "id": "f7f6f03c-6d7d-4b61-8a4b-7e9957888cc3",
+    "name": "G. Donnarumma",
+    "position": "GK",
+    "rating": 88,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/230/621/23_60.png"
+  },
+  {
+    "id": "dbdf41a2-b5e0-4ad1-b5ea-5ff0fdb43ed2",
+    "name": "K. Navas",
+    "position": "GK",
+    "rating": 88,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/193/041/23_60.png"
+  },
+  {
+    "id": "e1f81da3-de2f-4b3a-b750-5697111b69b8",
+    "name": "M. ter Stegen",
+    "position": "GK",
+    "rating": 88,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/192/448/23_60.png"
+  },
+  {
+    "id": "5d2863f1-6a4d-4016-b87c-a08688ab5f38",
+    "name": "Rúben Dias",
+    "position": "CB",
+    "rating": 88,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/239/818/23_60.png"
+  },
+  {
+    "id": "18bf7046-baef-498d-b365-1c5b09872ddd",
+    "name": "Marquinhos",
+    "position": "CB",
+    "rating": 88,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/207/865/23_60.png"
+  },
+  {
+    "id": "bed5b442-5464-49d8-8a5a-83d96e61e83f",
+    "name": "João Cancelo",
+    "position": "FB",
+    "rating": 88,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/210/514/23_60.png"
+  },
+  {
+    "id": "c263f18f-312a-4a34-9ec6-ec71febee9a8",
+    "name": "Rodri",
+    "position": "MID",
+    "rating": 87,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/231/866/23_60.png"
+  },
+  {
+    "id": "3d8519a3-563b-4664-bdb3-a330b7f28331",
+    "name": "Fabinho",
+    "position": "MID",
+    "rating": 87,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/209/499/23_60.png"
+  },
+  {
+    "id": "96d39a6a-0af7-4e3b-9b58-a5a08401dc28",
+    "name": "T. Müller",
+    "position": "MID",
+    "rating": 87,
+    "club": "FC Bayern München",
+    "image_url": "https://cdn.sofifa.net/players/189/596/23_60.png"
+  },
+  {
+    "id": "ae2e86f3-cc7d-436d-8351-b1fe8ecdc4ea",
+    "name": "M. Verratti",
+    "position": "MID",
+    "rating": 87,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/199/556/23_60.png"
+  },
+  {
+    "id": "d05c5880-4de6-4fe0-be51-7e7439e5a15c",
+    "name": "T. Alexander-Arnold",
+    "position": "MID",
+    "rating": 87,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/231/281/23_60.png"
+  },
+  {
+    "id": "25d304e2-af01-43f9-9b21-2043e3ca12f5",
+    "name": "L. Goretzka",
+    "position": "MID",
+    "rating": 87,
+    "club": "FC Bayern München",
+    "image_url": "https://cdn.sofifa.net/players/209/658/23_60.png"
+  },
+  {
+    "id": "a0405990-6fd6-42aa-bcf9-11d033854d78",
+    "name": "F. de Jong",
+    "position": "MID",
+    "rating": 87,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/228/702/23_60.png"
+  },
+  {
+    "id": "999769c2-5c00-4d47-8bc6-2bfd78143f07",
+    "name": "H. Lloris",
+    "position": "GK",
+    "rating": 87,
+    "club": "Tottenham Hotspur",
+    "image_url": "https://cdn.sofifa.net/players/167/948/23_60.png"
+  },
+  {
+    "id": "1d4c3234-b8fb-4276-a29a-67563739b68a",
+    "name": "De Gea",
+    "position": "GK",
+    "rating": 87,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/193/080/23_60.png"
+  },
+  {
+    "id": "5aceb503-3c39-4450-8d8f-0dcc383a52e0",
+    "name": "M. Maignan",
+    "position": "GK",
+    "rating": 87,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/215/698/23_60.png"
+  },
+  {
+    "id": "ebd4bb1f-c69a-49ab-aa8e-3f11f2868c30",
+    "name": "A. Rüdiger",
+    "position": "CB",
+    "rating": 87,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/205/452/23_60.png"
+  },
+  {
+    "id": "0daad8b0-d634-46b2-8cb6-3aa1b98ed793",
+    "name": "K. Koulibaly",
+    "position": "CB",
+    "rating": 87,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/201/024/23_60.png"
+  },
+  {
+    "id": "99d8242b-41ca-452e-ad2e-da7a8d1b979e",
+    "name": "A. Robertson",
+    "position": "FB",
+    "rating": 87,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/216/267/23_60.png"
+  },
+  {
+    "id": "ca682e0a-daa7-4c90-a7ee-33e66b5970d4",
+    "name": "Thiago",
+    "position": "MID",
+    "rating": 86,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/189/509/23_60.png"
+  },
+  {
+    "id": "0988f9d4-7a4f-40c1-ae31-380dbb92cbcd",
+    "name": "P. Dybala",
+    "position": "MID",
+    "rating": 86,
+    "club": "Roma",
+    "image_url": "https://cdn.sofifa.net/players/211/110/23_60.png"
+  },
+  {
+    "id": "9c6fe66a-6876-418d-888c-478a7e6dae5f",
+    "name": "Bruno Fernandes",
+    "position": "MID",
+    "rating": 86,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/212/198/23_60.png"
+  },
+  {
+    "id": "93dcdf45-427a-40f3-bfa3-9040340663c0",
+    "name": "Parejo",
+    "position": "MID",
+    "rating": 86,
+    "club": "Villarreal CF",
+    "image_url": "https://cdn.sofifa.net/players/189/513/23_60.png"
+  },
+  {
+    "id": "b351c321-04f6-4d21-9c55-941050fa3ae6",
+    "name": "M. Brozović",
+    "position": "MID",
+    "rating": 86,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/216/352/23_60.png"
+  },
+  {
+    "id": "1482547a-1f9d-4340-a48a-5587dcbf879f",
+    "name": "N. Barella",
+    "position": "MID",
+    "rating": 86,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/224/232/23_60.png"
+  },
+  {
+    "id": "e79b8d33-5c24-40f3-b81f-0330999ccf74",
+    "name": "C. Nkunku",
+    "position": "MID",
+    "rating": 86,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/232/411/23_60.png"
+  },
+  {
+    "id": "374d6271-96b2-46c2-8bfe-76028b3a8849",
+    "name": "S. Milinković-Savić",
+    "position": "MID",
+    "rating": 86,
+    "club": "Lazio",
+    "image_url": "https://cdn.sofifa.net/players/223/848/23_60.png"
+  },
+  {
+    "id": "bacbee41-1948-4053-a0e3-953c0c9947e3",
+    "name": "C. Immobile",
+    "position": "ST",
+    "rating": 86,
+    "club": "Lazio",
+    "image_url": "https://cdn.sofifa.net/players/192/387/23_60.png"
+  },
+  {
+    "id": "e770d11b-d240-4250-bf5c-17ec48310210",
+    "name": "R. Lukaku",
+    "position": "ST",
+    "rating": 86,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/192/505/23_60.png"
+  },
+  {
+    "id": "ff6c2b37-4d3f-4c83-8c33-142a733771b2",
+    "name": "L. Martínez",
+    "position": "ST",
+    "rating": 86,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/231/478/23_60.png"
+  },
+  {
+    "id": "e4dfe8ad-654c-42c6-bea8-ce9ce7fdb1ea",
+    "name": "R. Sterling",
+    "position": "WING",
+    "rating": 86,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/202/652/23_60.png"
+  },
+  {
+    "id": "7ebd0ceb-ef55-4c4b-bb64-8f6713a5ac0a",
+    "name": "R. Mahrez",
+    "position": "WING",
+    "rating": 86,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/204/485/23_60.png"
+  },
+  {
+    "id": "955210ca-5c55-4659-8024-409455a759c2",
+    "name": "Vinícius Jr.",
+    "position": "WING",
+    "rating": 86,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/238/794/23_60.png"
+  },
+  {
+    "id": "8379c28e-85f7-48c8-a7ac-2c047210e55c",
+    "name": "W. Szczęsny",
+    "position": "GK",
+    "rating": 86,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/186/153/23_60.png"
+  },
+  {
+    "id": "8a332c91-2cfb-4c63-bf21-2977b868e1f9",
+    "name": "K. Trapp",
+    "position": "GK",
+    "rating": 86,
+    "club": "Eintracht Frankfurt",
+    "image_url": "https://cdn.sofifa.net/players/188/943/23_60.png"
+  },
+  {
+    "id": "584ec617-a79d-43ba-ad3d-a05ddf5799d2",
+    "name": "É. Mendy",
+    "position": "GK",
+    "rating": 86,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/234/642/23_60.png"
+  },
+  {
+    "id": "e2f5d95e-91b2-4c73-b38b-f72883e4a4bc",
+    "name": "D. Alaba",
+    "position": "CB",
+    "rating": 86,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/197/445/23_60.png"
+  },
+  {
+    "id": "08b321c6-076f-4337-8319-2f97c6bd0923",
+    "name": "Thiago Silva",
+    "position": "CB",
+    "rating": 86,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/164/240/23_60.png"
+  },
+  {
+    "id": "95add95d-c529-47c5-837b-97ce6b750ac4",
+    "name": "A. Laporte",
+    "position": "CB",
+    "rating": 86,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/212/218/23_60.png"
+  },
+  {
+    "id": "fb52990a-75ea-4704-9f45-e870a3355177",
+    "name": "M. Škriniar",
+    "position": "CB",
+    "rating": 86,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/232/363/23_60.png"
+  },
+  {
+    "id": "7bb99f5c-c7c9-4c03-b1cd-732a0f67914b",
+    "name": "N. Fekir",
+    "position": "MID",
+    "rating": 85,
+    "club": "Real Betis Balompié",
+    "image_url": "https://cdn.sofifa.net/players/216/594/23_60.png"
+  },
+  {
+    "id": "0ab5aa7b-0967-4609-82b3-707617508849",
+    "name": "İ. Gündoğan",
+    "position": "MID",
+    "rating": 85,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/186/942/23_60.png"
+  },
+  {
+    "id": "36bebcf3-3b59-4b59-83dc-af53ee28a25d",
+    "name": "Sergio Busquets",
+    "position": "MID",
+    "rating": 85,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/189/511/23_60.png"
+  },
+  {
+    "id": "c557041a-a34d-4822-8508-d086fea5275a",
+    "name": "P. Pogba",
+    "position": "MID",
+    "rating": 85,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/195/864/23_60.png"
+  },
+  {
+    "id": "08579e4b-8c12-44a0-869f-7a8dd53906d1",
+    "name": "Jorginho",
+    "position": "MID",
+    "rating": 85,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/205/498/23_60.png"
+  },
+  {
+    "id": "f578732c-f1ba-4d5d-9265-36381b932537",
+    "name": "Pedri",
+    "position": "MID",
+    "rating": 85,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/251/854/23_60.png"
+  },
+  {
+    "id": "76c663c1-d4fd-4dbe-8726-fbec3249413c",
+    "name": "P. Foden",
+    "position": "MID",
+    "rating": 85,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/237/692/23_60.png"
+  },
+  {
+    "id": "bac990ae-0491-4000-be12-39360623352a",
+    "name": "M. Reus",
+    "position": "MID",
+    "rating": 85,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/188/350/23_60.png"
+  },
+  {
+    "id": "6b33b0eb-6ec3-4745-9a83-af904430570e",
+    "name": "P. Aubameyang",
+    "position": "ST",
+    "rating": 85,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/188/567/23_60.png"
+  },
+  {
+    "id": "ce1eea28-a4aa-4cdc-9368-3ed3e8a7aa43",
+    "name": "Iago Aspas",
+    "position": "ST",
+    "rating": 85,
+    "club": "RC Celta de Vigo",
+    "image_url": "https://cdn.sofifa.net/players/192/629/23_60.png"
+  },
+  {
+    "id": "d2a35cc3-2a75-480a-a12a-496047d361cf",
+    "name": "M. Depay",
+    "position": "ST",
+    "rating": 85,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/202/556/23_60.png"
+  },
+  {
+    "id": "0e5cb2b5-d372-457d-8875-6dab010b4707",
+    "name": "Gerard Moreno",
+    "position": "ST",
+    "rating": 85,
+    "club": "Villarreal CF",
+    "image_url": "https://cdn.sofifa.net/players/208/093/23_60.png"
+  },
+  {
+    "id": "0da366e3-915c-4d8f-8849-8491949e850f",
+    "name": "J. Vardy",
+    "position": "ST",
+    "rating": 85,
+    "club": "Leicester City",
+    "image_url": "https://cdn.sofifa.net/players/208/830/23_60.png"
+  },
+  {
+    "id": "da845b41-9668-4424-ac01-a753ff4a6acc",
+    "name": "P. Schick",
+    "position": "ST",
+    "rating": 85,
+    "club": "Bayer 04 Leverkusen",
+    "image_url": "https://cdn.sofifa.net/players/234/236/23_60.png"
+  },
+  {
+    "id": "4ee8c387-d64c-4fa8-b4c4-c14d908931ed",
+    "name": "Diogo Jota",
+    "position": "ST",
+    "rating": 85,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/224/458/23_60.png"
+  },
+  {
+    "id": "e1a38816-78f9-4d0d-b9a0-6b4ea5d0d400",
+    "name": "P. Gulácsi",
+    "position": "GK",
+    "rating": 85,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/185/122/23_60.png"
+  },
+  {
+    "id": "eade8bca-f687-437d-9050-a364cdda4d4f",
+    "name": "Y. Sommer",
+    "position": "GK",
+    "rating": 85,
+    "club": "Borussia Mönchengladbach",
+    "image_url": "https://cdn.sofifa.net/players/177/683/23_60.png"
+  },
+  {
+    "id": "ca091d66-2224-49cf-add2-8bbd2b3d2952",
+    "name": "N. Süle",
+    "position": "CB",
+    "rating": 85,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/212/190/23_60.png"
+  },
+  {
+    "id": "b1065ecc-4599-4557-b0e1-433283aae407",
+    "name": "M. de Ligt",
+    "position": "CB",
+    "rating": 85,
+    "club": "FC Bayern München",
+    "image_url": "https://cdn.sofifa.net/players/235/243/23_60.png"
+  },
+  {
+    "id": "6818d965-d74b-4e82-88b4-e542bf07d8cd",
+    "name": "K. Walker",
+    "position": "FB",
+    "rating": 85,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/188/377/23_60.png"
+  },
+  {
+    "id": "907718e7-174a-4a7a-9991-0ea021cf728d",
+    "name": "Jordi Alba",
+    "position": "FB",
+    "rating": 85,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/189/332/23_60.png"
+  },
+  {
+    "id": "bc5f7392-d178-4fbe-89b4-61e21f421db4",
+    "name": "M. Acuña",
+    "position": "FB",
+    "rating": 85,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/224/334/23_60.png"
+  },
+  {
+    "id": "1c9e3a51-3b24-4c5f-8867-297d392b8d79",
+    "name": "T. Hernández",
+    "position": "FB",
+    "rating": 85,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/232/656/23_60.png"
+  },
+  {
+    "id": "e7c22a2e-fa09-4d00-8e00-cc81d6102ee4",
+    "name": "A. Gómez",
+    "position": "MID",
+    "rating": 84,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/143/076/23_60.png"
+  },
+  {
+    "id": "32768ecd-e422-4236-b5c8-45a0f3de52b0",
+    "name": "T. Partey",
+    "position": "MID",
+    "rating": 84,
+    "club": "Arsenal",
+    "image_url": "https://cdn.sofifa.net/players/209/989/23_60.png"
+  },
+  {
+    "id": "37ff0160-2708-4a87-9b45-676fae812da7",
+    "name": "H. Çalhanoğlu",
+    "position": "MID",
+    "rating": 84,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/208/128/23_60.png"
+  },
+  {
+    "id": "5b137d93-691c-4495-857e-5754f1aa993f",
+    "name": "M. Kovačić",
+    "position": "MID",
+    "rating": 84,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/207/410/23_60.png"
+  },
+  {
+    "id": "222e136d-9f24-46bc-83a3-a16480eaa7b4",
+    "name": "L. Insigne",
+    "position": "MID",
+    "rating": 84,
+    "club": "Toronto FC",
+    "image_url": "https://cdn.sofifa.net/players/198/219/23_60.png"
+  },
+  {
+    "id": "e298f5cf-f83d-4347-9c47-785cb76d695b",
+    "name": "R. De Paul",
+    "position": "MID",
+    "rating": 84,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/212/616/23_60.png"
+  },
+  {
+    "id": "55ff1ebb-0dda-4e1d-a881-391a24dbf393",
+    "name": "J. Bellingham",
+    "position": "MID",
+    "rating": 84,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/252/371/23_60.png"
+  },
+  {
+    "id": "8551b485-16f8-47a2-9cac-97b75414feac",
+    "name": "J. Tartt",
+    "position": "MID",
+    "rating": 84,
+    "club": "AFC Richmond",
+    "image_url": "https://cdn.sofifa.net/players/269/761/23_60.png"
+  },
+  {
+    "id": "2d35fadd-00da-452a-b0bd-079366e73835",
+    "name": "Y. Tielemans",
+    "position": "MID",
+    "rating": 84,
+    "club": "Leicester City",
+    "image_url": "https://cdn.sofifa.net/players/216/393/23_60.png"
+  },
+  {
+    "id": "3fba332c-bdb9-48ff-99c0-8d110b4fab3d",
+    "name": "S. Tonali",
+    "position": "MID",
+    "rating": 84,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/241/096/23_60.png"
+  },
+  {
+    "id": "1be26648-de35-4ad4-99fe-bb01bf548d02",
+    "name": "F. Valverde",
+    "position": "MID",
+    "rating": 84,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/239/053/23_60.png"
+  },
+  {
+    "id": "c156b0ae-be8b-427a-9e63-b38f0ff80266",
+    "name": "K. Havertz",
+    "position": "MID",
+    "rating": 84,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/235/790/23_60.png"
+  },
+  {
+    "id": "df964ad0-905d-434f-b136-c25291fdbec5",
+    "name": "João Félix",
+    "position": "MID",
+    "rating": 84,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/242/444/23_60.png"
+  },
+  {
+    "id": "7528c506-f2bf-48ab-b0b6-03f2e5b5b8df",
+    "name": "D. Rice",
+    "position": "MID",
+    "rating": 84,
+    "club": "West Ham United",
+    "image_url": "https://cdn.sofifa.net/players/234/378/23_60.png"
+  },
+  {
+    "id": "4a17ec0a-94f8-473f-93fa-5e20dcd13abb",
+    "name": "M. Mount",
+    "position": "MID",
+    "rating": 84,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/233/064/23_60.png"
+  },
+  {
+    "id": "09e687cd-9dae-41bb-aa73-d43f818f4ebe",
+    "name": "J. Sancho",
+    "position": "MID",
+    "rating": 84,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/233/049/23_60.png"
+  },
+  {
+    "id": "70bd2a9f-3334-4951-b87c-d6a2f900976d",
+    "name": "F. Kessié",
+    "position": "MID",
+    "rating": 84,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/230/938/23_60.png"
+  },
+  {
+    "id": "da7783a9-b705-4da1-bd12-008049d418dc",
+    "name": "L. Pellegrini",
+    "position": "MID",
+    "rating": 84,
+    "club": "Roma",
+    "image_url": "https://cdn.sofifa.net/players/228/251/23_60.png"
+  },
+  {
+    "id": "070db97c-2590-4ce1-a127-19e7b6cdb598",
+    "name": "Marcos Llorente",
+    "position": "MID",
+    "rating": 84,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/226/161/23_60.png"
+  },
+  {
+    "id": "7c15da4c-f3b5-41a9-8820-f6c8deabdf1b",
+    "name": "M. Ødegaard",
+    "position": "MID",
+    "rating": 84,
+    "club": "Arsenal",
+    "image_url": "https://cdn.sofifa.net/players/222/665/23_60.png"
+  },
+  {
+    "id": "1d4046e2-2f6a-4a49-9a4a-ce1365834d59",
+    "name": "D. Mertens",
+    "position": "ST",
+    "rating": 84,
+    "club": "Galatasaray SK",
+    "image_url": "https://cdn.sofifa.net/players/175/943/23_60.png"
+  },
+  {
+    "id": "08719507-b90a-4fc9-8e4e-9a98777103f0",
+    "name": "L. Suárez",
+    "position": "ST",
+    "rating": 84,
+    "club": "Club Nacional de Football",
+    "image_url": "https://cdn.sofifa.net/players/176/580/23_60.png"
+  },
+  {
+    "id": "d1cf2674-cccf-4b68-85d3-492095558e4e",
+    "name": "W. Ben Yedder",
+    "position": "ST",
+    "rating": 84,
+    "club": "AS Monaco",
+    "image_url": "https://cdn.sofifa.net/players/199/451/23_60.png"
+  },
+  {
+    "id": "fb7ec495-5ede-4cf1-9b27-82d4decc0832",
+    "name": "E. Džeko",
+    "position": "ST",
+    "rating": 84,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/180/930/23_60.png"
+  },
+  {
+    "id": "c8a30dee-f005-40cc-b68e-1f66578e73bb",
+    "name": "D. Vlahović",
+    "position": "ST",
+    "rating": 84,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/246/430/23_60.png"
+  },
+  {
+    "id": "8175a864-a54b-4b90-839a-543666e1c4aa",
+    "name": "D. Tadić",
+    "position": "WING",
+    "rating": 84,
+    "club": "Ajax",
+    "image_url": "https://cdn.sofifa.net/players/199/434/23_60.png"
+  },
+  {
+    "id": "94b61c07-1c18-4190-adc9-70211e12e73c",
+    "name": "J. Grealish",
+    "position": "WING",
+    "rating": 84,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/206/517/23_60.png"
+  },
+  {
+    "id": "bf2c3553-1513-4ce8-a042-01636ddb783f",
+    "name": "Á. Di María",
+    "position": "WING",
+    "rating": 84,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/183/898/23_60.png"
+  },
+  {
+    "id": "649fdc97-86d9-4c00-add7-787cc54f7cc5",
+    "name": "E. Hazard",
+    "position": "WING",
+    "rating": 84,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/183/277/23_60.png"
+  },
+  {
+    "id": "cc12f672-1cdd-4e8d-9382-47f184b78a41",
+    "name": "Rafael Leão",
+    "position": "WING",
+    "rating": 84,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/241/721/23_60.png"
+  },
+  {
+    "id": "a6d1494f-b992-4c92-a1c4-e8adbdfe8930",
+    "name": "Oyarzabal",
+    "position": "WING",
+    "rating": 84,
+    "club": "Real Sociedad",
+    "image_url": "https://cdn.sofifa.net/players/230/142/23_60.png"
+  },
+  {
+    "id": "a3d0b86b-9df5-47b3-a325-ae8c87a99db7",
+    "name": "S. Handanovič",
+    "position": "GK",
+    "rating": 84,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/162/835/23_60.png"
+  },
+  {
+    "id": "fc27472f-a8cf-477d-8433-ff7e3a58a60d",
+    "name": "Y. Bounou",
+    "position": "GK",
+    "rating": 84,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/209/981/23_60.png"
+  },
+  {
+    "id": "df7eef27-1243-4117-b74a-817e82c69ed1",
+    "name": "E. Martínez",
+    "position": "GK",
+    "rating": 84,
+    "club": "Aston Villa",
+    "image_url": "https://cdn.sofifa.net/players/202/811/23_60.png"
+  },
+  {
+    "id": "8ddcb74a-a34a-457f-80b8-a2abe62b1aed",
+    "name": "K. Casteels",
+    "position": "GK",
+    "rating": 84,
+    "club": "VfL Wolfsburg",
+    "image_url": "https://cdn.sofifa.net/players/192/984/23_60.png"
+  },
+  {
+    "id": "1fc73723-16fb-4f49-b881-e55178fb0015",
+    "name": "L. Hernández",
+    "position": "CB",
+    "rating": 84,
+    "club": "FC Bayern München",
+    "image_url": "https://cdn.sofifa.net/players/220/814/23_60.png"
+  },
+  {
+    "id": "b4c1983c-e5f0-437b-aab1-0cbb51965140",
+    "name": "Sergio Ramos",
+    "position": "CB",
+    "rating": 84,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/155/862/23_60.png"
+  },
+  {
+    "id": "a626a2ab-57e2-4b4f-b730-0c5e5532d2e3",
+    "name": "S. Savić",
+    "position": "CB",
+    "rating": 84,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/204/639/23_60.png"
+  },
+  {
+    "id": "8e7b6923-d4a3-4ea7-bc62-940201165234",
+    "name": "R. Varane",
+    "position": "CB",
+    "rating": 84,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/201/535/23_60.png"
+  },
+  {
+    "id": "4dd774a3-20ab-412c-ac8a-5e39005d8fad",
+    "name": "M. Hummels",
+    "position": "CB",
+    "rating": 84,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/178/603/23_60.png"
+  },
+  {
+    "id": "5ed9ce37-9fdc-4107-8899-9f5c91ecb2be",
+    "name": "S. de Vrij",
+    "position": "CB",
+    "rating": 84,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/198/176/23_60.png"
+  },
+  {
+    "id": "3dde66b4-a7a5-48be-b1c3-7de18d16195b",
+    "name": "J. Matip",
+    "position": "CB",
+    "rating": 84,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/197/061/23_60.png"
+  },
+  {
+    "id": "288029c4-4bfb-4be7-8c1a-04b80e83840d",
+    "name": "L. Bonucci",
+    "position": "CB",
+    "rating": 84,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/184/344/23_60.png"
+  },
+  {
+    "id": "81529f77-4fa1-4534-bf91-44a008d2886d",
+    "name": "G. Chiellini",
+    "position": "CB",
+    "rating": 84,
+    "club": "Los Angeles FC",
+    "image_url": "https://cdn.sofifa.net/players/138/956/23_60.png"
+  },
+  {
+    "id": "39d62aef-de36-4ee6-bbe7-72cb843381e0",
+    "name": "J. Koundé",
+    "position": "CB",
+    "rating": 84,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/241/486/23_60.png"
+  },
+  {
+    "id": "ab0cd8d3-6d3d-4e14-8eaf-47ca5516eea1",
+    "name": "Éder Militão",
+    "position": "CB",
+    "rating": 84,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/240/130/23_60.png"
+  },
+  {
+    "id": "e51f2e58-34aa-4950-a4a4-7cb1ae1c1df1",
+    "name": "A. Bastoni",
+    "position": "CB",
+    "rating": 84,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/237/383/23_60.png"
+  },
+  {
+    "id": "a6f3c87d-1619-4239-a1a2-88d2115b350e",
+    "name": "F. Tomori",
+    "position": "CB",
+    "rating": 84,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/232/756/23_60.png"
+  },
+  {
+    "id": "2e90ffda-8f67-4895-8ce6-350a145ac7a1",
+    "name": "W. Ndidi",
+    "position": "CB",
+    "rating": 84,
+    "club": "Leicester City",
+    "image_url": "https://cdn.sofifa.net/players/226/790/23_60.png"
+  },
+  {
+    "id": "c68c8e48-675b-457c-b765-bfcbffcd1ff1",
+    "name": "Carvajal",
+    "position": "FB",
+    "rating": 84,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/204/963/23_60.png"
+  },
+  {
+    "id": "6aecd588-a427-448a-b1a6-b0daa161f321",
+    "name": "K. Trippier",
+    "position": "FB",
+    "rating": 84,
+    "club": "Newcastle United",
+    "image_url": "https://cdn.sofifa.net/players/186/345/23_60.png"
+  },
+  {
+    "id": "ef7cb994-2503-43fc-b4c0-0907c0900d13",
+    "name": "R. James",
+    "position": "FB",
+    "rating": 84,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/238/074/23_60.png"
+  },
+  {
+    "id": "374f9249-e835-4803-832b-146bba436542",
+    "name": "A. Hakimi",
+    "position": "FB",
+    "rating": 84,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/235/212/23_60.png"
+  },
+  {
+    "id": "bdba9fc5-8598-4f21-b523-1138f692b4c3",
+    "name": "Rúben Neves",
+    "position": "MID",
+    "rating": 83,
+    "club": "Wolverhampton Wanderers",
+    "image_url": "https://cdn.sofifa.net/players/224/293/23_60.png"
+  },
+  {
+    "id": "f1f02473-0797-446a-af0e-5d201b07f8b0",
+    "name": "Merino",
+    "position": "MID",
+    "rating": 83,
+    "club": "Real Sociedad",
+    "image_url": "https://cdn.sofifa.net/players/225/193/23_60.png"
+  },
+  {
+    "id": "1e7d3ff2-f028-48a8-9cfb-e0141a0eebb5",
+    "name": "K. Laimer",
+    "position": "MID",
+    "rating": 83,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/225/375/23_60.png"
+  },
+  {
+    "id": "8ad24f42-326d-4b29-b885-9f78b61fa37d",
+    "name": "Fabián",
+    "position": "MID",
+    "rating": 83,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/226/271/23_60.png"
+  },
+  {
+    "id": "df0440d0-60a2-4616-8bb9-e48d9e04c85c",
+    "name": "P. Højbjerg",
+    "position": "MID",
+    "rating": 83,
+    "club": "Tottenham Hotspur",
+    "image_url": "https://cdn.sofifa.net/players/213/648/23_60.png"
+  },
+  {
+    "id": "5c325d3d-55a8-4028-b1ac-dd5f576296a2",
+    "name": "Carlos Soler",
+    "position": "MID",
+    "rating": 83,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/234/153/23_60.png"
+  },
+  {
+    "id": "3430eae2-8e7c-4a87-8dbe-169dadf14e83",
+    "name": "R. Kent",
+    "position": "MID",
+    "rating": 83,
+    "club": "AFC Richmond",
+    "image_url": "https://cdn.sofifa.net/players/269/760/23_60.png"
+  },
+  {
+    "id": "a5fc862a-cf06-4154-bfba-2e27e37d23a6",
+    "name": "T. Lemar",
+    "position": "MID",
+    "rating": 83,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/213/565/23_60.png"
+  },
+  {
+    "id": "04092a06-c71b-4fcb-ba14-eeaf7077a8b1",
+    "name": "P. Zieliński",
+    "position": "MID",
+    "rating": 83,
+    "club": "Napoli",
+    "image_url": "https://cdn.sofifa.net/players/210/406/23_60.png"
+  },
+  {
+    "id": "6246279f-b9b4-46d0-9637-c1aad85dd615",
+    "name": "Gabriel Jesus",
+    "position": "ST",
+    "rating": 83,
+    "club": "Arsenal",
+    "image_url": "https://cdn.sofifa.net/players/230/666/23_60.png"
+  },
+  {
+    "id": "8fa007dc-e5d8-4449-9b57-f3eaa8245463",
+    "name": "V. Osimhen",
+    "position": "ST",
+    "rating": 83,
+    "club": "Napoli",
+    "image_url": "https://cdn.sofifa.net/players/232/293/23_60.png"
+  },
+  {
+    "id": "68c01740-fd12-4e95-b5c0-a3c701367043",
+    "name": "D. Zapata",
+    "position": "ST",
+    "rating": 83,
+    "club": "Atalanta",
+    "image_url": "https://cdn.sofifa.net/players/215/333/23_60.png"
+  },
+  {
+    "id": "99ebd887-da9d-4a79-8e9c-eec4c5f30ea0",
+    "name": "Á. Correa",
+    "position": "ST",
+    "rating": 83,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/214/997/23_60.png"
+  },
+  {
+    "id": "60b21f21-8949-4920-b3eb-b41c4f73f16c",
+    "name": "Roberto Firmino",
+    "position": "ST",
+    "rating": 83,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/201/942/23_60.png"
+  },
+  {
+    "id": "106083c6-7c55-4cc2-b19e-782ee69ce11d",
+    "name": "Marco Asensio",
+    "position": "WING",
+    "rating": 83,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/220/834/23_60.png"
+  },
+  {
+    "id": "4a991936-76a9-4557-8ea4-8ec717ddccd5",
+    "name": "H. Ziyech",
+    "position": "WING",
+    "rating": 83,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/208/670/23_60.png"
+  },
+  {
+    "id": "17490ed6-c184-4973-afd8-4651c074d9bb",
+    "name": "Unai Simón",
+    "position": "GK",
+    "rating": 83,
+    "club": "Athletic Club de Bilbao",
+    "image_url": "https://cdn.sofifa.net/players/230/869/23_60.png"
+  },
+  {
+    "id": "6682dae7-939b-42b9-9408-5fc21f56ad2e",
+    "name": "G. Kobel",
+    "position": "GK",
+    "rating": 83,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/235/073/23_60.png"
+  },
+  {
+    "id": "d7641b71-d883-4b46-8a5e-a2ef5a3fc5c3",
+    "name": "K. Schmeichel",
+    "position": "GK",
+    "rating": 83,
+    "club": "OGC Nice",
+    "image_url": "https://cdn.sofifa.net/players/163/587/23_60.png"
+  },
+  {
+    "id": "3ee6fe77-838b-4594-bddc-1e00052580a6",
+    "name": "L. Hrádecký",
+    "position": "GK",
+    "rating": 83,
+    "club": "Bayer 04 Leverkusen",
+    "image_url": "https://cdn.sofifa.net/players/190/941/23_60.png"
+  },
+  {
+    "id": "ffd14a6d-3e8d-497d-bf0e-30f2fb8134e4",
+    "name": "O. Baumann",
+    "position": "GK",
+    "rating": 83,
+    "club": "TSG Hoffenheim",
+    "image_url": "https://cdn.sofifa.net/players/193/698/23_60.png"
+  },
+  {
+    "id": "07899192-a71d-4f92-8afe-257a31ab287e",
+    "name": "Diego Carlos",
+    "position": "CB",
+    "rating": 83,
+    "club": "Aston Villa",
+    "image_url": "https://cdn.sofifa.net/players/219/693/23_60.png"
+  },
+  {
+    "id": "47d54825-4623-4cb2-8e09-240c30c66901",
+    "name": "P. Kimpembe",
+    "position": "CB",
+    "rating": 83,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/225/850/23_60.png"
+  },
+  {
+    "id": "94782c5e-c698-4e5d-92bc-90a2596329cc",
+    "name": "C. Romero",
+    "position": "CB",
+    "rating": 83,
+    "club": "Tottenham Hotspur",
+    "image_url": "https://cdn.sofifa.net/players/232/488/23_60.png"
+  },
+  {
+    "id": "fe434c53-8afa-4bf8-8f05-5c82a85e67c6",
+    "name": "Pau Torres",
+    "position": "CB",
+    "rating": 83,
+    "club": "Villarreal CF",
+    "image_url": "https://cdn.sofifa.net/players/241/464/23_60.png"
+  },
+  {
+    "id": "d2bba53f-ea71-41ee-bc7d-7ad8f1c87175",
+    "name": "R. Araujo",
+    "position": "CB",
+    "rating": 83,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/253/163/23_60.png"
+  },
+  {
+    "id": "5e4aa82b-6924-4757-8c90-7ef2c270c8c9",
+    "name": "J. Giménez",
+    "position": "CB",
+    "rating": 83,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/216/460/23_60.png"
+  },
+  {
+    "id": "020536f0-703b-4fe4-a7af-3679f613af0e",
+    "name": "Bremer",
+    "position": "CB",
+    "rating": 83,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/239/580/23_60.png"
+  },
+  {
+    "id": "15ab38c1-e9e4-43c6-a817-11f2e7f9ee6a",
+    "name": "Piqué",
+    "position": "CB",
+    "rating": 83,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/152/729/23_60.png"
+  },
+  {
+    "id": "d9a8200f-f66a-4be7-b725-95ad18ec076a",
+    "name": "J. Stones",
+    "position": "CB",
+    "rating": 83,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/203/574/23_60.png"
+  },
+  {
+    "id": "60ff13db-6bf2-408d-88f0-1f90936cad89",
+    "name": "F. Mendy",
+    "position": "FB",
+    "rating": 83,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/228/618/23_60.png"
+  },
+  {
+    "id": "e843c4b8-8b94-4a90-827f-9a073343c4a0",
+    "name": "J. Cuadrado",
+    "position": "FB",
+    "rating": 83,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/193/082/23_60.png"
+  },
+  {
+    "id": "0f141920-298a-4271-9d2d-31060609bc12",
+    "name": "Jesús Navas",
+    "position": "FB",
+    "rating": 83,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/146/536/23_60.png"
+  },
+  {
+    "id": "dc1e2e41-bbe3-4034-b470-d17e3fc55a8b",
+    "name": "Ricardo Pereira",
+    "position": "FB",
+    "rating": 83,
+    "club": "Leicester City",
+    "image_url": "https://cdn.sofifa.net/players/210/243/23_60.png"
+  },
+  {
+    "id": "965243c4-2a1c-4aa1-801c-edcf7cfd6e59",
+    "name": "A. Kramarić",
+    "position": "ST",
+    "rating": 82,
+    "club": "TSG Hoffenheim",
+    "image_url": "https://cdn.sofifa.net/players/216/354/23_60.png"
+  },
+  {
+    "id": "4df38310-e949-41cd-a687-cffd865181dd",
+    "name": "Gonçalo Guedes",
+    "position": "ST",
+    "rating": 82,
+    "club": "Wolverhampton Wanderers",
+    "image_url": "https://cdn.sofifa.net/players/224/411/23_60.png"
+  },
+  {
+    "id": "fffd0d05-503c-4adb-9df5-02f93c208ce9",
+    "name": "Anderson Talisca",
+    "position": "ST",
+    "rating": 82,
+    "club": "Al Nassr",
+    "image_url": "https://cdn.sofifa.net/players/212/523/23_60.png"
+  },
+  {
+    "id": "3d0cc731-7f9a-4afe-bc53-b2687437f3bb",
+    "name": "T. Werner",
+    "position": "ST",
+    "rating": 82,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/212/188/23_60.png"
+  },
+  {
+    "id": "c30e18c1-b082-4af3-93ba-11bde9dec656",
+    "name": "S. Haller",
+    "position": "ST",
+    "rating": 82,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/205/693/23_60.png"
+  },
+  {
+    "id": "f1b01e68-ec33-415e-b4ef-23ae020031e1",
+    "name": "T. Abraham",
+    "position": "ST",
+    "rating": 82,
+    "club": "Roma",
+    "image_url": "https://cdn.sofifa.net/players/231/352/23_60.png"
+  },
+  {
+    "id": "204072f7-6d6e-4827-aa30-09e2466200a5",
+    "name": "D. Rojas",
+    "position": "ST",
+    "rating": 82,
+    "club": "AFC Richmond",
+    "image_url": "https://cdn.sofifa.net/players/269/763/23_60.png"
+  },
+  {
+    "id": "18f4234a-a136-4223-9a0c-0e53ac1d1c5d",
+    "name": "D. Núñez",
+    "position": "ST",
+    "rating": 82,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/253/072/23_60.png"
+  },
+  {
+    "id": "bbde356d-6502-49c8-a61f-5128d578ea4f",
+    "name": "R. Malinovskyi",
+    "position": "ST",
+    "rating": 82,
+    "club": "Atalanta",
+    "image_url": "https://cdn.sofifa.net/players/231/969/23_60.png"
+  },
+  {
+    "id": "4ab88f1f-a372-4b1c-a22b-dc5a2d690d58",
+    "name": "R. Jiménez",
+    "position": "ST",
+    "rating": 82,
+    "club": "Wolverhampton Wanderers",
+    "image_url": "https://cdn.sofifa.net/players/204/838/23_60.png"
+  },
+  {
+    "id": "7f72c4b8-fc12-419f-975e-553deff1c917",
+    "name": "André Silva",
+    "position": "ST",
+    "rating": 82,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/228/941/23_60.png"
+  },
+  {
+    "id": "df1de374-08cf-460a-9a17-25f34ce4406e",
+    "name": "Z. Ibrahimović",
+    "position": "ST",
+    "rating": 82,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/041/236/23_60.png"
+  },
+  {
+    "id": "66521147-e3c4-4b91-92ba-97346bb0d696",
+    "name": "O. Giroud",
+    "position": "ST",
+    "rating": 82,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/178/509/23_60.png"
+  },
+  {
+    "id": "074ae5dc-2bf8-4a05-bf6b-4b826958e4fc",
+    "name": "M. Arnautović",
+    "position": "ST",
+    "rating": 82,
+    "club": "Bologna",
+    "image_url": "https://cdn.sofifa.net/players/184/200/23_60.png"
+  },
+  {
+    "id": "fb2d92a7-2033-488e-91d6-648d96934a92",
+    "name": "K. Volland",
+    "position": "ST",
+    "rating": 82,
+    "club": "AS Monaco",
+    "image_url": "https://cdn.sofifa.net/players/200/610/23_60.png"
+  },
+  {
+    "id": "44175dba-c967-4927-9732-182df43c8ad5",
+    "name": "L. Muriel",
+    "position": "ST",
+    "rating": 82,
+    "club": "Atalanta",
+    "image_url": "https://cdn.sofifa.net/players/199/110/23_60.png"
+  },
+  {
+    "id": "ad9303fd-afe4-49e1-bcdd-a0a99c0f2aaa",
+    "name": "Rafa",
+    "position": "WING",
+    "rating": 82,
+    "club": "SL Benfica",
+    "image_url": "https://cdn.sofifa.net/players/216/547/23_60.png"
+  },
+  {
+    "id": "c3f4b335-2892-44c2-9729-6f80176d9302",
+    "name": "Ferran Torres",
+    "position": "WING",
+    "rating": 82,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/241/461/23_60.png"
+  },
+  {
+    "id": "32c9802f-2f9b-4f1c-96c6-06b8c337e5c8",
+    "name": "W. Zaha",
+    "position": "WING",
+    "rating": 82,
+    "club": "Crystal Palace",
+    "image_url": "https://cdn.sofifa.net/players/198/717/23_60.png"
+  },
+  {
+    "id": "da09954d-0c29-463c-9549-4611345a94a5",
+    "name": "G. Rulli",
+    "position": "GK",
+    "rating": 82,
+    "club": "Villarreal CF",
+    "image_url": "https://cdn.sofifa.net/players/215/316/23_60.png"
+  },
+  {
+    "id": "0f99b0be-e02e-487a-a241-6437fdcfc2c1",
+    "name": "David Soria",
+    "position": "GK",
+    "rating": 82,
+    "club": "Getafe CF",
+    "image_url": "https://cdn.sofifa.net/players/223/952/23_60.png"
+  },
+  {
+    "id": "b98888eb-6dab-460d-9efe-54b8af9455b7",
+    "name": "A. Onana",
+    "position": "GK",
+    "rating": 82,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/226/753/23_60.png"
+  },
+  {
+    "id": "8311f9c3-836c-43cc-bd87-b5bb2c2c9b13",
+    "name": "Álex Remiro",
+    "position": "GK",
+    "rating": 82,
+    "club": "Real Sociedad",
+    "image_url": "https://cdn.sofifa.net/players/227/127/23_60.png"
+  },
+  {
+    "id": "7c8a2729-b7a7-4691-b391-46724e724275",
+    "name": "A. Ramsdale",
+    "position": "GK",
+    "rating": 82,
+    "club": "Arsenal",
+    "image_url": "https://cdn.sofifa.net/players/233/934/23_60.png"
+  },
+  {
+    "id": "35ae1bc6-a752-492b-b32c-6b051b92c075",
+    "name": "Lucas Mantela",
+    "position": "GK",
+    "rating": 82,
+    "club": "Palmeiras",
+    "image_url": "https://cdn.sofifa.net/players/230/182/23_60.png"
+  },
+  {
+    "id": "52019282-4a36-4396-9640-89b6c1803fa0",
+    "name": "J. Pickford",
+    "position": "GK",
+    "rating": 82,
+    "club": "Everton",
+    "image_url": "https://cdn.sofifa.net/players/204/935/23_60.png"
+  },
+  {
+    "id": "44fa05f7-be34-41dc-8a9f-fc8ff3d03d18",
+    "name": "Ł. Fabiański",
+    "position": "GK",
+    "rating": 82,
+    "club": "West Ham United",
+    "image_url": "https://cdn.sofifa.net/players/164/835/23_60.png"
+  },
+  {
+    "id": "2e392052-1aed-4224-9455-ed4f5d40849a",
+    "name": "Rui Patrício",
+    "position": "GK",
+    "rating": 82,
+    "club": "Roma",
+    "image_url": "https://cdn.sofifa.net/players/178/005/23_60.png"
+  },
+  {
+    "id": "c1043125-e3f8-4493-9868-f71255c04826",
+    "name": "A. Lopes",
+    "position": "GK",
+    "rating": 82,
+    "club": "Olympique Lyonnais",
+    "image_url": "https://cdn.sofifa.net/players/199/482/23_60.png"
+  },
+  {
+    "id": "f077028c-3dde-4d89-a51b-ae94e308e39c",
+    "name": "J. Tah",
+    "position": "CB",
+    "rating": 82,
+    "club": "Bayer 04 Leverkusen",
+    "image_url": "https://cdn.sofifa.net/players/213/331/23_60.png"
+  },
+  {
+    "id": "fde77d08-79f9-4a48-bcb6-754399d6baaf",
+    "name": "A. Christensen",
+    "position": "CB",
+    "rating": 82,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/213/661/23_60.png"
+  },
+  {
+    "id": "61a337c4-af09-4c3c-83e3-43d17bc0776d",
+    "name": "E. Can",
+    "position": "CB",
+    "rating": 82,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/208/333/23_60.png"
+  },
+  {
+    "id": "8d244f9f-b078-4297-88a9-06d6c032e297",
+    "name": "M. Ginter",
+    "position": "CB",
+    "rating": 82,
+    "club": "Sport-Club Freiburg",
+    "image_url": "https://cdn.sofifa.net/players/207/862/23_60.png"
+  },
+  {
+    "id": "1d8df4be-c826-4e21-872c-94836b965db5",
+    "name": "Aritz Elustondo",
+    "position": "CB",
+    "rating": 82,
+    "club": "Real Sociedad",
+    "image_url": "https://cdn.sofifa.net/players/226/221/23_60.png"
+  },
+  {
+    "id": "3e762ee6-f545-4734-bf72-d43b3ff77b80",
+    "name": "N. Schlotterbeck",
+    "position": "CB",
+    "rating": 82,
+    "club": "Borussia Dortmund",
+    "image_url": "https://cdn.sofifa.net/players/247/819/23_60.png"
+  },
+  {
+    "id": "8a5e38ce-d15e-4ada-a6d6-168c26871116",
+    "name": "Josué Chiamulera",
+    "position": "CB",
+    "rating": 82,
+    "club": "Club Athletico Paranaense",
+    "image_url": "https://cdn.sofifa.net/players/230/375/23_60.png"
+  },
+  {
+    "id": "7fb26853-771e-425c-a89d-283013b3ebc2",
+    "name": "W. Orban",
+    "position": "CB",
+    "rating": 82,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/204/638/23_60.png"
+  },
+  {
+    "id": "b913b9cb-0f89-4859-80c1-d2d3f9d025eb",
+    "name": "Iñigo Martínez",
+    "position": "CB",
+    "rating": 82,
+    "club": "Athletic Club de Bilbao",
+    "image_url": "https://cdn.sofifa.net/players/204/525/23_60.png"
+  },
+  {
+    "id": "0789411c-9b6d-4db8-8849-dc35485b8e3c",
+    "name": "S. Kjær",
+    "position": "CB",
+    "rating": 82,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/179/645/23_60.png"
+  },
+  {
+    "id": "c9f8fb14-0bc2-4426-8040-5677a2334cc1",
+    "name": "T. Alderweireld",
+    "position": "CB",
+    "rating": 82,
+    "club": "Royal Antwerp FC",
+    "image_url": "https://cdn.sofifa.net/players/184/087/23_60.png"
+  },
+  {
+    "id": "351217da-fabd-43b6-b720-e12335a415a6",
+    "name": "Azpilicueta",
+    "position": "CB",
+    "rating": 82,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/184/432/23_60.png"
+  },
+  {
+    "id": "aeb2eea1-e4b7-4f8a-9a2b-d3e02d11bb1e",
+    "name": "Raúl Albiol",
+    "position": "CB",
+    "rating": 82,
+    "club": "Villarreal CF",
+    "image_url": "https://cdn.sofifa.net/players/157/481/23_60.png"
+  },
+  {
+    "id": "01735a8a-346d-4bd1-b107-4e9c04090167",
+    "name": "S. Coates",
+    "position": "CB",
+    "rating": 82,
+    "club": "Sporting CP",
+    "image_url": "https://cdn.sofifa.net/players/197/655/23_60.png"
+  },
+  {
+    "id": "2c2d854e-42f3-4cad-92bb-640fdcd58342",
+    "name": "Gabriel Paulista",
+    "position": "CB",
+    "rating": 82,
+    "club": "Valencia CF",
+    "image_url": "https://cdn.sofifa.net/players/201/305/23_60.png"
+  },
+  {
+    "id": "d25f4910-3ac7-48bb-8422-95eee986b547",
+    "name": "Nacho Fernández",
+    "position": "CB",
+    "rating": 82,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/200/724/23_60.png"
+  },
+  {
+    "id": "9b78bdde-e9e9-4912-844f-1ed000f3e175",
+    "name": "F. Acerbi",
+    "position": "CB",
+    "rating": 82,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/199/845/23_60.png"
+  },
+  {
+    "id": "bf62e418-2808-4900-af8a-5dd0cddf045c",
+    "name": "G. Di Lorenzo",
+    "position": "FB",
+    "rating": 82,
+    "club": "Napoli",
+    "image_url": "https://cdn.sofifa.net/players/217/870/23_60.png"
+  },
+  {
+    "id": "21fa2eff-7768-4c81-aa79-31a92e7a3b08",
+    "name": "R. Gosens",
+    "position": "FB",
+    "rating": 82,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/223/697/23_60.png"
+  },
+  {
+    "id": "cf8edda8-a89d-46d1-83c3-6c6bcf4a715c",
+    "name": "Gayà",
+    "position": "FB",
+    "rating": 82,
+    "club": "Valencia CF",
+    "image_url": "https://cdn.sofifa.net/players/211/688/23_60.png"
+  },
+  {
+    "id": "5b426016-eec2-4822-babb-ac1f904b00c9",
+    "name": "Grimaldo",
+    "position": "FB",
+    "rating": 82,
+    "club": "SL Benfica",
+    "image_url": "https://cdn.sofifa.net/players/210/035/23_60.png"
+  },
+  {
+    "id": "c17020cf-46de-461d-afa3-5f08b7a2cc07",
+    "name": "D. Dumfries",
+    "position": "FB",
+    "rating": 82,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/233/096/23_60.png"
+  },
+  {
+    "id": "8bcedf99-a5b0-4564-9e7d-f3d03470abd6",
+    "name": "B. Chilwell",
+    "position": "FB",
+    "rating": 82,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/229/984/23_60.png"
+  },
+  {
+    "id": "93056877-c150-4938-ad43-4e9c3714fab6",
+    "name": "Yuri Berchiche",
+    "position": "FB",
+    "rating": 82,
+    "club": "Athletic Club de Bilbao",
+    "image_url": "https://cdn.sofifa.net/players/183/512/23_60.png"
+  },
+  {
+    "id": "86465e15-3158-4c6d-b386-3e324aa53d38",
+    "name": "L. Digne",
+    "position": "FB",
+    "rating": 82,
+    "club": "Aston Villa",
+    "image_url": "https://cdn.sofifa.net/players/200/458/23_60.png"
+  },
+  {
+    "id": "603bb0b0-fd0c-43d0-adf5-997768ca1633",
+    "name": "L. Spinazzola",
+    "position": "FB",
+    "rating": 82,
+    "club": "Roma",
+    "image_url": "https://cdn.sofifa.net/players/202/884/23_60.png"
+  },
+  {
+    "id": "2bc6f1bd-9874-43cf-adaa-86a4c9db0169",
+    "name": "M. Terrier",
+    "position": "ST",
+    "rating": 81,
+    "club": "Stade Rennais FC",
+    "image_url": "https://cdn.sofifa.net/players/236/786/23_60.png"
+  },
+  {
+    "id": "30eb85af-5bd5-46a1-91c8-21639bd66c3c",
+    "name": "A. Lacazette",
+    "position": "ST",
+    "rating": 81,
+    "club": "Olympique Lyonnais",
+    "image_url": "https://cdn.sofifa.net/players/193/301/23_60.png"
+  },
+  {
+    "id": "0006bc6e-2322-4bfc-8856-a489ac8f4c37",
+    "name": "M. Taremi",
+    "position": "ST",
+    "rating": 81,
+    "club": "FC Porto",
+    "image_url": "https://cdn.sofifa.net/players/241/788/23_60.png"
+  },
+  {
+    "id": "92c43d35-9394-4719-868a-e393b006d8e0",
+    "name": "Oswaldinato",
+    "position": "ST",
+    "rating": 81,
+    "club": "Flamengo",
+    "image_url": "https://cdn.sofifa.net/players/230/430/23_60.png"
+  },
+  {
+    "id": "4ab95926-40f5-47b1-89f7-eecfe2018e88",
+    "name": "Adriano Bisesi",
+    "position": "ST",
+    "rating": 81,
+    "club": "RB Bragantino",
+    "image_url": "https://cdn.sofifa.net/players/230/294/23_60.png"
+  },
+  {
+    "id": "b5fb6df5-f3e4-4c86-8d19-207f15f1dd2e",
+    "name": "M. Rashford",
+    "position": "ST",
+    "rating": 81,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/231/677/23_60.png"
+  },
+  {
+    "id": "a04bceb8-a20b-4900-a61e-c1c3749c1fab",
+    "name": "Richarlison",
+    "position": "ST",
+    "rating": 81,
+    "club": "Tottenham Hotspur",
+    "image_url": "https://cdn.sofifa.net/players/231/943/23_60.png"
+  },
+  {
+    "id": "a030bab4-ee13-4341-b159-3d93dc35975e",
+    "name": "E. Cavani",
+    "position": "ST",
+    "rating": 81,
+    "club": "Valencia CF",
+    "image_url": "https://cdn.sofifa.net/players/179/813/23_60.png"
+  },
+  {
+    "id": "402c8b4e-dcf5-452d-abd2-abc094d159ef",
+    "name": "G. Bale",
+    "position": "ST",
+    "rating": 81,
+    "club": "Los Angeles FC",
+    "image_url": "https://cdn.sofifa.net/players/173/731/23_60.png"
+  },
+  {
+    "id": "fcf3478f-2acb-41f5-a4f9-8ca1806bc9a5",
+    "name": "Borja Iglesias",
+    "position": "ST",
+    "rating": 81,
+    "club": "Real Betis Balompié",
+    "image_url": "https://cdn.sofifa.net/players/224/179/23_60.png"
+  },
+  {
+    "id": "04313f7d-b25d-4c06-8995-17e4553e0679",
+    "name": "G. Laborde",
+    "position": "ST",
+    "rating": 81,
+    "club": "OGC Nice",
+    "image_url": "https://cdn.sofifa.net/players/209/519/23_60.png"
+  },
+  {
+    "id": "3c5c9c41-a826-4ccf-8044-c2bc77c535f9",
+    "name": "Ricardo Horta",
+    "position": "ST",
+    "rating": 81,
+    "club": "SC Braga",
+    "image_url": "https://cdn.sofifa.net/players/213/516/23_60.png"
+  },
+  {
+    "id": "0264e245-7760-44fe-b5eb-519dc25ca842",
+    "name": "Iñaki Williams",
+    "position": "ST",
+    "rating": 81,
+    "club": "Athletic Club de Bilbao",
+    "image_url": "https://cdn.sofifa.net/players/216/201/23_60.png"
+  },
+  {
+    "id": "2960381f-330c-41ef-a172-850465061023",
+    "name": "J. Corona",
+    "position": "WING",
+    "rating": 81,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/193/165/23_60.png"
+  },
+  {
+    "id": "2b08d96c-b49e-4608-9cd6-dd089911e222",
+    "name": "Pablo Sarabia",
+    "position": "WING",
+    "rating": 81,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/198/950/23_60.png"
+  },
+  {
+    "id": "1b36756d-9059-40eb-b556-00595abba0c1",
+    "name": "C. Vela",
+    "position": "WING",
+    "rating": 81,
+    "club": "Los Angeles FC",
+    "image_url": "https://cdn.sofifa.net/players/169/416/23_60.png"
+  },
+  {
+    "id": "dcb55c1b-8480-4b0b-a383-37c44f96f9e7",
+    "name": "L. Ocampos",
+    "position": "WING",
+    "rating": 81,
+    "club": "Ajax",
+    "image_url": "https://cdn.sofifa.net/players/205/632/23_60.png"
+  },
+  {
+    "id": "e45672b6-0cb1-4e33-ace3-c57e67ee3697",
+    "name": "H. Lozano",
+    "position": "WING",
+    "rating": 81,
+    "club": "Napoli",
+    "image_url": "https://cdn.sofifa.net/players/221/992/23_60.png"
+  },
+  {
+    "id": "65c667bf-fcfa-4d9e-9e91-26902536dbc6",
+    "name": "M. Politano",
+    "position": "WING",
+    "rating": 81,
+    "club": "Napoli",
+    "image_url": "https://cdn.sofifa.net/players/216/409/23_60.png"
+  },
+  {
+    "id": "60612940-1201-43f9-b15c-43cfc55e4795",
+    "name": "B. Bourigeaud",
+    "position": "WING",
+    "rating": 81,
+    "club": "Stade Rennais FC",
+    "image_url": "https://cdn.sofifa.net/players/214/097/23_60.png"
+  },
+  {
+    "id": "c95b32ca-5cd9-423a-983d-1294a2ed132c",
+    "name": "A. Areola",
+    "position": "GK",
+    "rating": 81,
+    "club": "West Ham United",
+    "image_url": "https://cdn.sofifa.net/players/193/105/23_60.png"
+  },
+  {
+    "id": "9965ee4b-ae3a-496f-a4ae-93d51ddb58cb",
+    "name": "Neto",
+    "position": "GK",
+    "rating": 81,
+    "club": "AFC Bournemouth",
+    "image_url": "https://cdn.sofifa.net/players/194/404/23_60.png"
+  },
+  {
+    "id": "1bee5356-85d2-48a7-aadc-e9b73f8ac365",
+    "name": "N. Pope",
+    "position": "GK",
+    "rating": 81,
+    "club": "Newcastle United",
+    "image_url": "https://cdn.sofifa.net/players/203/841/23_60.png"
+  },
+  {
+    "id": "4105af61-0549-4300-9aac-848315250a20",
+    "name": "Adán",
+    "position": "GK",
+    "rating": 81,
+    "club": "Sporting CP",
+    "image_url": "https://cdn.sofifa.net/players/178/086/23_60.png"
+  },
+  {
+    "id": "515c25ba-109d-440b-b07a-8fdbf17d7750",
+    "name": "José Sá",
+    "position": "GK",
+    "rating": 81,
+    "club": "Wolverhampton Wanderers",
+    "image_url": "https://cdn.sofifa.net/players/212/442/23_60.png"
+  },
+  {
+    "id": "88faa982-eb66-4df9-9150-d4f0290e4581",
+    "name": "O. Vlachodimos",
+    "position": "GK",
+    "rating": 81,
+    "club": "SL Benfica",
+    "image_url": "https://cdn.sofifa.net/players/211/990/23_60.png"
+  },
+  {
+    "id": "4957d252-25d5-4ced-baea-26e9b9954d1b",
+    "name": "J. Musso",
+    "position": "GK",
+    "rating": 81,
+    "club": "Atalanta",
+    "image_url": "https://cdn.sofifa.net/players/214/979/23_60.png"
+  },
+  {
+    "id": "24d14164-23ef-4a86-af61-d2c2aef04b9b",
+    "name": "E. Ndicka",
+    "position": "CB",
+    "rating": 81,
+    "club": "Eintracht Frankfurt",
+    "image_url": "https://cdn.sofifa.net/players/236/403/23_60.png"
+  },
+  {
+    "id": "09097872-a7e9-4af8-9b9d-6c75fa9e2a97",
+    "name": "T. Souček",
+    "position": "CB",
+    "rating": 81,
+    "club": "West Ham United",
+    "image_url": "https://cdn.sofifa.net/players/236/792/23_60.png"
+  },
+  {
+    "id": "92e4f771-9147-4be7-a577-d97678c7424c",
+    "name": "I. Konaté",
+    "position": "CB",
+    "rating": 81,
+    "club": "Liverpool",
+    "image_url": "https://cdn.sofifa.net/players/237/678/23_60.png"
+  },
+  {
+    "id": "bfee6963-f08a-48b4-a7a0-d28d46b39d40",
+    "name": "E. Tapsoba",
+    "position": "CB",
+    "rating": 81,
+    "club": "Bayer 04 Leverkusen",
+    "image_url": "https://cdn.sofifa.net/players/247/263/23_60.png"
+  },
+  {
+    "id": "a1636701-0595-4a1d-93de-c8138e98fe81",
+    "name": "J. Gvardiol",
+    "position": "CB",
+    "rating": 81,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/251/517/23_60.png"
+  },
+  {
+    "id": "f0fcd937-e0b0-4216-b60c-8174cb0afa47",
+    "name": "Marc Bartra",
+    "position": "CB",
+    "rating": 81,
+    "club": "Trabzonspor",
+    "image_url": "https://cdn.sofifa.net/players/198/141/23_60.png"
+  },
+  {
+    "id": "9ee3c1b7-44f9-4cb2-9470-4a333bc5ce22",
+    "name": "Felipe",
+    "position": "CB",
+    "rating": 81,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/207/863/23_60.png"
+  },
+  {
+    "id": "6145b8b6-61fd-4af3-aa52-802699b18a01",
+    "name": "H. Maguire",
+    "position": "CB",
+    "rating": 81,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/203/263/23_60.png"
+  },
+  {
+    "id": "6edaf86c-4382-4885-b1db-eed1fe27907b",
+    "name": "Heberto Gaúcho",
+    "position": "CB",
+    "rating": 81,
+    "club": "Clube Atlético Mineiro",
+    "image_url": "https://cdn.sofifa.net/players/230/225/23_60.png"
+  },
+  {
+    "id": "fe4db233-066f-4929-9a6d-d9194319fc9c",
+    "name": "D. Raum",
+    "position": "FB",
+    "rating": 81,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/236/703/23_60.png"
+  },
+  {
+    "id": "78591bd3-ab89-4dc8-adde-114c8460f48c",
+    "name": "Pedro Porro",
+    "position": "FB",
+    "rating": 81,
+    "club": "Sporting CP",
+    "image_url": "https://cdn.sofifa.net/players/243/576/23_60.png"
+  },
+  {
+    "id": "3fc30363-68c6-4fd2-9f8c-509bbb0c1d73",
+    "name": "Cucurella",
+    "position": "FB",
+    "rating": 81,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/239/231/23_60.png"
+  },
+  {
+    "id": "e366e51b-ff81-4359-8629-7ac53154b0d3",
+    "name": "Welington Dano",
+    "position": "FB",
+    "rating": 81,
+    "club": "Clube Atlético Mineiro",
+    "image_url": "https://cdn.sofifa.net/players/230/347/23_60.png"
+  },
+  {
+    "id": "b55d6e41-7586-4f92-a75f-57eb910c627c",
+    "name": "Adryan Zonta",
+    "position": "FB",
+    "rating": 81,
+    "club": "RB Bragantino",
+    "image_url": "https://cdn.sofifa.net/players/230/256/23_60.png"
+  },
+  {
+    "id": "87421b53-f06a-4b55-9438-309a13c2c5a2",
+    "name": "K. Tierney",
+    "position": "FB",
+    "rating": 81,
+    "club": "Arsenal",
+    "image_url": "https://cdn.sofifa.net/players/226/491/23_60.png"
+  },
+  {
+    "id": "462a002b-6df4-4af4-b5f7-aab97a04cf2a",
+    "name": "Lucas Vázquez",
+    "position": "FB",
+    "rating": 81,
+    "club": "Real Madrid CF",
+    "image_url": "https://cdn.sofifa.net/players/208/618/23_60.png"
+  },
+  {
+    "id": "a5875b35-ee2c-4ec2-8d41-e163218f0b2d",
+    "name": "N. Tagliafico",
+    "position": "FB",
+    "rating": 81,
+    "club": "Olympique Lyonnais",
+    "image_url": "https://cdn.sofifa.net/players/211/256/23_60.png"
+  },
+  {
+    "id": "2bfb1055-02b2-4649-b8a8-66584de254f0",
+    "name": "Y. En-Nesyri",
+    "position": "ST",
+    "rating": 80,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/235/410/23_60.png"
+  },
+  {
+    "id": "6c1ad329-0add-4d40-a175-89bd5137bf97",
+    "name": "A. Isak",
+    "position": "ST",
+    "rating": 80,
+    "club": "Newcastle United",
+    "image_url": "https://cdn.sofifa.net/players/233/731/23_60.png"
+  },
+  {
+    "id": "aebc29df-c3c4-42ce-9f05-d6b32d91e1e9",
+    "name": "Morata",
+    "position": "ST",
+    "rating": 80,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/201/153/23_60.png"
+  },
+  {
+    "id": "bd227368-9003-4708-b3ff-35a0fd04bf6d",
+    "name": "A. Delort",
+    "position": "ST",
+    "rating": 80,
+    "club": "OGC Nice",
+    "image_url": "https://cdn.sofifa.net/players/193/983/23_60.png"
+  },
+  {
+    "id": "221ae175-8b2b-4325-9a58-97050d44d62a",
+    "name": "Joselu",
+    "position": "ST",
+    "rating": 80,
+    "club": "RCD Espanyol de Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/173/608/23_60.png"
+  },
+  {
+    "id": "0623190e-4cc7-4e1c-864b-5e484f906cbd",
+    "name": "L. Sinisterra",
+    "position": "WING",
+    "rating": 80,
+    "club": "Leeds United",
+    "image_url": "https://cdn.sofifa.net/players/233/500/23_60.png"
+  },
+  {
+    "id": "be4eebe3-674b-43c5-954c-3f74b63d9468",
+    "name": "Lucas Moura",
+    "position": "WING",
+    "rating": 80,
+    "club": "Tottenham Hotspur",
+    "image_url": "https://cdn.sofifa.net/players/200/949/23_60.png"
+  },
+  {
+    "id": "67600a4d-5cef-42bf-b5ea-5c5681c2398b",
+    "name": "Deulofeu",
+    "position": "WING",
+    "rating": 80,
+    "club": "Udinese Calcio",
+    "image_url": "https://cdn.sofifa.net/players/202/477/23_60.png"
+  },
+  {
+    "id": "b779a7c2-90d0-42d2-994a-53ec4ef11038",
+    "name": "J. Correa",
+    "position": "WING",
+    "rating": 80,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/215/330/23_60.png"
+  },
+  {
+    "id": "6efa9e0c-8cf6-4b81-9c70-5db1f93c0a6a",
+    "name": "A. Lafont",
+    "position": "GK",
+    "rating": 80,
+    "club": "FC Nantes",
+    "image_url": "https://cdn.sofifa.net/players/231/691/23_60.png"
+  },
+  {
+    "id": "7b78b605-0a1d-4a5c-8c24-088335e4ee7a",
+    "name": "Héniton Pires",
+    "position": "GK",
+    "rating": 80,
+    "club": "Flamengo",
+    "image_url": "https://cdn.sofifa.net/players/230/204/23_60.png"
+  },
+  {
+    "id": "945ab6e8-6a28-40f9-88c4-a6ff97f32091",
+    "name": "M. Dmitrović",
+    "position": "GK",
+    "rating": 80,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/227/290/23_60.png"
+  },
+  {
+    "id": "ee1f92a0-9ebd-4a3f-87a8-82ca5bcd1c51",
+    "name": "D. Livaković",
+    "position": "GK",
+    "rating": 80,
+    "club": "Dinamo Zagreb",
+    "image_url": "https://cdn.sofifa.net/players/241/671/23_60.png"
+  },
+  {
+    "id": "bfeab2e3-05e7-488a-b4cb-74191c672219",
+    "name": "J. Cillessen",
+    "position": "GK",
+    "rating": 80,
+    "club": "N.E.C. Nijmegen",
+    "image_url": "https://cdn.sofifa.net/players/199/987/23_60.png"
+  },
+  {
+    "id": "d9915ea3-afbf-4b65-86fd-293ba78eb01a",
+    "name": "S. Ortega",
+    "position": "GK",
+    "rating": 80,
+    "club": "Manchester City",
+    "image_url": "https://cdn.sofifa.net/players/200/159/23_60.png"
+  },
+  {
+    "id": "c55477b4-2e0f-4586-859b-9d3d6ef5451e",
+    "name": "T. Vaclík",
+    "position": "GK",
+    "rating": 80,
+    "club": "Free agent",
+    "image_url": "https://cdn.sofifa.net/players/204/120/23_60.png"
+  },
+  {
+    "id": "ee871760-f721-4f54-a48e-2a54d6181f6f",
+    "name": "Edgar Badia",
+    "position": "GK",
+    "rating": 80,
+    "club": "Elche CF",
+    "image_url": "https://cdn.sofifa.net/players/204/234/23_60.png"
+  },
+  {
+    "id": "fd2f1c64-8f0d-4b08-8761-2b47b3ac962b",
+    "name": "B. Leno",
+    "position": "GK",
+    "rating": 80,
+    "club": "Fulham",
+    "image_url": "https://cdn.sofifa.net/players/192/563/23_60.png"
+  },
+  {
+    "id": "c4a20bb6-3a68-421d-a0a9-aa5612fc6c30",
+    "name": "G. Ochoa",
+    "position": "GK",
+    "rating": 80,
+    "club": "Free agent",
+    "image_url": "https://cdn.sofifa.net/players/140/233/23_60.png"
+  },
+  {
+    "id": "fe1a8b9f-2e1e-466d-81fb-812634dd3389",
+    "name": "A. Consigli",
+    "position": "GK",
+    "rating": 80,
+    "club": "U.S. Sassuolo Calcio",
+    "image_url": "https://cdn.sofifa.net/players/163/489/23_60.png"
+  },
+  {
+    "id": "41799e5b-58be-406f-9f74-e13b6b3a62bc",
+    "name": "S. Mignolet",
+    "position": "GK",
+    "rating": 80,
+    "club": "Club Brugge KV",
+    "image_url": "https://cdn.sofifa.net/players/173/426/23_60.png"
+  },
+  {
+    "id": "971b43cc-c668-4f1b-817b-6a24113c62d1",
+    "name": "D. Ospina",
+    "position": "GK",
+    "rating": 80,
+    "club": "Al Nassr",
+    "image_url": "https://cdn.sofifa.net/players/176/550/23_60.png"
+  },
+  {
+    "id": "ed73e46f-803c-4881-b00b-5ac9e734d7f1",
+    "name": "A. Cragno",
+    "position": "GK",
+    "rating": 80,
+    "club": "AC Monza",
+    "image_url": "https://cdn.sofifa.net/players/205/659/23_60.png"
+  },
+  {
+    "id": "dfb77a82-75bd-4ef5-9b0a-8561ff864d09",
+    "name": "J. Ledesma",
+    "position": "GK",
+    "rating": 80,
+    "club": "Cádiz CF",
+    "image_url": "https://cdn.sofifa.net/players/219/522/23_60.png"
+  },
+  {
+    "id": "ad3aaa24-e9d8-42af-9648-a063bc832144",
+    "name": "Kepa",
+    "position": "GK",
+    "rating": 80,
+    "club": "Chelsea",
+    "image_url": "https://cdn.sofifa.net/players/206/585/23_60.png"
+  },
+  {
+    "id": "7abf284b-3d06-481c-85d8-941eeefa5818",
+    "name": "U. Çakır",
+    "position": "GK",
+    "rating": 80,
+    "club": "Trabzonspor",
+    "image_url": "https://cdn.sofifa.net/players/226/300/23_60.png"
+  },
+  {
+    "id": "31b2ea85-6e5b-4bb7-a697-5a6630e5fe20",
+    "name": "M. Dúbravka",
+    "position": "GK",
+    "rating": 80,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/220/407/23_60.png"
+  },
+  {
+    "id": "d2f508f2-f142-44ab-937e-f418c611b1bb",
+    "name": "Javi Galán",
+    "position": "FB",
+    "rating": 80,
+    "club": "RC Celta de Vigo",
+    "image_url": "https://cdn.sofifa.net/players/231/591/23_60.png"
+  },
+  {
+    "id": "a6f65f9e-5451-4cf0-82b9-249d2416aee2",
+    "name": "Maikel Catarino",
+    "position": "FB",
+    "rating": 80,
+    "club": "Sport Club Corinthians Paulista",
+    "image_url": "https://cdn.sofifa.net/players/230/201/23_60.png"
+  },
+  {
+    "id": "10713368-9951-4ac3-b09c-d0251253b1d2",
+    "name": "A. Wan-Bissaka",
+    "position": "FB",
+    "rating": 80,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/229/880/23_60.png"
+  },
+  {
+    "id": "81ab3513-1955-4527-b9a5-0f86b5aec6a5",
+    "name": "D. Calabria",
+    "position": "FB",
+    "rating": 80,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/228/881/23_60.png"
+  },
+  {
+    "id": "a254a2aa-eb6f-44d1-80bb-3ecf4df91089",
+    "name": "Nuno Mendes",
+    "position": "FB",
+    "rating": 80,
+    "club": "Paris Saint-Germain",
+    "image_url": "https://cdn.sofifa.net/players/252/145/23_60.png"
+  },
+  {
+    "id": "21a5703b-ac9e-431d-af13-ff8a093efc85",
+    "name": "Renan Lodi",
+    "position": "FB",
+    "rating": 80,
+    "club": "Nottingham Forest",
+    "image_url": "https://cdn.sofifa.net/players/251/573/23_60.png"
+  },
+  {
+    "id": "610be78c-aebc-454d-958e-b83c881f2f59",
+    "name": "Reguilón",
+    "position": "FB",
+    "rating": 80,
+    "club": "Atlético de Madrid",
+    "image_url": "https://cdn.sofifa.net/players/245/279/23_60.png"
+  },
+  {
+    "id": "bdaaea69-290c-4bae-8c70-d635ec98e0a1",
+    "name": "V. Coufal",
+    "position": "FB",
+    "rating": 80,
+    "club": "West Ham United",
+    "image_url": "https://cdn.sofifa.net/players/244/470/23_60.png"
+  },
+  {
+    "id": "790c541d-b971-40c1-8ebc-b17e7fa8aa01",
+    "name": "J. Clauss",
+    "position": "FB",
+    "rating": 80,
+    "club": "Olympique de Marseille",
+    "image_url": "https://cdn.sofifa.net/players/239/093/23_60.png"
+  },
+  {
+    "id": "5b97d675-e033-43e8-991d-5e91996528f4",
+    "name": "Nélson Semedo",
+    "position": "FB",
+    "rating": 80,
+    "club": "Wolverhampton Wanderers",
+    "image_url": "https://cdn.sofifa.net/players/227/928/23_60.png"
+  },
+  {
+    "id": "0de58c82-0225-4295-9dc3-89f01e9a1504",
+    "name": "Danilo",
+    "position": "FB",
+    "rating": 80,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/199/304/23_60.png"
+  },
+  {
+    "id": "dd18bdd3-4262-4d08-9c74-56692de40063",
+    "name": "Sergi Roberto",
+    "position": "FB",
+    "rating": 80,
+    "club": "FC Barcelona",
+    "image_url": "https://cdn.sofifa.net/players/199/564/23_60.png"
+  },
+  {
+    "id": "f96ffa9a-bff2-4300-94a5-7c3644b0b37c",
+    "name": "L. Shaw",
+    "position": "FB",
+    "rating": 80,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/205/988/23_60.png"
+  },
+  {
+    "id": "40b169cf-fc0e-4a6c-88fa-9d374d5dd3d1",
+    "name": "C. Biraghi",
+    "position": "FB",
+    "rating": 80,
+    "club": "Fiorentina",
+    "image_url": "https://cdn.sofifa.net/players/201/389/23_60.png"
+  },
+  {
+    "id": "21aa6e14-2a6f-442a-b449-37a2289f8fa8",
+    "name": "Alex Sandro",
+    "position": "FB",
+    "rating": 80,
+    "club": "Juventus",
+    "image_url": "https://cdn.sofifa.net/players/191/043/23_60.png"
+  },
+  {
+    "id": "83fde4a9-20c9-4101-bdf2-6e181d2b5695",
+    "name": "M. Darmian",
+    "position": "FB",
+    "rating": 80,
+    "club": "Inter",
+    "image_url": "https://cdn.sofifa.net/players/184/392/23_60.png"
+  },
+  {
+    "id": "ed767eb1-4f2e-48fc-9864-f216e522a1f4",
+    "name": "Álex Moreno",
+    "position": "FB",
+    "rating": 80,
+    "club": "Real Betis Balompié",
+    "image_url": "https://cdn.sofifa.net/players/217/036/23_60.png"
+  },
+  {
+    "id": "b58e9733-abe7-4e2d-b343-58c6f59869fd",
+    "name": "H. Traoré",
+    "position": "FB",
+    "rating": 80,
+    "club": "Stade Rennais FC",
+    "image_url": "https://cdn.sofifa.net/players/219/789/23_60.png"
+  },
+  {
+    "id": "e73e9c31-1e49-4d6d-8288-5a690df0d8b1",
+    "name": "H. Hateboer",
+    "position": "FB",
+    "rating": 80,
+    "club": "Atalanta",
+    "image_url": "https://cdn.sofifa.net/players/220/093/23_60.png"
+  },
+  {
+    "id": "9971e7f9-3991-46bc-9531-3dcfe88d8eb2",
+    "name": "L. Klostermann",
+    "position": "FB",
+    "rating": 80,
+    "club": "RB Leipzig",
+    "image_url": "https://cdn.sofifa.net/players/222/331/23_60.png"
+  },
+  {
+    "id": "fd8e4d7d-c21e-4df2-b05f-25ca8f27cce2",
+    "name": "R. Karsdorp",
+    "position": "FB",
+    "rating": 80,
+    "club": "Roma",
+    "image_url": "https://cdn.sofifa.net/players/222/558/23_60.png"
+  },
+  {
+    "id": "44da3192-4b7d-4ddf-9f16-9d928688ffc7",
+    "name": "C. Günter",
+    "position": "FB",
+    "rating": 80,
+    "club": "Sport-Club Freiburg",
+    "image_url": "https://cdn.sofifa.net/players/209/846/23_60.png"
+  },
+  {
+    "id": "bbac7aee-265b-4c0d-bfce-652f6faa6891",
+    "name": "Alex Telles",
+    "position": "FB",
+    "rating": 80,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/212/462/23_60.png"
+  },
+  {
+    "id": "496c7385-2b96-45ff-a770-8fbface674ee",
+    "name": "N. Pépé",
+    "position": "WING",
+    "rating": 79,
+    "club": "OGC Nice",
+    "image_url": "https://cdn.sofifa.net/players/226/110/23_60.png"
+  },
+  {
+    "id": "62ebc5da-9177-4382-9f2c-3378004c008a",
+    "name": "C. Ünder",
+    "position": "WING",
+    "rating": 79,
+    "club": "Olympique de Marseille",
+    "image_url": "https://cdn.sofifa.net/players/235/889/23_60.png"
+  },
+  {
+    "id": "8ba4ac3a-4c98-4052-815f-16a42e06f7f5",
+    "name": "Felipe Anderson",
+    "position": "WING",
+    "rating": 79,
+    "club": "Lazio",
+    "image_url": "https://cdn.sofifa.net/players/201/995/23_60.png"
+  },
+  {
+    "id": "a42872c4-f6db-4292-ba2a-829f767734d7",
+    "name": "M. Zaccagni",
+    "position": "WING",
+    "rating": 79,
+    "club": "Lazio",
+    "image_url": "https://cdn.sofifa.net/players/220/502/23_60.png"
+  },
+  {
+    "id": "0cf7e795-d16c-4427-86a1-eea30ace5076",
+    "name": "Juanmi",
+    "position": "WING",
+    "rating": 79,
+    "club": "Real Betis Balompié",
+    "image_url": "https://cdn.sofifa.net/players/197/891/23_60.png"
+  },
+  {
+    "id": "47d4bfbe-2931-4589-abcb-eb6fbf6d995b",
+    "name": "Adama Traoré",
+    "position": "WING",
+    "rating": 79,
+    "club": "Wolverhampton Wanderers",
+    "image_url": "https://cdn.sofifa.net/players/213/956/23_60.png"
+  },
+  {
+    "id": "861f09fc-b7fc-415e-b256-f50f188f2dbd",
+    "name": "R. Ghezzal",
+    "position": "WING",
+    "rating": 79,
+    "club": "Beşiktaş JK",
+    "image_url": "https://cdn.sofifa.net/players/210/372/23_60.png"
+  },
+  {
+    "id": "a8b01eeb-47dd-4e5b-a4a2-ec0635cc2d70",
+    "name": "A. Januzaj",
+    "position": "WING",
+    "rating": 79,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/208/330/23_60.png"
+  },
+  {
+    "id": "37386fd9-a4d9-471f-b01f-b7ac9d718c89",
+    "name": "E. Lamela",
+    "position": "WING",
+    "rating": 79,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/170/368/23_60.png"
+  },
+  {
+    "id": "82aed078-d7b7-44cd-a3ec-8da6bd3f02d9",
+    "name": "T. Malacia",
+    "position": "FB",
+    "rating": 79,
+    "club": "Manchester United",
+    "image_url": "https://cdn.sofifa.net/players/238/041/23_60.png"
+  },
+  {
+    "id": "ac603c21-6f80-44a3-a8d4-ddbd529d4d34",
+    "name": "P. Estupiñán",
+    "position": "FB",
+    "rating": 79,
+    "club": "Brighton & Hove Albion",
+    "image_url": "https://cdn.sofifa.net/players/237/942/23_60.png"
+  },
+  {
+    "id": "976f93d0-b1ca-4a9e-a264-f8ffab4c59ec",
+    "name": "G. Goodman",
+    "position": "FB",
+    "rating": 79,
+    "club": "AFC Richmond",
+    "image_url": "https://cdn.sofifa.net/players/269/781/23_60.png"
+  },
+  {
+    "id": "e71de426-8312-4e42-bfdb-7db1128cc2f0",
+    "name": "G. Montiel",
+    "position": "FB",
+    "rating": 79,
+    "club": "Sevilla FC",
+    "image_url": "https://cdn.sofifa.net/players/231/340/23_60.png"
+  },
+  {
+    "id": "8b9c71ba-6b8d-497d-bd88-ab54849df423",
+    "name": "Adnan Vidual",
+    "position": "FB",
+    "rating": 79,
+    "club": "Internacional",
+    "image_url": "https://cdn.sofifa.net/players/230/216/23_60.png"
+  },
+  {
+    "id": "9b7d67de-4ef6-4bcd-b297-1a536e2aabf3",
+    "name": "Diego Essler",
+    "position": "FB",
+    "rating": 79,
+    "club": "Clube Atlético Mineiro",
+    "image_url": "https://cdn.sofifa.net/players/230/184/23_60.png"
+  },
+  {
+    "id": "f039f3c5-f1d4-497f-a8c5-9abd144efec1",
+    "name": "Junior Messias",
+    "position": "WING",
+    "rating": 78,
+    "club": "AC Milan",
+    "image_url": "https://cdn.sofifa.net/players/240/938/23_60.png"
+  },
+  {
+    "id": "7ea667bf-73e3-4364-8258-b35169b49fe1",
+    "name": "A. Carrillo",
+    "position": "WING",
+    "rating": 78,
+    "club": "Al Hilal",
+    "image_url": "https://cdn.sofifa.net/players/203/299/23_60.png"
+  },
+  {
+    "id": "2ca4f054-6788-42c8-9829-1822733d1e00",
+    "name": "J. Ito",
+    "position": "WING",
+    "rating": 78,
+    "club": "Stade de Reims",
+    "image_url": "https://cdn.sofifa.net/players/232/905/23_60.png"
+  },
+  {
+    "id": "98f2427a-3606-4f05-afcd-f4c43e0496f6",
+    "name": "Jonatão Praz",
+    "position": "WING",
+    "rating": 78,
+    "club": "Flamengo",
+    "image_url": "https://cdn.sofifa.net/players/230/460/23_60.png"
+  },
+  {
+    "id": "ff26a7ee-863d-424b-97a6-fa83092b6784",
+    "name": "Nuno Santos",
+    "position": "WING",
+    "rating": 78,
+    "club": "Sporting CP",
+    "image_url": "https://cdn.sofifa.net/players/227/890/23_60.png"
+  },
+  {
+    "id": "9552adab-e8f4-4bb0-bd74-eda4fffd3c23",
+    "name": "Albertinho Dutra",
+    "position": "WING",
+    "rating": 78,
+    "club": "São Paulo",
+    "image_url": "https://cdn.sofifa.net/players/230/385/23_60.png"
+  },
+  {
+    "id": "3128de73-ae30-43b8-a1c7-a04a4622a976",
+    "name": "Rodrigo",
+    "position": "WING",
+    "rating": 77,
+    "club": "Leeds United",
+    "image_url": "https://cdn.sofifa.net/players/198/329/23_60.png"
+  },
+  {
+    "id": "01501beb-348e-42aa-a06e-081cc1bba505",
+    "name": "Bruma",
+    "position": "WING",
+    "rating": 77,
+    "club": "Fenerbahçe SK",
+    "image_url": "https://cdn.sofifa.net/players/211/368/23_60.png"
+  },
+  {
+    "id": "458e623a-ac3f-477e-8e23-b15613f5d4c2",
+    "name": "I. Bebou",
+    "position": "WING",
+    "rating": 77,
+    "club": "TSG Hoffenheim",
+    "image_url": "https://cdn.sofifa.net/players/216/258/23_60.png"
+  },
+  {
+    "id": "17bec16e-d9a9-4f18-ba3a-465d9cc50794",
+    "name": "D. Gray",
+    "position": "WING",
+    "rating": 77,
+    "club": "Everton",
+    "image_url": "https://cdn.sofifa.net/players/220/633/23_60.png"
+  },
+  {
+    "id": "cd64a437-796c-4f87-a7b2-60331aceda41",
+    "name": "A. Živković",
+    "position": "WING",
+    "rating": 77,
+    "club": "PAOK",
+    "image_url": "https://cdn.sofifa.net/players/220/746/23_60.png"
+  },
+  {
+    "id": "1cd38013-36ad-41e4-a09d-870261e48a44",
+    "name": "M. Oršić",
+    "position": "WING",
+    "rating": 77,
+    "club": "Dinamo Zagreb",
+    "image_url": "https://cdn.sofifa.net/players/221/174/23_60.png"
+  },
+  {
+    "id": "9ae3f0ba-3728-4667-a6a0-9d241e4256c5",
+    "name": "S. El Shaarawy",
+    "position": "WING",
+    "rating": 77,
+    "club": "Roma",
+    "image_url": "https://cdn.sofifa.net/players/190/813/23_60.png"
+  },
+  {
+    "id": "43a247df-9751-4f9c-a7f9-6cda15668420",
+    "name": "S. Al Dawsari",
+    "position": "WING",
+    "rating": 77,
+    "club": "Al Hilal",
+    "image_url": "https://cdn.sofifa.net/players/210/602/23_60.png"
+  },
+  {
+    "id": "3c70ac6a-7705-42f4-b789-88d775009838",
+    "name": "Hwang Hee Chan",
+    "position": "WING",
+    "rating": 77,
+    "club": "Wolverhampton Wanderers",
+    "image_url": "https://cdn.sofifa.net/players/226/380/23_60.png"
+  },
+  {
+    "id": "242d816f-ca48-48ab-ab4b-a05ed157e1bb",
+    "name": "S. Nakajima",
+    "position": "WING",
+    "rating": 76,
+    "club": "Antalyaspor",
+    "image_url": "https://cdn.sofifa.net/players/232/862/23_60.png"
+  },
+  {
+    "id": "a42ef543-397a-41fe-9714-1f257a7b3cad",
+    "name": "S. Palacios",
+    "position": "WING",
+    "rating": 76,
+    "club": "Panathinaikos FC",
+    "image_url": "https://cdn.sofifa.net/players/212/715/23_60.png"
+  },
+  {
+    "id": "ef3fa5a0-aa42-463d-b219-8cfe4d7ff812",
+    "name": "F. Di Francesco",
+    "position": "WING",
+    "rating": 76,
+    "club": "Lecce",
+    "image_url": "https://cdn.sofifa.net/players/213/814/23_60.png"
+  },
+  {
+    "id": "c2958e78-dd9e-458b-9584-fbe6ef0c4072",
+    "name": "Ayoze Pérez",
+    "position": "WING",
+    "rating": 76,
+    "club": "Leicester City",
+    "image_url": "https://cdn.sofifa.net/players/215/590/23_60.png"
+  },
+  {
+    "id": "ba61f7a1-af2a-45d1-bb51-8394b12ec96b",
+    "name": "Trezeguet",
+    "position": "WING",
+    "rating": 76,
+    "club": "Trabzonspor",
+    "image_url": "https://cdn.sofifa.net/players/226/078/23_60.png"
+  },
+  {
+    "id": "65adbce9-d29a-4418-a5e2-5f03e143230b",
+    "name": "O. Pineda",
+    "position": "WING",
+    "rating": 76,
+    "club": "AEK Athens",
+    "image_url": "https://cdn.sofifa.net/players/224/574/23_60.png"
+  },
+  {
+    "id": "b7ec643c-9d2d-4d8e-af7c-e6d3ecaba3c0",
+    "name": "M. Stevanović",
+    "position": "WING",
+    "rating": 76,
+    "club": "Servette FC",
+    "image_url": "https://cdn.sofifa.net/players/206/254/23_60.png"
+  },
+  {
+    "id": "a1ea2379-0811-4d25-90ec-6152a01b6f24",
+    "name": "O. Idrissi",
+    "position": "WING",
+    "rating": 76,
+    "club": "Feyenoord",
+    "image_url": "https://cdn.sofifa.net/players/228/747/23_60.png"
+  }
+]
