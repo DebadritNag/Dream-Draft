@@ -50,8 +50,7 @@ const Lobby = () => {
       const { data } = await supabase
         .from("room_members")
         .select("user_id, team_name, avatar, is_host")
-        .eq("room_id", roomId);
-      if (data) setMembers(data);
+        .eq("room_id", roomId);      if (data) setMembers(data);
     };
     load();
 
