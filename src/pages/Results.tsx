@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import GlassCard from "@/components/draft/GlassCard";
 import NeonButton from "@/components/draft/NeonButton";
@@ -34,6 +34,7 @@ function calcChemistry(players: PlayerRow[]): number {
 
 export default function Results() {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const roomId = searchParams.get("room");
   const { user } = useAuth();
   const [teams, setTeams] = useState<TeamData[]>([]);
@@ -190,6 +191,12 @@ export default function Results() {
             </div>
           </>
         )}
+
+        <motion.div className="text-center mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+          <NeonButton variant="blue" size="lg" onClick={() => navigate("/lobby")}>
+            🏠 Play Again
+          </NeonButton>
+        </motion.div>
       </div>
     </div>
   );
