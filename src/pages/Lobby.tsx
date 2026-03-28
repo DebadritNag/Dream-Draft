@@ -78,6 +78,13 @@ const Lobby = () => {
     });
     if (memberError) { toast.error("Failed to create room"); return; }
 
+    // Pre-load members before setting roomId
+    const { data: allMembers } = await supabase
+      .from("room_members")
+      .select("user_id, team_name, avatar, is_host")
+      .eq("room_id", room.id);
+    if (allMembers) setMembers(allMembers);
+
     setRoomId(room.id);
     setRoomCode(room.code);
     setView("lobby");
@@ -104,6 +111,13 @@ const Lobby = () => {
         return;
       }
     }
+
+    // Load members first before setting roomId to avoid useEffect race
+    const { data: allMembers } = await supabase
+      .from("room_members")
+      .select("user_id, team_name, avatar, is_host")
+      .eq("room_id", room.id);
+    if (allMembers) setMembers(allMembers);
 
     setRoomId(room.id);
     setRoomCode(room.code);
