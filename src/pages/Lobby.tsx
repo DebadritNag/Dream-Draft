@@ -95,20 +95,29 @@ const Lobby = () => {
 
   const joinRoom = async () => {
     if (!user || !teamName || !joinCode) { toast.error("Enter team name and room code"); return; }
-    const { data: room } = await supabase
+    
+    const { data: room, error: roomError } = await supabase
       .from("rooms")
       .select()
       .eq("code", joinCode.toUpperCase())
       .single();
-    if (!room) { toast.error("Room not found"); return; }
+    
+    if (roomError || !room) {
+      console.error("Room lookup error:", roomError);
+      toast.error(`Room not found: ${roomError?.message ?? "unknown"}`);
+      return;
+    }
+
+    console.log("Joining room:", room.id, "as user:", user.id);
 
     const { error } = await supabase.from("room_members").upsert({
       room_id: room.id, user_id: user.id,
       team_name: teamName, avatar, is_host: false,
-    }, { onConflict: "room_id,user_id" });
-    if (error) {
-      console.error("Join room error:", error);
-      toast.error(`Could not join room: ${error.message}`);
+    }, { onConflict: "room_id,user_id", ignoreDuplicates: true });
+    
+    if (error && error.code !== '23505') {
+      console.error("Join room error:", JSON.stringify(error));
+      toast.error(`Join failed: ${error.message} (${error.code})`);
       return;
     }
 
