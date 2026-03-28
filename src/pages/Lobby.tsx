@@ -23,40 +23,36 @@ const Lobby = () => {
   const [avatar] = useState(() => AVATARS[Math.floor(Math.random() * AVATARS.length)]);
   const [copied, setCopied] = useState(false);
   const [members, setMembers] = useState<any[]>([]);
-  const [isHost, setIsHost] = useState(false);
   const [view, setView] = useState<"menu" | "lobby">("menu");
 
   const [sessionId] = useState(() => getSessionId());
   const [joinedAt] = useState(() => new Date().toISOString());
 
-  // Memoize so presence only re-subscribes when user_id/session actually changes
   const presenceUser = useMemo(() => {
     if (!user || !roomId) return null;
-    return {
-      user_id: user.id,
-      session_id: sessionId,
-      display_name: teamName,
-      avatar,
-      online_at: joinedAt,
-    };
+    return { user_id: user.id, session_id: sessionId, display_name: teamName, avatar, online_at: joinedAt };
   }, [user?.id, roomId, sessionId, teamName, avatar, joinedAt]);
 
   const { onlineUsers } = usePresence(roomId, presenceUser);
 
-  // Load room members from DB (for host flag + fallback)
+  // Derive isHost from DB members — never from local state
+  const isHost = user ? (members.find((m) => m.user_id === user.id)?.is_host ?? false) : false;
+
+  const loadMembers = async (rid: string) => {
+    const { data } = await supabase
+      .from("room_members")
+      .select("user_id, team_name, avatar, is_host")
+      .eq("room_id", rid);
+    if (data) setMembers(data);
+  };
+
   useEffect(() => {
     if (!roomId) return;
-    const load = async () => {
-      const { data } = await supabase
-        .from("room_members")
-        .select("user_id, team_name, avatar, is_host")
-        .eq("room_id", roomId);      if (data) setMembers(data);
-    };
-    load();
+    loadMembers(roomId);
 
     const channel = supabase
       .channel(`lobby-members:${roomId}`)
-      .on("postgres_changes", { event: "*", schema: "public", table: "room_members", filter: `room_id=eq.${roomId}` }, load)
+      .on("postgres_changes", { event: "*", schema: "public", table: "room_members", filter: `room_id=eq.${roomId}` }, () => loadMembers(roomId))
       .on("postgres_changes", { event: "UPDATE", schema: "public", table: "rooms", filter: `id=eq.${roomId}` }, (payload) => {
         if (payload.new.status === "trivia") navigate(`/trivia?room=${roomId}`);
       })
@@ -65,66 +61,48 @@ const Lobby = () => {
     return () => { channel.unsubscribe(); };
   }, [roomId, navigate]);
 
-  // Merge DB members (source of truth) with presence (online status)
-  // Fall back to DB members so players show even before presence syncs
   const displayMembers = members.map((m) => {
     const presenceMember = onlineUsers.find((u) => u.user_id === m.user_id);
-    return {
-      user_id: m.user_id,
-      display_name: presenceMember?.display_name ?? m.team_name,
-      avatar: m.avatar,
-      is_host: m.is_host,
-      isOnline: !!presenceMember,
-    };
+    return { user_id: m.user_id, display_name: m.team_name, avatar: m.avatar, is_host: m.is_host, isOnline: !!presenceMember };
   });
 
   const createRoom = async () => {
     if (!user || !teamName) { toast.error("Enter a team name"); return; }
     const code = Math.random().toString(36).substring(2, 8).toUpperCase();
     const { data: room, error } = await supabase
-      .from("rooms")
-      .insert({ code, host_id: user.id })
-      .select()
-      .single();
+      .from("rooms").insert({ code, host_id: user.id }).select().single();
     if (error || !room) { toast.error("Failed to create room"); return; }
 
-    await supabase.from("room_members").insert({
-      room_id: room.id, user_id: user.id,
-      team_name: teamName, avatar, is_host: true,
+    const { error: memberError } = await supabase.from("room_members").insert({
+      room_id: room.id, user_id: user.id, team_name: teamName, avatar, is_host: true,
     });
+    if (memberError) { toast.error("Failed to create room"); return; }
 
     setRoomId(room.id);
     setRoomCode(room.code);
-    setIsHost(true);
     setView("lobby");
   };
 
   const joinRoom = async () => {
     if (!user || !teamName || !joinCode) { toast.error("Enter team name and room code"); return; }
-    
+
     const { data: room, error: roomError } = await supabase
-      .from("rooms")
-      .select()
-      .eq("code", joinCode.toUpperCase())
-      .single();
-    
-    if (roomError || !room) {
-      console.error("Room lookup error:", roomError);
-      toast.error(`Room not found: ${roomError?.message ?? "unknown"}`);
-      return;
-    }
+      .from("rooms").select("id, code").eq("code", joinCode.toUpperCase()).single();
+    if (roomError || !room) { toast.error("Room not found"); return; }
 
-    console.log("Joining room:", room.id, "as user:", user.id);
+    // Check if already a member
+    const { data: existing } = await supabase
+      .from("room_members").select("user_id").eq("room_id", room.id).eq("user_id", user.id).single();
 
-    const { error } = await supabase.from("room_members").upsert({
-      room_id: room.id, user_id: user.id,
-      team_name: teamName, avatar, is_host: false,
-    }, { onConflict: "room_id,user_id", ignoreDuplicates: true });
-    
-    if (error && error.code !== '23505') {
-      console.error("Join room error:", JSON.stringify(error));
-      toast.error(`Join failed: ${error.message} (${error.code})`);
-      return;
+    if (!existing) {
+      const { error } = await supabase.from("room_members").insert({
+        room_id: room.id, user_id: user.id, team_name: teamName, avatar, is_host: false,
+      });
+      if (error) {
+        console.error("Join room error:", error);
+        toast.error(`Join failed: ${error.message}`);
+        return;
+      }
     }
 
     setRoomId(room.id);
