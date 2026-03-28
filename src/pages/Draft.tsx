@@ -93,7 +93,9 @@ export default function Draft() {
       if (member && pick.user_id !== user?.id) {
         toast(`${member.team_name} drafted a player! ⚽`);
       }
-    }, [applyPick, members, user?.id]),
+      // Reload full room state to ensure turn/timer sync for all users
+      loadFromDB();
+    }, [applyPick, members, user?.id, loadFromDB]),
   });
 
   // Reconnect: reload full state from DB when connection restores
