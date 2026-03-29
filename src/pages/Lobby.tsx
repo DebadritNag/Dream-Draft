@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import teamBg from "@/data/team.png";
 import waitBg from "@/data/wait.png";
 import { useAudio } from "@/contexts/AudioContext";
+import { SettingsButton, SettingsModal } from "@/components/SettingsModal";
 
 const AVATARS = ["⚡", "😈", "⭐", "🦁", "🔥", "🐉", "🦅", "🌊"];
 
@@ -43,6 +44,7 @@ const Lobby = () => {
   const [joinedAt] = useState(() => new Date().toISOString());
   const roomIdRef = useRef<string | null>(null);
   const { startMusic } = useAudio();
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   // isHost: strictly compare auth user id with room's host_id
   const isHost = !!(user && hostId && user.id === hostId);
@@ -226,6 +228,8 @@ const Lobby = () => {
   if (view === "menu") {
     return (
       <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+        <SettingsButton onClick={() => setSettingsOpen(true)} />
+        <SettingsModal open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
         {/* Background image with zoom */}
         <motion.div
