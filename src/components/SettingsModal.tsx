@@ -9,7 +9,7 @@ interface SettingsModalProps {
 }
 
 export default function SettingsModal({ open, onClose }: SettingsModalProps) {
-  const { isMusicOn, isMuted, volume, currentTrackName, setMusicOn, setMuted, setVolume } = useAudio();
+  const { isMusicOn, isMuted, volume, currentTrackName, setMusicOn, setMuted, setVolume, nextTrack } = useAudio();
 
   // Close on ESC
   useEffect(() => {
@@ -90,7 +90,14 @@ export default function SettingsModal({ open, onClose }: SettingsModalProps) {
                 {/* Now playing */}
                 <div className="p-3 rounded-xl bg-white/5 border border-white/8">
                   <p className="text-white/30 text-xs uppercase tracking-widest mb-1">Now Playing</p>
-                  <p className="text-white font-bold text-sm truncate">🎵 {currentTrackName}</p>
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="text-white font-bold text-sm truncate">🎵 {currentTrackName}</p>
+                    <motion.button onClick={nextTrack}
+                      whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+                      className="shrink-0 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white/60 hover:text-white text-xs font-bold transition-colors flex items-center gap-1">
+                      ⏭ Next
+                    </motion.button>
+                  </div>
                 </div>
               </div>
             </div>

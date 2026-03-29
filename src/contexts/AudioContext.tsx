@@ -20,6 +20,7 @@ interface AudioContextValue {
   setMusicOn: (v: boolean) => void;
   setMuted: (v: boolean) => void;
   setVolume: (v: number) => void;
+  nextTrack: () => void;
 }
 
 const AudioCtx = createContext<AudioContextValue | null>(null);
@@ -27,12 +28,20 @@ const AudioCtx = createContext<AudioContextValue | null>(null);
 export function AudioProvider({ children }: { children: ReactNode }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const trackIndexRef = useRef(0);
+  const toastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [isMusicOn, setMusicOnState] = useState(() => localStorage.getItem("musicEnabled") !== "false");
   const [isMuted, setMutedState] = useState(() => localStorage.getItem("isMuted") === "true");
   const [volume, setVolumeState] = useState(() => Number(localStorage.getItem("volumeLevel") ?? 70));
   const [currentTrackName, setCurrentTrackName] = useState(PLAYLIST[0].name);
   const [nowPlayingToast, setNowPlayingToast] = useState<string | null>(null);
+
+  // Stable toast function via ref
+  const showToastRef = useRef((name: string) => {
+    setNowPlayingToast(name);
+    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+    toastTimerRef.current = setTimeout(() => setNowPlayingToast(null), 2000);
+  });
 
   // Init audio element once
   useEffect(() => {
@@ -41,23 +50,24 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     audio.loop = false;
     audioRef.current = audio;
 
+    // Auto-advance to next song when current ends
     const handleEnded = () => {
       trackIndexRef.current = (trackIndexRef.current + 1) % PLAYLIST.length;
       const next = PLAYLIST[trackIndexRef.current];
       audio.src = next.src;
       audio.load();
       setCurrentTrackName(next.name);
-      showToast(next.name);
-      if (isMusicOn && !isMuted) audio.play().catch(() => {});
+      showToastRef.current(next.name);
+      audio.play().catch(() => {});
     };
 
     audio.addEventListener("ended", handleEnded);
 
     // Start on first user interaction (browser autoplay policy)
     const startOnInteraction = () => {
-      if (isMusicOn && !isMuted) {
-        audio.play().catch(() => {});
-      }
+      audio.play()
+        .then(() => showToastRef.current(PLAYLIST[trackIndexRef.current].name))
+        .catch(() => {});
       document.removeEventListener("click", startOnInteraction);
       document.removeEventListener("keydown", startOnInteraction);
     };
@@ -73,7 +83,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Play/pause based on isMusicOn
+  // Play/pause when isMusicOn or isMuted changes
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -85,24 +95,33 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("musicEnabled", String(isMusicOn));
   }, [isMusicOn, isMuted]);
 
-  // Volume
+  // Volume sync
   useEffect(() => {
     if (audioRef.current) audioRef.current.volume = isMuted ? 0 : volume / 100;
     localStorage.setItem("volumeLevel", String(volume));
     localStorage.setItem("isMuted", String(isMuted));
   }, [volume, isMuted]);
 
-  const showToast = (name: string) => {
-    setNowPlayingToast(name);
-    setTimeout(() => setNowPlayingToast(null), 2000);
+  const nextTrack = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    trackIndexRef.current = (trackIndexRef.current + 1) % PLAYLIST.length;
+    const next = PLAYLIST[trackIndexRef.current];
+    audio.src = next.src;
+    audio.load();
+    setCurrentTrackName(next.name);
+    showToastRef.current(next.name);
+    if (isMusicOn && !isMuted) audio.play().catch(() => {});
   };
 
-  const setMusicOn = (v: boolean) => setMusicOnState(v);
-  const setMuted = (v: boolean) => setMutedState(v);
-  const setVolume = (v: number) => setVolumeState(v);
-
   return (
-    <AudioCtx.Provider value={{ isMusicOn, isMuted, volume, currentTrackName, nowPlayingToast, setMusicOn, setMuted, setVolume }}>
+    <AudioCtx.Provider value={{
+      isMusicOn, isMuted, volume, currentTrackName, nowPlayingToast,
+      setMusicOn: setMusicOnState,
+      setMuted: setMutedState,
+      setVolume: setVolumeState,
+      nextTrack,
+    }}>
       {children}
     </AudioCtx.Provider>
   );
