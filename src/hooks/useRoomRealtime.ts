@@ -41,6 +41,13 @@ export function useRoomRealtime({ roomId, onRoomUpdate, onDraftPick }: UseRoomRe
     const channel = supabase
       .channel(`room:${roomId}`, { config: { broadcast: { ack: false } } })
       .on(
+        'broadcast', { event: 'turn_update' },
+        (payload) => {
+          console.log('[realtime] turn_update broadcast:', payload.payload);
+          onRoomUpdateRef.current?.(payload.payload as RoomState);
+        }
+      )
+      .on(
         'postgres_changes',
         { event: 'UPDATE', schema: 'public', table: 'rooms', filter: `id=eq.${roomId}` },
         (payload) => {

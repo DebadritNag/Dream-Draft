@@ -95,6 +95,11 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
     if (pickNumber >= totalPicks) {
       await supabase.from('rooms').update({ status: 'complete' }).eq('id', roomId);
       applyRoomUpdate({ status: 'complete' });
+      // Broadcast to all clients immediately
+      await supabase.channel(`room:${roomId}`).send({
+        type: 'broadcast', event: 'turn_update',
+        payload: { status: 'complete' },
+      });
     } else {
       let nextTurn: number;
       if (draftFormat === 'snake') {
@@ -107,6 +112,11 @@ export function useDraft({ roomId, userId }: UseDraftOptions) {
       const expiresAt = new Date(Date.now() + 30000).toISOString();
       await supabase.from('rooms').update({ current_turn: nextTurn, turn_expires_at: expiresAt }).eq('id', roomId);
       applyRoomUpdate({ current_turn: nextTurn, turn_expires_at: expiresAt });
+      // Broadcast turn update to ALL clients immediately (faster than postgres_changes)
+      await supabase.channel(`room:${roomId}`).send({
+        type: 'broadcast', event: 'turn_update',
+        payload: { current_turn: nextTurn, turn_expires_at: expiresAt },
+      });
     }
 
     return { data: true };
