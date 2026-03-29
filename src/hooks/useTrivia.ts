@@ -27,6 +27,7 @@ interface UseTriviaOptions {
 }
 
 const QUESTION_DURATION_MS = 15000;
+const BROADCAST_BUFFER_MS = 3000; // extra time added to end_time to account for broadcast latency
 const BETWEEN_QUESTIONS_MS = 3000;
 
 export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: UseTriviaOptions) {
@@ -58,7 +59,11 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
         const endTime = new Date(payload.end_time).getTime();
         if (timerRef.current) clearInterval(timerRef.current);
         const tick = () => {
-          const secs = Math.max(0, Math.round((endTime - Date.now()) / 1000));
+          // Cap display at QUESTION_DURATION_MS so all users see same max
+          const secs = Math.max(0, Math.min(
+            QUESTION_DURATION_MS / 1000,
+            Math.round((endTime - Date.now()) / 1000)
+          ));
           setRemainingSeconds(secs);
           if (secs <= 0 && timerRef.current) clearInterval(timerRef.current);
         };
@@ -125,7 +130,8 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
       for (let i = 0; i < questions.length; i++) {
         const q = questions[i];
         const startTime = new Date();
-        const endTime = new Date(startTime.getTime() + QUESTION_DURATION_MS);
+        // end_time includes broadcast buffer so non-host clients get full duration
+        const endTime = new Date(startTime.getTime() + QUESTION_DURATION_MS + BROADCAST_BUFFER_MS);
 
         await supabase.from('trivia_sessions').update({
           current_question_index: i,
