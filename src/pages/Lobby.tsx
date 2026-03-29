@@ -12,6 +12,7 @@ import RoomSetup from "@/pages/RoomSetup";
 import { toast } from "sonner";
 import teamBg from "@/data/team.png";
 import waitBg from "@/data/wait.png";
+import SettingsModal from "@/components/SettingsModal";
 
 const AVATARS = ["⚡", "😈", "⭐", "🦁", "🔥", "🐉", "🦅", "🌊"];
 
@@ -37,6 +38,7 @@ const Lobby = () => {
   const [members, setMembers] = useState<RoomMember[]>([]);
   const [view, setView] = useState<"menu" | "setup" | "lobby">("menu");
   const [creatingRoom, setCreatingRoom] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   const [sessionId] = useState(() => getSessionId());
   const [joinedAt] = useState(() => new Date().toISOString());
@@ -245,20 +247,29 @@ const Lobby = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}>
 
           {/* Profile strip */}
-          <motion.div className="flex items-center gap-3 mb-8"
+          <motion.div className="flex items-center justify-between mb-8"
             initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
-            <div className="relative cursor-pointer" onClick={() => navigate("/profile")}>
-              <div className="w-11 h-11 rounded-full flex items-center justify-center text-xl font-black border border-white/20 bg-white/10 backdrop-blur-sm"
-                style={{ boxShadow: "0 0 16px rgba(59,130,246,0.4)" }}>
-                {avatar}
+            <div className="flex items-center gap-3">
+              <div className="relative cursor-pointer" onClick={() => navigate("/profile")}>
+                <div className="w-11 h-11 rounded-full flex items-center justify-center text-xl font-black border border-white/20 bg-white/10 backdrop-blur-sm"
+                  style={{ boxShadow: "0 0 16px rgba(59,130,246,0.4)" }}>
+                  {avatar}
+                </div>
+                <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#060810]" />
               </div>
-              <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#060810]" />
+              <div>
+                <p className="text-white font-bold text-sm leading-none">{user?.email?.split("@")[0] ?? "Player"}</p>
+                <p className="text-emerald-400 text-xs mt-0.5">● Online</p>
+              </div>
             </div>
-            <div>
-              <p className="text-white font-bold text-sm leading-none">{user?.email?.split("@")[0] ?? "Player"}</p>
-              <p className="text-emerald-400 text-xs mt-0.5">● Online</p>
-            </div>
+            <motion.button onClick={() => setSettingsOpen(true)}
+              whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
+              className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white transition-colors backdrop-blur-sm">
+              ⚙️
+            </motion.button>
           </motion.div>
+
+          <SettingsModal open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
           {/* Header */}
           <motion.div className="text-center mb-10"
