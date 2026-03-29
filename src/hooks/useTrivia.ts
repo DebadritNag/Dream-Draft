@@ -27,7 +27,7 @@ interface UseTriviaOptions {
 }
 
 const QUESTION_DURATION_MS = 15000;
-const BROADCAST_BUFFER_MS = 3000; // extra time added to end_time to account for broadcast latency
+const BROADCAST_BUFFER_MS = 2000; // extra time added to end_time to account for broadcast latency
 const BETWEEN_QUESTIONS_MS = 3000;
 
 export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: UseTriviaOptions) {
@@ -56,19 +56,15 @@ export function useTrivia({ roomId, userId, sessionId, isHost, memberCount }: Us
         setRespondedUsers(new Set());
         setAllAnswered(false);
 
-        const endTime = new Date(payload.end_time).getTime();
+        // Always start from full duration on receipt — avoids clock skew between clients
         if (timerRef.current) clearInterval(timerRef.current);
-        const tick = () => {
-          // Cap display at QUESTION_DURATION_MS so all users see same max
-          const secs = Math.max(0, Math.min(
-            QUESTION_DURATION_MS / 1000,
-            Math.round((endTime - Date.now()) / 1000)
-          ));
+        let secs = QUESTION_DURATION_MS / 1000;
+        setRemainingSeconds(secs);
+        timerRef.current = setInterval(() => {
+          secs = Math.max(0, secs - 1);
           setRemainingSeconds(secs);
           if (secs <= 0 && timerRef.current) clearInterval(timerRef.current);
-        };
-        timerRef.current = setInterval(tick, 500);
-        tick();
+        }, 1000);
       })
       .on('broadcast', { event: 'all_answered' }, () => {
         setAllAnswered(true);
