@@ -12,6 +12,7 @@ import RoomSetup from "@/pages/RoomSetup";
 import { toast } from "sonner";
 import teamBg from "@/data/team.png";
 import waitBg from "@/data/wait.png";
+import { useAudio } from "@/contexts/AudioContext";
 
 const AVATARS = ["⚡", "😈", "⭐", "🦁", "🔥", "🐉", "🦅", "🌊"];
 
@@ -41,6 +42,7 @@ const Lobby = () => {
   const [sessionId] = useState(() => getSessionId());
   const [joinedAt] = useState(() => new Date().toISOString());
   const roomIdRef = useRef<string | null>(null);
+  const { startMusic } = useAudio();
 
   // isHost: strictly compare auth user id with room's host_id
   const isHost = !!(user && hostId && user.id === hostId);
@@ -115,6 +117,7 @@ const Lobby = () => {
 
   const createRoom = async (config?: { maxPlayers: number; picksPerUser: number; draftFormat: "snake" | "linear" }) => {
     if (!user || !teamName.trim()) { toast.error("Enter a team name"); return; }
+    startMusic();
     setCreatingRoom(true);
     const code = Math.random().toString(36).substring(2, 8).toUpperCase();
     const { data: room, error } = await supabase
@@ -150,6 +153,7 @@ const Lobby = () => {
       toast.error("Enter team name and room code");
       return;
     }
+    startMusic();
 
     const { data: room, error: roomErr } = await supabase
       .from("rooms")

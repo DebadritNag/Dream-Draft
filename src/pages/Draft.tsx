@@ -10,6 +10,7 @@ import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 import { playDraftSound } from "@/lib/sounds";
 import type { Tables } from "@/lib/supabase";
+import draftBg from "@/data/draft.png";
 
 type Player = Tables<"players"> & { position: string };
 
@@ -272,6 +273,13 @@ export default function Draft() {
   return (
     <div className="h-screen bg-[#020617] flex flex-col overflow-hidden select-none"
       style={{ backgroundImage: "radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.08) 0%, transparent 60%), radial-gradient(ellipse at 50% 100%, rgba(139,92,246,0.06) 0%, transparent 60%)" }}>
+
+      {/* Background image + overlay */}
+      <div className="fixed inset-0 pointer-events-none -z-10">
+        <div className="absolute inset-0"
+          style={{ backgroundImage: `url(${draftBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
+        <div className="absolute inset-0 bg-black/65" />
+      </div>
 
       {/* Pitch lines background */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.03]"
