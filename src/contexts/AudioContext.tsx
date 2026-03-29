@@ -52,8 +52,22 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     };
 
     audio.addEventListener("ended", handleEnded);
+
+    // Start on first user interaction (browser autoplay policy)
+    const startOnInteraction = () => {
+      if (isMusicOn && !isMuted) {
+        audio.play().catch(() => {});
+      }
+      document.removeEventListener("click", startOnInteraction);
+      document.removeEventListener("keydown", startOnInteraction);
+    };
+    document.addEventListener("click", startOnInteraction);
+    document.addEventListener("keydown", startOnInteraction);
+
     return () => {
       audio.removeEventListener("ended", handleEnded);
+      document.removeEventListener("click", startOnInteraction);
+      document.removeEventListener("keydown", startOnInteraction);
       audio.pause();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
