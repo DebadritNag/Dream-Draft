@@ -1,14 +1,14 @@
-import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useRef, useState, useCallback, type ReactNode } from "react";
 
-import song1 from "@/data/song/The Nights.mp3";
-import song2 from "@/data/song/Viva la Vida.mp3";
-import song3 from "@/data/song/Waka Waka.mp3";
-import song4 from "@/data/song/Hall Of Fame.mp3";
+import song1 from "@/data/song/Avicii - The Nights.mp3";
+import song2 from "@/data/song/Coldplay - Viva la Vida.mp3";
+import song3 from "@/data/song/Shakira - Waka Waka.mp3";
+import song4 from "@/data/song/The Script - Hall Of Fame.mp3";
 
-const PLAYLIST: { name: string; src: string }[] = [
-  { name: "The Nights — Avicii", src: song1 },
-  { name: "Viva la Vida — Coldplay", src: song2 },
-  { name: "Waka Waka — Shakira", src: song3 },
+const PLAYLIST = [
+  { name: "The Nights — Avicii",       src: song1 },
+  { name: "Viva la Vida — Coldplay",   src: song2 },
+  { name: "Waka Waka — Shakira",       src: song3 },
   { name: "Hall of Fame — The Script", src: song4 },
 ];
 
@@ -27,83 +27,86 @@ interface AudioContextValue {
 const AudioCtx = createContext<AudioContextValue | null>(null);
 
 export function AudioProvider({ children }: { children: ReactNode }) {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement>(new Audio());
   const trackIndexRef = useRef(0);
   const startedRef = useRef(false);
   const toastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [isPlaying, setIsPlaying] = useState(() => localStorage.getItem("musicEnabled") !== "false");
-  const [isMuted, setIsMuted] = useState(() => localStorage.getItem("isMuted") === "true");
-  const [volume, setVolumeState] = useState(() => Number(localStorage.getItem("volumeLevel") ?? 40));
+  const [isMuted,   setIsMuted]   = useState(() => localStorage.getItem("isMuted") === "true");
+  const [volume,    setVolumeState] = useState(() => Number(localStorage.getItem("volumeLevel") ?? "40"));
   const [currentTrackName, setCurrentTrackName] = useState("");
-  const [nowPlayingToast, setNowPlayingToast] = useState<string | null>(null);
+  const [nowPlayingToast,  setNowPlayingToast]  = useState<string | null>(null);
 
-  const getEffectiveVolume = (vol: number, muted: boolean) => muted ? 0 : vol / 100;
+  // Keep refs in sync so callbacks always see latest values
+  const isPlayingRef = useRef(isPlaying);
+  const isMutedRef   = useRef(isMuted);
+  const volumeRef    = useRef(volume);
+  useEffect(() => { isPlayingRef.current = isPlaying; }, [isPlaying]);
+  useEffect(() => { isMutedRef.current   = isMuted;   }, [isMuted]);
+  useEffect(() => { volumeRef.current    = volume;    }, [volume]);
 
-  const showToast = (name: string) => {
+  const showToast = useCallback((name: string) => {
     setNowPlayingToast(name);
     if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
     toastTimerRef.current = setTimeout(() => setNowPlayingToast(null), 2500);
-  };
+  }, []);
 
-  const playTrack = (index: number) => {
-    if (PLAYLIST.length === 0) return;
+  const playTrack = useCallback((index: number) => {
     const track = PLAYLIST[index % PLAYLIST.length];
-    if (!audioRef.current) audioRef.current = new Audio();
-    audioRef.current.src = track.src;
-    audioRef.current.volume = getEffectiveVolume(volume, isMuted);
-    audioRef.current.play().catch(() => {});
+    const audio = audioRef.current;
+    audio.src = track.src;
+    audio.volume = isMutedRef.current ? 0 : volumeRef.current / 100;
+    audio.play().catch((e) => console.warn("[audio] play blocked:", e));
+    trackIndexRef.current = index % PLAYLIST.length;
     setCurrentTrackName(track.name);
     showToast(track.name);
-    trackIndexRef.current = index % PLAYLIST.length;
-  };
+  }, [showToast]);
 
-  const handleEnded = () => playTrack(trackIndexRef.current + 1);
-
+  // Wire up ended → next track
   useEffect(() => {
-    if (!audioRef.current) audioRef.current = new Audio();
-    audioRef.current.addEventListener("ended", handleEnded);
+    const audio = audioRef.current;
+    const onEnded = () => playTrack(trackIndexRef.current + 1);
+    audio.addEventListener("ended", onEnded);
     return () => {
-      audioRef.current?.removeEventListener("ended", handleEnded);
-      audioRef.current?.pause();
+      audio.removeEventListener("ended", onEnded);
+      audio.pause();
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [playTrack]);
+
+  // Sync volume/mute to audio element
+  useEffect(() => {
+    audioRef.current.volume = isMuted ? 0 : volume / 100;
+  }, [volume, isMuted]);
 
   // Sync play/pause
   useEffect(() => {
     localStorage.setItem("musicEnabled", String(isPlaying));
-    if (!audioRef.current || PLAYLIST.length === 0) return;
-    if (isPlaying && startedRef.current) audioRef.current.play().catch(() => {});
-    else if (!isPlaying) audioRef.current.pause();
+    if (!startedRef.current) return;
+    if (isPlaying) audioRef.current.play().catch(() => {});
+    else audioRef.current.pause();
   }, [isPlaying]);
 
-  // Sync volume + mute
-  useEffect(() => {
-    if (!audioRef.current) return;
-    audioRef.current.volume = getEffectiveVolume(volume, isMuted);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [volume, isMuted]);
-
-  const startMusic = () => {
-    if (PLAYLIST.length === 0 || startedRef.current) return;
+  // Start music on first user interaction (browser autoplay policy)
+  const startMusic = useCallback(() => {
+    if (startedRef.current) return;
     startedRef.current = true;
-    if (isPlaying) playTrack(0);
-  };
+    if (isPlayingRef.current) playTrack(0);
+  }, [playTrack]);
 
-  const toggle = () => setIsPlaying((v) => !v);
+  const toggle = useCallback(() => setIsPlaying((v) => !v), []);
 
-  const toggleMute = () => {
+  const toggleMute = useCallback(() => {
     setIsMuted((v) => {
       localStorage.setItem("isMuted", String(!v));
       return !v;
     });
-  };
+  }, []);
 
-  const setVolume = (v: number) => {
+  const setVolume = useCallback((v: number) => {
     setVolumeState(v);
     localStorage.setItem("volumeLevel", String(v));
-  };
+  }, []);
 
   return (
     <AudioCtx.Provider value={{ isPlaying, isMuted, volume, currentTrackName, nowPlayingToast, toggle, toggleMute, setVolume, startMusic }}>
