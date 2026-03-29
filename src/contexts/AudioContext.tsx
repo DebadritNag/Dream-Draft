@@ -1,15 +1,11 @@
 import { createContext, useContext, useEffect, useRef, useState, useCallback, type ReactNode } from "react";
 
-import song1 from "@/data/song/Avicii - The Nights.mp3";
-import song2 from "@/data/song/Coldplay - Viva la Vida.mp3";
-import song3 from "@/data/song/Shakira - Waka Waka.mp3";
-import song4 from "@/data/song/The Script - Hall Of Fame.mp3";
-
+// Songs served from /public/song/ — no imports needed, no bundle size issues
 const PLAYLIST = [
-  { name: "The Nights — Avicii",       src: song1 },
-  { name: "Viva la Vida — Coldplay",   src: song2 },
-  { name: "Waka Waka — Shakira",       src: song3 },
-  { name: "Hall of Fame — The Script", src: song4 },
+  { name: "The Nights — Avicii",       src: "/song/Avicii - The Nights.mp3" },
+  { name: "Viva la Vida — Coldplay",   src: "/song/Coldplay - Viva la Vida.mp3" },
+  { name: "Waka Waka — Shakira",       src: "/song/Shakira - Waka Waka.mp3" },
+  { name: "Hall of Fame — The Script", src: "/song/The Script - Hall Of Fame.mp3" },
 ];
 
 interface AudioContextValue {
