@@ -71,6 +71,9 @@ export default function Draft() {
     return () => { if (timerIntervalRef.current) clearInterval(timerIntervalRef.current); };
   }, [room?.turn_expires_at, getRemainingSeconds]);
 
+  const membersRef = useRef(members);
+  useEffect(() => { membersRef.current = members; }, [members]);
+
   const { connected, reconnecting } = useRoomRealtime({
     roomId,
     onRoomUpdate: useCallback((update: any) => {
@@ -78,11 +81,14 @@ export default function Draft() {
       if (update.status === "complete") navigate(`/results?room=${roomId}`);
     }, [applyRoomUpdate, navigate, roomId]),
     onDraftPick: useCallback((pick: any) => {
-      applyPick(pick); playDraftSound();
-      const member = members.find((m) => m.user_id === pick.user_id);
-      if (member && pick.user_id !== user?.id) toast(`${member.team_name} drafted a player! ⚽`);
-      loadFromDB(true);
-    }, [applyPick, members, user?.id, loadFromDB]),
+      applyPick(pick);
+      playDraftSound();
+      const member = membersRef.current.find((m: any) => m.user_id === pick.user_id);
+      if (member && pick.user_id !== user?.id) {
+        toast(`${member.team_name} drafted a player! ⚽`);
+      }
+      // Don't call loadFromDB here — onRoomUpdate handles turn advancement
+    }, [applyPick, user?.id]),
   });
 
   const wasReconnecting = useRef(false);
